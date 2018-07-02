@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="com.rcp.editor.application.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="RCP Perspective"
+            class="com.rcp.editor.perspective.Perspective"
+            id="com.rcp.editor.perspective">
+      </perspective>
+   </extension>
+   <extension
+         id="MyEditor"
+         name="MyEditor"
+         point="org.eclipse.ui.editors">
+      <editor
+            class="com.rcp.editor.ui.SimpleEditorPart"
+            default="false"
+            id="com.rcp.editor.editor1"
+            name="MyEditor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="com.rcp.editor.commands.OpenEditor"
+            id="com.rcp.editor.command1"
+            name="OpenEditor">
+      </command>
+   </extension>
+
+</plugin>
