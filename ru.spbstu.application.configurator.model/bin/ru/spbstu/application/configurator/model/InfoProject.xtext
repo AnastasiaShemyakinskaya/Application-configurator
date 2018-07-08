@@ -3,18 +3,26 @@ grammar ru.spbstu.application.configurator.model.InfoProject with org.eclipse.xt
 generate infoProject "http://www.spbstu.ru/application/configurator/model/InfoProject"
 
 Model:
-    (element+=Version) (element+=Application)(element+=Tenant) (element+=Hold);
+    (element+=Version) 
+    (element+=Application)
+    (element+=Tenant) 
+    (element+=Hold);
     
-terminal ID1: 
-    ('0'..'9')('.' | '0'..'9')*;    
+terminal VERSION_NUMBER: 
+    ('0'..'9')('.' | '0'..'9')*; 
+       
 Version:
-    'version ' name=ID1;
+    'version:' name=VERSION_NUMBER;
 FeatureName:
-	'name: ' name = ID;
-
+	'name: ' name = ID ; 
 Application:
 	'application:' 
-	 (features1+=FeatureName)(features+=ArchiveTipe)(feature+=Category)(feature+=Description)?(feature+=MCS)(feature+=Type)
+	 (features1+=FeatureName)
+	 (features+=ArchiveType)
+	 (feature+=Category)
+	 (feature+=Description)?
+	 (feature+=MCS)
+	 (feature+=Type)
 ;
 Tenant:
 	'tenant:' 
@@ -26,24 +34,29 @@ Hold:
 	 (features1+=FeatureName)(features+=HoldType)
       
 ;
-ArchiveTipe:
-	'archiveType: ' name=ID
+enum enumOfArchiveType:
+	SIP='sip' | TABLE='table'
+;
+ArchiveType:
+	'archiveType:' value=enumOfArchiveType
 ;
 Category:
-	'category: ' name=ID
+	'category:' name=ID
 ;
 Description:
-	'description: ' name=ID
+	'description:' name=ID
 ;
 MCS:
-	'metadataCacheSize: ' name=ID
+	'metadataCacheSize:' name=ID
+;
+enum enumOfTypes:
+	ACTIVE_ARCHIVING='active archiving' | APP_DECOMM='app decomm'
 ;
 Type:
-	'type: ' name=ID
+	'type:' value=enumOfTypes
 ;
 HoldType:
 	'holdType:'
 	(features+=Type)
 	
 ;
-	

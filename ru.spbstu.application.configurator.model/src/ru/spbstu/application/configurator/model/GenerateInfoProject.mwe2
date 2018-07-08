@@ -32,7 +32,9 @@ Workflow {
 		language = StandardLanguage {
 			name = "ru.spbstu.application.configurator.model.InfoProject"
 			fileExtensions = "yml"
-
+            projectWizard = {
+            	generate = true
+            }
 			serializer = {
 				generateStub = false
 			}
