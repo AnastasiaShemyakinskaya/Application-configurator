@@ -28,11 +28,11 @@ import ru.spbstu.application.configurator.model.infoProject.InfoProjectPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link ru.spbstu.application.configurator.model.infoProject.impl.HoldImpl#getFeatures1 <em>Features1</em>}</li>
  *   <li>{@link ru.spbstu.application.configurator.model.infoProject.impl.HoldImpl#getFeatures <em>Features</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

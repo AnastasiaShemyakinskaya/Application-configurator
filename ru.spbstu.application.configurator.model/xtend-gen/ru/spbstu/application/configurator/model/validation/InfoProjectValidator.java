@@ -3,19 +3,7 @@
  */
 package ru.spbstu.application.configurator.model.validation;
 
-import java.util.ArrayList;
-import org.eclipse.core.resources.IFile;
-import org.eclipse.core.resources.IProject;
-import org.eclipse.core.resources.IWorkspaceRoot;
-import org.eclipse.core.resources.ResourcesPlugin;
-import org.eclipse.core.runtime.Path;
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.xtext.validation.Check;
-import org.eclipse.xtext.xbase.lib.Exceptions;
-import ru.spbstu.application.configurator.model.infoProject.Include;
 import ru.spbstu.application.configurator.model.validation.AbstractInfoProjectValidator;
-import ru.spbstu.application.configurator.model.validation.Utils;
-import ru.spbstu.application.configurator.model.validation.YamlProperties;
 
 /**
  * This class contains custom validation rules.
@@ -24,66 +12,4 @@ import ru.spbstu.application.configurator.model.validation.YamlProperties;
  */
 @SuppressWarnings("all")
 public class InfoProjectValidator extends AbstractInfoProjectValidator {
-  @Check
-  public void checkFileExisting(final Include include) {
-    final EList<String> myfiles = include.getFiles();
-    for (final String a : myfiles) {
-      {
-        final String platformString = include.eResource().getURI().toPlatformString(true);
-        IWorkspaceRoot _root = ResourcesPlugin.getWorkspace().getRoot();
-        Path _path = new Path(platformString);
-        final IFile myFile = _root.getFile(_path);
-        final IProject proj = myFile.getProject();
-        final String changedFile = Utils.changeString(a);
-        final String fullPath = Utils.checkFolder(changedFile, "config/");
-        final IFile shouldExistsFile = proj.getFile(fullPath);
-        boolean _exists = shouldExistsFile.exists();
-        boolean _not = (!_exists);
-        if (_not) {
-          String _string = shouldExistsFile.toString();
-          String _plus = ("File " + _string);
-          String _plus_1 = (_plus + " has not been found");
-          this.error(_plus_1, include, null);
-        }
-      }
-    }
-  }
-  
-  @Check
-  public void compareYamlProperties(final Include include) {
-    try {
-      final String platformString = include.eResource().getURI().toPlatformString(true);
-      IWorkspaceRoot _root = ResourcesPlugin.getWorkspace().getRoot();
-      Path _path = new Path(platformString);
-      final IFile myFile = _root.getFile(_path);
-      final IProject proj = myFile.getProject();
-      final IFile yamlFile = proj.getFile("config/configuration.yml");
-      final IFile propertiesFile = proj.getFile("config/configuration.properties");
-      boolean _exists = yamlFile.exists();
-      boolean _not = (!_exists);
-      if (_not) {
-        String _string = yamlFile.toString();
-        String _plus = ("File" + _string);
-        String _plus_1 = (_plus + " has not been found");
-        this.error(_plus_1, include, null);
-      } else {
-        boolean _exists_1 = propertiesFile.exists();
-        boolean _not_1 = (!_exists_1);
-        if (_not_1) {
-          String _string_1 = propertiesFile.toString();
-          String _plus_2 = ("File" + _string_1);
-          String _plus_3 = (_plus_2 + " has not been found");
-          this.error(_plus_3, include, null);
-        } else {
-          final YamlProperties yp = new YamlProperties();
-          final ArrayList<String> array = yp.mainFunction(yamlFile, propertiesFile);
-          for (final String str : array) {
-            this.error(str, include, null);
-          }
-        }
-      }
-    } catch (Throwable _e) {
-      throw Exceptions.sneakyThrow(_e);
-    }
-  }
 }

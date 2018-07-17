@@ -68,9 +68,6 @@ public class InfoProjectFactoryImpl extends EFactoryImpl implements InfoProjectF
     {
       case InfoProjectPackage.MODEL: return createModel();
       case InfoProjectPackage.VERSION: return createVersion();
-      case InfoProjectPackage.NAMESPACE: return createNamespace();
-      case InfoProjectPackage.PREFIX: return createPrefix();
-      case InfoProjectPackage.URI: return createUri();
       case InfoProjectPackage.FEATURE_NAME: return createFeatureName();
       case InfoProjectPackage.APPLICATION: return createApplication();
       case InfoProjectPackage.TENANT: return createTenant();
@@ -81,12 +78,6 @@ public class InfoProjectFactoryImpl extends EFactoryImpl implements InfoProjectF
       case InfoProjectPackage.MCS: return createMCS();
       case InfoProjectPackage.TYPE: return createType();
       case InfoProjectPackage.HOLD_TYPE: return createHoldType();
-      case InfoProjectPackage.TYPE_ATTRIBUTE: return createTypeAttribute();
-      case InfoProjectPackage.INCLUDE: return createInclude();
-      case InfoProjectPackage.INGEST_NODE: return createIngestNode();
-      case InfoProjectPackage.ENUM_COD: return createEnumCOD();
-      case InfoProjectPackage.ENUM_MR: return createEnumMR();
-      case InfoProjectPackage.LOG_LEVEL: return createLogLevel();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -150,39 +141,6 @@ public class InfoProjectFactoryImpl extends EFactoryImpl implements InfoProjectF
   {
     VersionImpl version = new VersionImpl();
     return version;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Namespace createNamespace()
-  {
-    NamespaceImpl namespace = new NamespaceImpl();
-    return namespace;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Prefix createPrefix()
-  {
-    PrefixImpl prefix = new PrefixImpl();
-    return prefix;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Uri createUri()
-  {
-    UriImpl uri = new UriImpl();
-    return uri;
   }
 
   /**
@@ -293,72 +251,6 @@ public class InfoProjectFactoryImpl extends EFactoryImpl implements InfoProjectF
   {
     HoldTypeImpl holdType = new HoldTypeImpl();
     return holdType;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public TypeAttribute createTypeAttribute()
-  {
-    TypeAttributeImpl typeAttribute = new TypeAttributeImpl();
-    return typeAttribute;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Include createInclude()
-  {
-    IncludeImpl include = new IncludeImpl();
-    return include;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public IngestNode createIngestNode()
-  {
-    IngestNodeImpl ingestNode = new IngestNodeImpl();
-    return ingestNode;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EnumCOD createEnumCOD()
-  {
-    EnumCODImpl enumCOD = new EnumCODImpl();
-    return enumCOD;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EnumMR createEnumMR()
-  {
-    EnumMRImpl enumMR = new EnumMRImpl();
-    return enumMR;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public LogLevel createLogLevel()
-  {
-    LogLevelImpl logLevel = new LogLevelImpl();
-    return logLevel;
   }
 
   /**

@@ -2,33 +2,19 @@ grammar ru.spbstu.application.configurator.model.InfoProject with org.eclipse.xt
 
 generate infoProject "http://www.spbstu.ru/application/configurator/model/InfoProject"
 
-Model hidden(WS):
+Model:
     (element+=Version) 
-    (element+=Namespace)
-    (element+=Tenant)
     (element+=Application)
-    (element+=Hold)
-    (element+=IngestNode)
-    (element+=Include);
- 
+    (element+=Tenant) 
+    (element+=Hold);
+    
 terminal VERSION_NUMBER: 
     ('0'..'9')('.' | '0'..'9')*; 
-
+       
 Version:
-    'version:' SPACE name=VERSION_NUMBER;
-Namespace:
-	'namespace:' 
-	(feature+=Prefix)
-	(feature+=Uri)
-;
-Prefix:
-	 'prefix: ' name = ID
-;
-Uri:
-	{Uri} 'uri:' SPACE name =(ID|'-'|'$'| '{'|'}'|'^'|':'|'.'|VERSION_NUMBER)*
-;   
-FeatureName hidden (WS, SPACE):
-	{FeatureName} 'name:' name = ((ID|'-'|'$'| '{'|'}'|'^'|':'|'.'|VERSION_NUMBER|EXCEPTION))*; 
+    'version:' name=VERSION_NUMBER;
+FeatureName:
+	'name: ' name = ID ; 
 Application:
 	'application:' 
 	 (features1+=FeatureName)
@@ -45,79 +31,32 @@ Tenant:
 ;
 Hold:
 	'hold:' 
-	 (features1+=FeatureName)
-	 (features+=HoldType)
+	 (features1+=FeatureName)(features+=HoldType)
       
 ;
 enum enumOfArchiveType:
 	SIP='sip' | TABLE='table'
 ;
 ArchiveType:
-	'archiveType: ' value=enumOfArchiveType
+	'archiveType:' value=enumOfArchiveType
 ;
 Category:
-	{Category} 'category:' SPACE name= ID SPACE? ID? | (ID | ADDITION| VERSION_NUMBER)*
+	'category:' name=ID
 ;
 Description:
-	{Description} 'description:' SPACE name= (ID) (SPACE ID)* 
+	'description:' name=ID
 ;
 MCS:
-	{MCS} 'metadataCacheSize: ' name= ((ID|'-'|'$'| '{'|'}'|'^'|':'|'.'|EXCEPTION|VERSION_NUMBER))*;
+	'metadataCacheSize:' name=ID
+;
 enum enumOfTypes:
 	ACTIVE_ARCHIVING='active archiving' | APP_DECOMM='app decomm'
 ;
 Type:
-	{Type} 'type:' SPACE value=enumOfTypes
+	'type:' value=enumOfTypes
 ;
 HoldType:
-	'holdType:'+WS
-	(features+=FeatureName)?
-	(features+=TypeAttribute)	
-;
-TypeAttribute hidden (WS, SPACE): 
-	'type:' name = ID
-;
-
-Include:
-	{Include} 'includes:'+WS
+	'holdType:'
+	(features+=Type)
 	
-	(files+=FileDeclaration)*
 ;
-FileDeclaration:
-	('-'SPACE)('/'?'../')*((ID|'-'|'$'| '{'|'}')*('/'))*((ID|'-'|'$'|'{'|'}')*'.'?ID?)
-;
-IngestNode:
-	'ingestNode:' WS 
-	 (features+=FeatureName)
-	 (features+=EnumCOD)
-	 (features+=EnumMR)
-	 (features+=LogLevel)
-;
-EnumCOD:
-	'enumerationCutoffDays:' SPACE name=VERSION_NUMBER
-;
-EnumMR:
-	'enumerationMinusRunning:' SPACE name=ID
-;
-LogLevel:
-	'logLevel:' SPACE name=ID
-;
-@Override 
-terminal ML_COMMENT: 
-	'#' -> '\n'
-;
-terminal SPACE:
-	' '
-;
-terminal ADDITION:
-	('$')*|('{')*|('}')*|('-')*|('.')*|(' ')*|(':')*
-;
- 
-terminal EXCEPTION:
-	('name:')?|('metadataCacheSize:')?
-;
- 
-terminal MY_INT:
-	('0'..'9')+
-;
-

@@ -86,21 +86,6 @@ public class InfoProjectAdapterFactory extends AdapterFactoryImpl
         return createVersionAdapter();
       }
       @Override
-      public Adapter caseNamespace(Namespace object)
-      {
-        return createNamespaceAdapter();
-      }
-      @Override
-      public Adapter casePrefix(Prefix object)
-      {
-        return createPrefixAdapter();
-      }
-      @Override
-      public Adapter caseUri(Uri object)
-      {
-        return createUriAdapter();
-      }
-      @Override
       public Adapter caseFeatureName(FeatureName object)
       {
         return createFeatureNameAdapter();
@@ -151,36 +136,6 @@ public class InfoProjectAdapterFactory extends AdapterFactoryImpl
         return createHoldTypeAdapter();
       }
       @Override
-      public Adapter caseTypeAttribute(TypeAttribute object)
-      {
-        return createTypeAttributeAdapter();
-      }
-      @Override
-      public Adapter caseInclude(Include object)
-      {
-        return createIncludeAdapter();
-      }
-      @Override
-      public Adapter caseIngestNode(IngestNode object)
-      {
-        return createIngestNodeAdapter();
-      }
-      @Override
-      public Adapter caseEnumCOD(EnumCOD object)
-      {
-        return createEnumCODAdapter();
-      }
-      @Override
-      public Adapter caseEnumMR(EnumMR object)
-      {
-        return createEnumMRAdapter();
-      }
-      @Override
-      public Adapter caseLogLevel(LogLevel object)
-      {
-        return createLogLevelAdapter();
-      }
-      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -228,51 +183,6 @@ public class InfoProjectAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createVersionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Namespace <em>Namespace</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see ru.spbstu.application.configurator.model.infoProject.Namespace
-   * @generated
-   */
-  public Adapter createNamespaceAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Prefix <em>Prefix</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see ru.spbstu.application.configurator.model.infoProject.Prefix
-   * @generated
-   */
-  public Adapter createPrefixAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Uri <em>Uri</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see ru.spbstu.application.configurator.model.infoProject.Uri
-   * @generated
-   */
-  public Adapter createUriAdapter()
   {
     return null;
   }
@@ -423,96 +333,6 @@ public class InfoProjectAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createHoldTypeAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.TypeAttribute <em>Type Attribute</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see ru.spbstu.application.configurator.model.infoProject.TypeAttribute
-   * @generated
-   */
-  public Adapter createTypeAttributeAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Include <em>Include</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see ru.spbstu.application.configurator.model.infoProject.Include
-   * @generated
-   */
-  public Adapter createIncludeAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.IngestNode <em>Ingest Node</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see ru.spbstu.application.configurator.model.infoProject.IngestNode
-   * @generated
-   */
-  public Adapter createIngestNodeAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.EnumCOD <em>Enum COD</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see ru.spbstu.application.configurator.model.infoProject.EnumCOD
-   * @generated
-   */
-  public Adapter createEnumCODAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.EnumMR <em>Enum MR</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see ru.spbstu.application.configurator.model.infoProject.EnumMR
-   * @generated
-   */
-  public Adapter createEnumMRAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.LogLevel <em>Log Level</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see ru.spbstu.application.configurator.model.infoProject.LogLevel
-   * @generated
-   */
-  public Adapter createLogLevelAdapter()
   {
     return null;
   }

@@ -19,10 +19,10 @@ import ru.spbstu.application.configurator.model.infoProject.InfoProjectPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link ru.spbstu.application.configurator.model.infoProject.impl.DescriptionImpl#getName <em>Name</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
@@ -168,7 +168,7 @@ public class DescriptionImpl extends MinimalEObjectImpl.Container implements Des
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuilder result = new StringBuilder(super.toString());
+    StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
     result.append(')');

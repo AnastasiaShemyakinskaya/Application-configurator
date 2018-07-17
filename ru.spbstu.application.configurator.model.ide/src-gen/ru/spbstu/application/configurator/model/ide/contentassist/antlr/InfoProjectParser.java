@@ -31,55 +31,26 @@ public class InfoProjectParser extends AbstractContentAssistParser {
 		}
 		
 		private static void init(ImmutableMap.Builder<AbstractElement, String> builder, InfoProjectGrammarAccess grammarAccess) {
-			builder.put(grammarAccess.getUriAccess().getNameAlternatives_3_0(), "rule__Uri__NameAlternatives_3_0");
-			builder.put(grammarAccess.getFeatureNameAccess().getNameAlternatives_2_0(), "rule__FeatureName__NameAlternatives_2_0");
-			builder.put(grammarAccess.getCategoryAccess().getAlternatives(), "rule__Category__Alternatives");
-			builder.put(grammarAccess.getCategoryAccess().getAlternatives_1(), "rule__Category__Alternatives_1");
-			builder.put(grammarAccess.getMCSAccess().getNameAlternatives_2_0(), "rule__MCS__NameAlternatives_2_0");
-			builder.put(grammarAccess.getFileDeclarationAccess().getAlternatives_2_0(), "rule__FileDeclaration__Alternatives_2_0");
-			builder.put(grammarAccess.getFileDeclarationAccess().getAlternatives_3_0(), "rule__FileDeclaration__Alternatives_3_0");
 			builder.put(grammarAccess.getEnumOfArchiveTypeAccess().getAlternatives(), "rule__EnumOfArchiveType__Alternatives");
 			builder.put(grammarAccess.getEnumOfTypesAccess().getAlternatives(), "rule__EnumOfTypes__Alternatives");
 			builder.put(grammarAccess.getModelAccess().getGroup(), "rule__Model__Group__0");
 			builder.put(grammarAccess.getVersionAccess().getGroup(), "rule__Version__Group__0");
-			builder.put(grammarAccess.getNamespaceAccess().getGroup(), "rule__Namespace__Group__0");
-			builder.put(grammarAccess.getPrefixAccess().getGroup(), "rule__Prefix__Group__0");
-			builder.put(grammarAccess.getUriAccess().getGroup(), "rule__Uri__Group__0");
 			builder.put(grammarAccess.getFeatureNameAccess().getGroup(), "rule__FeatureName__Group__0");
 			builder.put(grammarAccess.getApplicationAccess().getGroup(), "rule__Application__Group__0");
 			builder.put(grammarAccess.getTenantAccess().getGroup(), "rule__Tenant__Group__0");
 			builder.put(grammarAccess.getHoldAccess().getGroup(), "rule__Hold__Group__0");
 			builder.put(grammarAccess.getArchiveTypeAccess().getGroup(), "rule__ArchiveType__Group__0");
-			builder.put(grammarAccess.getCategoryAccess().getGroup_0(), "rule__Category__Group_0__0");
+			builder.put(grammarAccess.getCategoryAccess().getGroup(), "rule__Category__Group__0");
 			builder.put(grammarAccess.getDescriptionAccess().getGroup(), "rule__Description__Group__0");
-			builder.put(grammarAccess.getDescriptionAccess().getGroup_4(), "rule__Description__Group_4__0");
 			builder.put(grammarAccess.getMCSAccess().getGroup(), "rule__MCS__Group__0");
 			builder.put(grammarAccess.getTypeAccess().getGroup(), "rule__Type__Group__0");
 			builder.put(grammarAccess.getHoldTypeAccess().getGroup(), "rule__HoldType__Group__0");
-			builder.put(grammarAccess.getTypeAttributeAccess().getGroup(), "rule__TypeAttribute__Group__0");
-			builder.put(grammarAccess.getIncludeAccess().getGroup(), "rule__Include__Group__0");
-			builder.put(grammarAccess.getFileDeclarationAccess().getGroup(), "rule__FileDeclaration__Group__0");
-			builder.put(grammarAccess.getFileDeclarationAccess().getGroup_0(), "rule__FileDeclaration__Group_0__0");
-			builder.put(grammarAccess.getFileDeclarationAccess().getGroup_1(), "rule__FileDeclaration__Group_1__0");
-			builder.put(grammarAccess.getFileDeclarationAccess().getGroup_2(), "rule__FileDeclaration__Group_2__0");
-			builder.put(grammarAccess.getFileDeclarationAccess().getGroup_3(), "rule__FileDeclaration__Group_3__0");
-			builder.put(grammarAccess.getIngestNodeAccess().getGroup(), "rule__IngestNode__Group__0");
-			builder.put(grammarAccess.getEnumCODAccess().getGroup(), "rule__EnumCOD__Group__0");
-			builder.put(grammarAccess.getEnumMRAccess().getGroup(), "rule__EnumMR__Group__0");
-			builder.put(grammarAccess.getLogLevelAccess().getGroup(), "rule__LogLevel__Group__0");
 			builder.put(grammarAccess.getModelAccess().getElementAssignment_0(), "rule__Model__ElementAssignment_0");
 			builder.put(grammarAccess.getModelAccess().getElementAssignment_1(), "rule__Model__ElementAssignment_1");
 			builder.put(grammarAccess.getModelAccess().getElementAssignment_2(), "rule__Model__ElementAssignment_2");
 			builder.put(grammarAccess.getModelAccess().getElementAssignment_3(), "rule__Model__ElementAssignment_3");
-			builder.put(grammarAccess.getModelAccess().getElementAssignment_4(), "rule__Model__ElementAssignment_4");
-			builder.put(grammarAccess.getModelAccess().getElementAssignment_5(), "rule__Model__ElementAssignment_5");
-			builder.put(grammarAccess.getModelAccess().getElementAssignment_6(), "rule__Model__ElementAssignment_6");
-			builder.put(grammarAccess.getVersionAccess().getNameAssignment_2(), "rule__Version__NameAssignment_2");
-			builder.put(grammarAccess.getNamespaceAccess().getFeatureAssignment_1(), "rule__Namespace__FeatureAssignment_1");
-			builder.put(grammarAccess.getNamespaceAccess().getFeatureAssignment_2(), "rule__Namespace__FeatureAssignment_2");
-			builder.put(grammarAccess.getPrefixAccess().getNameAssignment_1(), "rule__Prefix__NameAssignment_1");
-			builder.put(grammarAccess.getUriAccess().getNameAssignment_3(), "rule__Uri__NameAssignment_3");
-			builder.put(grammarAccess.getFeatureNameAccess().getNameAssignment_2(), "rule__FeatureName__NameAssignment_2");
+			builder.put(grammarAccess.getVersionAccess().getNameAssignment_1(), "rule__Version__NameAssignment_1");
+			builder.put(grammarAccess.getFeatureNameAccess().getNameAssignment_1(), "rule__FeatureName__NameAssignment_1");
 			builder.put(grammarAccess.getApplicationAccess().getFeatures1Assignment_1(), "rule__Application__Features1Assignment_1");
 			builder.put(grammarAccess.getApplicationAccess().getFeaturesAssignment_2(), "rule__Application__FeaturesAssignment_2");
 			builder.put(grammarAccess.getApplicationAccess().getFeatureAssignment_3(), "rule__Application__FeatureAssignment_3");
@@ -90,21 +61,11 @@ public class InfoProjectParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getHoldAccess().getFeatures1Assignment_1(), "rule__Hold__Features1Assignment_1");
 			builder.put(grammarAccess.getHoldAccess().getFeaturesAssignment_2(), "rule__Hold__FeaturesAssignment_2");
 			builder.put(grammarAccess.getArchiveTypeAccess().getValueAssignment_1(), "rule__ArchiveType__ValueAssignment_1");
-			builder.put(grammarAccess.getCategoryAccess().getNameAssignment_0_3(), "rule__Category__NameAssignment_0_3");
-			builder.put(grammarAccess.getDescriptionAccess().getNameAssignment_3(), "rule__Description__NameAssignment_3");
-			builder.put(grammarAccess.getMCSAccess().getNameAssignment_2(), "rule__MCS__NameAssignment_2");
-			builder.put(grammarAccess.getTypeAccess().getValueAssignment_3(), "rule__Type__ValueAssignment_3");
-			builder.put(grammarAccess.getHoldTypeAccess().getFeaturesAssignment_2(), "rule__HoldType__FeaturesAssignment_2");
-			builder.put(grammarAccess.getHoldTypeAccess().getFeaturesAssignment_3(), "rule__HoldType__FeaturesAssignment_3");
-			builder.put(grammarAccess.getTypeAttributeAccess().getNameAssignment_1(), "rule__TypeAttribute__NameAssignment_1");
-			builder.put(grammarAccess.getIncludeAccess().getFilesAssignment_3(), "rule__Include__FilesAssignment_3");
-			builder.put(grammarAccess.getIngestNodeAccess().getFeaturesAssignment_2(), "rule__IngestNode__FeaturesAssignment_2");
-			builder.put(grammarAccess.getIngestNodeAccess().getFeaturesAssignment_3(), "rule__IngestNode__FeaturesAssignment_3");
-			builder.put(grammarAccess.getIngestNodeAccess().getFeaturesAssignment_4(), "rule__IngestNode__FeaturesAssignment_4");
-			builder.put(grammarAccess.getIngestNodeAccess().getFeaturesAssignment_5(), "rule__IngestNode__FeaturesAssignment_5");
-			builder.put(grammarAccess.getEnumCODAccess().getNameAssignment_2(), "rule__EnumCOD__NameAssignment_2");
-			builder.put(grammarAccess.getEnumMRAccess().getNameAssignment_2(), "rule__EnumMR__NameAssignment_2");
-			builder.put(grammarAccess.getLogLevelAccess().getNameAssignment_2(), "rule__LogLevel__NameAssignment_2");
+			builder.put(grammarAccess.getCategoryAccess().getNameAssignment_1(), "rule__Category__NameAssignment_1");
+			builder.put(grammarAccess.getDescriptionAccess().getNameAssignment_1(), "rule__Description__NameAssignment_1");
+			builder.put(grammarAccess.getMCSAccess().getNameAssignment_1(), "rule__MCS__NameAssignment_1");
+			builder.put(grammarAccess.getTypeAccess().getValueAssignment_1(), "rule__Type__ValueAssignment_1");
+			builder.put(grammarAccess.getHoldTypeAccess().getFeaturesAssignment_1(), "rule__HoldType__FeaturesAssignment_1");
 		}
 	}
 	

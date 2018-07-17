@@ -20,10 +20,10 @@ import ru.spbstu.application.configurator.model.infoProject.enumOfTypes;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link ru.spbstu.application.configurator.model.infoProject.impl.TypeImpl#getValue <em>Value</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
@@ -169,7 +169,7 @@ public class TypeImpl extends MinimalEObjectImpl.Container implements Type
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuilder result = new StringBuilder(super.toString());
+    StringBuffer result = new StringBuffer(super.toString());
     result.append(" (value: ");
     result.append(value);
     result.append(')');

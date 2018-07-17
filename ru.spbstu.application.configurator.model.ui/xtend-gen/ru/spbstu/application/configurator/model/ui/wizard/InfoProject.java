@@ -1,8 +1,8 @@
 package ru.spbstu.application.configurator.model.ui.wizard;
 
 import java.util.List;
+import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.xtend2.lib.StringConcatenation;
-import org.eclipse.xtext.ui.XtextProjectHelper;
 import org.eclipse.xtext.ui.util.PluginProjectFactory;
 import org.eclipse.xtext.ui.wizard.template.AbstractProjectTemplate;
 import org.eclipse.xtext.ui.wizard.template.IProjectGenerator;
@@ -20,23 +20,19 @@ public final class InfoProject extends AbstractProjectTemplate {
       it.setProjectName(this.getProjectInfo().getProjectName());
       it.setLocation(this.getProjectInfo().getLocationPath());
       List<String> _builderIds = it.getBuilderIds();
-      _builderIds.add(XtextProjectHelper.BUILDER_ID);
-      List<String> _projectNatures = it.getProjectNatures();
-      _projectNatures.add(XtextProjectHelper.NATURE_ID);
+      _builderIds.add(JavaCore.BUILDER_ID);
       List<String> _folders = it.getFolders();
       _folders.add("config");
       List<String> _folders_1 = it.getFolders();
       _folders_1.add("data");
       List<String> _folders_2 = it.getFolders();
-      _folders_2.add("lib");
+      _folders_2.add("config//custom-presentations");
       List<String> _folders_3 = it.getFolders();
-      _folders_3.add("config//custom-presentations");
+      _folders_3.add("config//data-model-config");
       List<String> _folders_4 = it.getFolders();
-      _folders_4.add("config//data-model-config");
+      _folders_4.add("config//exports");
       List<String> _folders_5 = it.getFolders();
-      _folders_5.add("config//exports");
-      List<String> _folders_6 = it.getFolders();
-      _folders_6.add("config//searches");
+      _folders_5.add("config//searches");
       StringConcatenation _builder = new StringConcatenation();
       _builder.append("config//configuration.yml");
       StringConcatenation _builder_1 = new StringConcatenation();

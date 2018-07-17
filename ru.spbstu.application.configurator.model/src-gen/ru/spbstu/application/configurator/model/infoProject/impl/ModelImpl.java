@@ -27,10 +27,10 @@ import ru.spbstu.application.configurator.model.infoProject.Model;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link ru.spbstu.application.configurator.model.infoProject.impl.ModelImpl#getElement <em>Element</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

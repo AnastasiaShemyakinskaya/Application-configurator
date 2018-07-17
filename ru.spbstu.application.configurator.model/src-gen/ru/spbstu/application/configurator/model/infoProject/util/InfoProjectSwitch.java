@@ -51,7 +51,7 @@ public class InfoProjectSwitch<T> extends Switch<T>
    * Checks whether this is a switch for the given package.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param ePackage the package in question.
+   * @parameter ePackage the package in question.
    * @return whether this is a switch for the given package.
    * @generated
    */
@@ -84,27 +84,6 @@ public class InfoProjectSwitch<T> extends Switch<T>
       {
         Version version = (Version)theEObject;
         T result = caseVersion(version);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case InfoProjectPackage.NAMESPACE:
-      {
-        Namespace namespace = (Namespace)theEObject;
-        T result = caseNamespace(namespace);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case InfoProjectPackage.PREFIX:
-      {
-        Prefix prefix = (Prefix)theEObject;
-        T result = casePrefix(prefix);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case InfoProjectPackage.URI:
-      {
-        Uri uri = (Uri)theEObject;
-        T result = caseUri(uri);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -178,48 +157,6 @@ public class InfoProjectSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case InfoProjectPackage.TYPE_ATTRIBUTE:
-      {
-        TypeAttribute typeAttribute = (TypeAttribute)theEObject;
-        T result = caseTypeAttribute(typeAttribute);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case InfoProjectPackage.INCLUDE:
-      {
-        Include include = (Include)theEObject;
-        T result = caseInclude(include);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case InfoProjectPackage.INGEST_NODE:
-      {
-        IngestNode ingestNode = (IngestNode)theEObject;
-        T result = caseIngestNode(ingestNode);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case InfoProjectPackage.ENUM_COD:
-      {
-        EnumCOD enumCOD = (EnumCOD)theEObject;
-        T result = caseEnumCOD(enumCOD);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case InfoProjectPackage.ENUM_MR:
-      {
-        EnumMR enumMR = (EnumMR)theEObject;
-        T result = caseEnumMR(enumMR);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case InfoProjectPackage.LOG_LEVEL:
-      {
-        LogLevel logLevel = (LogLevel)theEObject;
-        T result = caseLogLevel(logLevel);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       default: return defaultCase(theEObject);
     }
   }
@@ -252,54 +189,6 @@ public class InfoProjectSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseVersion(Version object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Namespace</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Namespace</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseNamespace(Namespace object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Prefix</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Prefix</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casePrefix(Prefix object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Uri</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Uri</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseUri(Uri object)
   {
     return null;
   }
@@ -460,102 +349,6 @@ public class InfoProjectSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseHoldType(HoldType object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Type Attribute</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Type Attribute</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseTypeAttribute(TypeAttribute object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Include</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Include</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseInclude(Include object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Ingest Node</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Ingest Node</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseIngestNode(IngestNode object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Enum COD</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Enum COD</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseEnumCOD(EnumCOD object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Enum MR</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Enum MR</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseEnumMR(EnumMR object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Log Level</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Log Level</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseLogLevel(LogLevel object)
   {
     return null;
   }
