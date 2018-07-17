@@ -115,6 +115,90 @@ public interface InfoProjectPackage extends EPackage
   int VERSION_FEATURE_COUNT = 1;
 
   /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.NamespaceImpl <em>Namespace</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.NamespaceImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getNamespace()
+   * @generated
+   */
+  int NAMESPACE = 2;
+
+  /**
+   * The feature id for the '<em><b>Feature</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NAMESPACE__FEATURE = 0;
+
+  /**
+   * The number of structural features of the '<em>Namespace</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NAMESPACE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.PrefixImpl <em>Prefix</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.PrefixImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getPrefix()
+   * @generated
+   */
+  int PREFIX = 3;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PREFIX__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Prefix</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PREFIX_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.UriImpl <em>Uri</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.UriImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getUri()
+   * @generated
+   */
+  int URI = 4;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int URI__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Uri</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int URI_FEATURE_COUNT = 1;
+
+  /**
    * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.FeatureNameImpl <em>Feature Name</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -122,7 +206,7 @@ public interface InfoProjectPackage extends EPackage
    * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getFeatureName()
    * @generated
    */
-  int FEATURE_NAME = 2;
+  int FEATURE_NAME = 5;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -150,7 +234,7 @@ public interface InfoProjectPackage extends EPackage
    * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getApplication()
    * @generated
    */
-  int APPLICATION = 3;
+  int APPLICATION = 6;
 
   /**
    * The feature id for the '<em><b>Features1</b></em>' containment reference list.
@@ -196,7 +280,7 @@ public interface InfoProjectPackage extends EPackage
    * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getTenant()
    * @generated
    */
-  int TENANT = 4;
+  int TENANT = 7;
 
   /**
    * The feature id for the '<em><b>Features1</b></em>' containment reference list.
@@ -224,7 +308,7 @@ public interface InfoProjectPackage extends EPackage
    * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getHold()
    * @generated
    */
-  int HOLD = 5;
+  int HOLD = 8;
 
   /**
    * The feature id for the '<em><b>Features1</b></em>' containment reference list.
@@ -261,7 +345,7 @@ public interface InfoProjectPackage extends EPackage
    * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getArchiveType()
    * @generated
    */
-  int ARCHIVE_TYPE = 6;
+  int ARCHIVE_TYPE = 9;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -289,7 +373,7 @@ public interface InfoProjectPackage extends EPackage
    * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getCategory()
    * @generated
    */
-  int CATEGORY = 7;
+  int CATEGORY = 10;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -317,7 +401,7 @@ public interface InfoProjectPackage extends EPackage
    * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getDescription()
    * @generated
    */
-  int DESCRIPTION = 8;
+  int DESCRIPTION = 11;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -345,7 +429,7 @@ public interface InfoProjectPackage extends EPackage
    * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getMCS()
    * @generated
    */
-  int MCS = 9;
+  int MCS = 12;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -373,7 +457,7 @@ public interface InfoProjectPackage extends EPackage
    * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getType()
    * @generated
    */
-  int TYPE = 10;
+  int TYPE = 13;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -401,7 +485,7 @@ public interface InfoProjectPackage extends EPackage
    * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getHoldType()
    * @generated
    */
-  int HOLD_TYPE = 11;
+  int HOLD_TYPE = 14;
 
   /**
    * The feature id for the '<em><b>Features</b></em>' containment reference list.
@@ -422,6 +506,174 @@ public interface InfoProjectPackage extends EPackage
   int HOLD_TYPE_FEATURE_COUNT = 1;
 
   /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.TypeAttributeImpl <em>Type Attribute</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.TypeAttributeImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getTypeAttribute()
+   * @generated
+   */
+  int TYPE_ATTRIBUTE = 15;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_ATTRIBUTE__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Type Attribute</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_ATTRIBUTE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.IncludeImpl <em>Include</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.IncludeImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getInclude()
+   * @generated
+   */
+  int INCLUDE = 16;
+
+  /**
+   * The feature id for the '<em><b>Files</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INCLUDE__FILES = 0;
+
+  /**
+   * The number of structural features of the '<em>Include</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INCLUDE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.IngestNodeImpl <em>Ingest Node</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.IngestNodeImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getIngestNode()
+   * @generated
+   */
+  int INGEST_NODE = 17;
+
+  /**
+   * The feature id for the '<em><b>Features</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INGEST_NODE__FEATURES = 0;
+
+  /**
+   * The number of structural features of the '<em>Ingest Node</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INGEST_NODE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.EnumCODImpl <em>Enum COD</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.EnumCODImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getEnumCOD()
+   * @generated
+   */
+  int ENUM_COD = 18;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENUM_COD__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Enum COD</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENUM_COD_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.EnumMRImpl <em>Enum MR</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.EnumMRImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getEnumMR()
+   * @generated
+   */
+  int ENUM_MR = 19;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENUM_MR__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Enum MR</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENUM_MR_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.LogLevelImpl <em>Log Level</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.LogLevelImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getLogLevel()
+   * @generated
+   */
+  int LOG_LEVEL = 20;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOG_LEVEL__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Log Level</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOG_LEVEL_FEATURE_COUNT = 1;
+
+  /**
    * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.enumOfArchiveType <em>enum Of Archive Type</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -429,7 +681,7 @@ public interface InfoProjectPackage extends EPackage
    * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getenumOfArchiveType()
    * @generated
    */
-  int ENUM_OF_ARCHIVE_TYPE = 12;
+  int ENUM_OF_ARCHIVE_TYPE = 21;
 
   /**
    * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.enumOfTypes <em>enum Of Types</em>}' enum.
@@ -439,7 +691,7 @@ public interface InfoProjectPackage extends EPackage
    * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getenumOfTypes()
    * @generated
    */
-  int ENUM_OF_TYPES = 13;
+  int ENUM_OF_TYPES = 22;
 
 
   /**
@@ -483,6 +735,69 @@ public interface InfoProjectPackage extends EPackage
    * @generated
    */
   EAttribute getVersion_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Namespace <em>Namespace</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Namespace</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Namespace
+   * @generated
+   */
+  EClass getNamespace();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link ru.spbstu.application.configurator.model.infoProject.Namespace#getFeature <em>Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Feature</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Namespace#getFeature()
+   * @see #getNamespace()
+   * @generated
+   */
+  EReference getNamespace_Feature();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Prefix <em>Prefix</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Prefix</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Prefix
+   * @generated
+   */
+  EClass getPrefix();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.Prefix#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Prefix#getName()
+   * @see #getPrefix()
+   * @generated
+   */
+  EAttribute getPrefix_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Uri <em>Uri</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Uri</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Uri
+   * @generated
+   */
+  EClass getUri();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.Uri#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Uri#getName()
+   * @see #getUri()
+   * @generated
+   */
+  EAttribute getUri_Name();
 
   /**
    * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.FeatureName <em>Feature Name</em>}'.
@@ -728,6 +1043,132 @@ public interface InfoProjectPackage extends EPackage
   EReference getHoldType_Features();
 
   /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.TypeAttribute <em>Type Attribute</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Type Attribute</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.TypeAttribute
+   * @generated
+   */
+  EClass getTypeAttribute();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.TypeAttribute#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.TypeAttribute#getName()
+   * @see #getTypeAttribute()
+   * @generated
+   */
+  EAttribute getTypeAttribute_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Include <em>Include</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Include</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Include
+   * @generated
+   */
+  EClass getInclude();
+
+  /**
+   * Returns the meta object for the attribute list '{@link ru.spbstu.application.configurator.model.infoProject.Include#getFiles <em>Files</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Files</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Include#getFiles()
+   * @see #getInclude()
+   * @generated
+   */
+  EAttribute getInclude_Files();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.IngestNode <em>Ingest Node</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Ingest Node</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.IngestNode
+   * @generated
+   */
+  EClass getIngestNode();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link ru.spbstu.application.configurator.model.infoProject.IngestNode#getFeatures <em>Features</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Features</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.IngestNode#getFeatures()
+   * @see #getIngestNode()
+   * @generated
+   */
+  EReference getIngestNode_Features();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.EnumCOD <em>Enum COD</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Enum COD</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.EnumCOD
+   * @generated
+   */
+  EClass getEnumCOD();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.EnumCOD#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.EnumCOD#getName()
+   * @see #getEnumCOD()
+   * @generated
+   */
+  EAttribute getEnumCOD_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.EnumMR <em>Enum MR</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Enum MR</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.EnumMR
+   * @generated
+   */
+  EClass getEnumMR();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.EnumMR#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.EnumMR#getName()
+   * @see #getEnumMR()
+   * @generated
+   */
+  EAttribute getEnumMR_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.LogLevel <em>Log Level</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Log Level</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.LogLevel
+   * @generated
+   */
+  EClass getLogLevel();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.LogLevel#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.LogLevel#getName()
+   * @see #getLogLevel()
+   * @generated
+   */
+  EAttribute getLogLevel_Name();
+
+  /**
    * Returns the meta object for enum '{@link ru.spbstu.application.configurator.model.infoProject.enumOfArchiveType <em>enum Of Archive Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -805,6 +1246,60 @@ public interface InfoProjectPackage extends EPackage
      * @generated
      */
     EAttribute VERSION__NAME = eINSTANCE.getVersion_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.NamespaceImpl <em>Namespace</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.NamespaceImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getNamespace()
+     * @generated
+     */
+    EClass NAMESPACE = eINSTANCE.getNamespace();
+
+    /**
+     * The meta object literal for the '<em><b>Feature</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference NAMESPACE__FEATURE = eINSTANCE.getNamespace_Feature();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.PrefixImpl <em>Prefix</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.PrefixImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getPrefix()
+     * @generated
+     */
+    EClass PREFIX = eINSTANCE.getPrefix();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PREFIX__NAME = eINSTANCE.getPrefix_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.UriImpl <em>Uri</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.UriImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getUri()
+     * @generated
+     */
+    EClass URI = eINSTANCE.getUri();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute URI__NAME = eINSTANCE.getUri_Name();
 
     /**
      * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.FeatureNameImpl <em>Feature Name</em>}' class.
@@ -1009,6 +1504,114 @@ public interface InfoProjectPackage extends EPackage
      * @generated
      */
     EReference HOLD_TYPE__FEATURES = eINSTANCE.getHoldType_Features();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.TypeAttributeImpl <em>Type Attribute</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.TypeAttributeImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getTypeAttribute()
+     * @generated
+     */
+    EClass TYPE_ATTRIBUTE = eINSTANCE.getTypeAttribute();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TYPE_ATTRIBUTE__NAME = eINSTANCE.getTypeAttribute_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.IncludeImpl <em>Include</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.IncludeImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getInclude()
+     * @generated
+     */
+    EClass INCLUDE = eINSTANCE.getInclude();
+
+    /**
+     * The meta object literal for the '<em><b>Files</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute INCLUDE__FILES = eINSTANCE.getInclude_Files();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.IngestNodeImpl <em>Ingest Node</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.IngestNodeImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getIngestNode()
+     * @generated
+     */
+    EClass INGEST_NODE = eINSTANCE.getIngestNode();
+
+    /**
+     * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INGEST_NODE__FEATURES = eINSTANCE.getIngestNode_Features();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.EnumCODImpl <em>Enum COD</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.EnumCODImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getEnumCOD()
+     * @generated
+     */
+    EClass ENUM_COD = eINSTANCE.getEnumCOD();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ENUM_COD__NAME = eINSTANCE.getEnumCOD_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.EnumMRImpl <em>Enum MR</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.EnumMRImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getEnumMR()
+     * @generated
+     */
+    EClass ENUM_MR = eINSTANCE.getEnumMR();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ENUM_MR__NAME = eINSTANCE.getEnumMR_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.LogLevelImpl <em>Log Level</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.LogLevelImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getLogLevel()
+     * @generated
+     */
+    EClass LOG_LEVEL = eINSTANCE.getLogLevel();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LOG_LEVEL__NAME = eINSTANCE.getLogLevel_Name();
 
     /**
      * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.enumOfArchiveType <em>enum Of Archive Type</em>}' enum.

@@ -6,6 +6,7 @@ package ru.spbstu.application.configurator.model.services;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import java.util.List;
+import org.eclipse.xtext.Action;
 import org.eclipse.xtext.Alternatives;
 import org.eclipse.xtext.Assignment;
 import org.eclipse.xtext.EnumLiteralDeclaration;
@@ -31,17 +32,25 @@ public class InfoProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cElementAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cElementVersionParserRuleCall_0_0 = (RuleCall)cElementAssignment_0.eContents().get(0);
 		private final Assignment cElementAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cElementApplicationParserRuleCall_1_0 = (RuleCall)cElementAssignment_1.eContents().get(0);
+		private final RuleCall cElementNamespaceParserRuleCall_1_0 = (RuleCall)cElementAssignment_1.eContents().get(0);
 		private final Assignment cElementAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cElementTenantParserRuleCall_2_0 = (RuleCall)cElementAssignment_2.eContents().get(0);
 		private final Assignment cElementAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cElementHoldParserRuleCall_3_0 = (RuleCall)cElementAssignment_3.eContents().get(0);
+		private final RuleCall cElementApplicationParserRuleCall_3_0 = (RuleCall)cElementAssignment_3.eContents().get(0);
+		private final Assignment cElementAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cElementHoldParserRuleCall_4_0 = (RuleCall)cElementAssignment_4.eContents().get(0);
+		private final Assignment cElementAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cElementIngestNodeParserRuleCall_5_0 = (RuleCall)cElementAssignment_5.eContents().get(0);
+		private final Assignment cElementAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cElementIncludeParserRuleCall_6_0 = (RuleCall)cElementAssignment_6.eContents().get(0);
 		
-		//Model:
-		//	element+=Version element+=Application element+=Tenant element+=Hold;
+		//Model hidden(WS):
+		//	element+=Version element+=Namespace element+=Tenant element+=Application element+=Hold element+=IngestNode
+		//	element+=Include;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//element+=Version element+=Application element+=Tenant element+=Hold
+		//element+=Version element+=Namespace element+=Tenant element+=Application element+=Hold element+=IngestNode
+		//element+=Include
 		public Group getGroup() { return cGroup; }
 		
 		//element+=Version
@@ -50,11 +59,11 @@ public class InfoProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//Version
 		public RuleCall getElementVersionParserRuleCall_0_0() { return cElementVersionParserRuleCall_0_0; }
 		
-		//element+=Application
+		//element+=Namespace
 		public Assignment getElementAssignment_1() { return cElementAssignment_1; }
 		
-		//Application
-		public RuleCall getElementApplicationParserRuleCall_1_0() { return cElementApplicationParserRuleCall_1_0; }
+		//Namespace
+		public RuleCall getElementNamespaceParserRuleCall_1_0() { return cElementNamespaceParserRuleCall_1_0; }
 		
 		//element+=Tenant
 		public Assignment getElementAssignment_2() { return cElementAssignment_2; }
@@ -62,57 +71,245 @@ public class InfoProjectGrammarAccess extends AbstractGrammarElementFinder {
 		//Tenant
 		public RuleCall getElementTenantParserRuleCall_2_0() { return cElementTenantParserRuleCall_2_0; }
 		
-		//element+=Hold
+		//element+=Application
 		public Assignment getElementAssignment_3() { return cElementAssignment_3; }
 		
+		//Application
+		public RuleCall getElementApplicationParserRuleCall_3_0() { return cElementApplicationParserRuleCall_3_0; }
+		
+		//element+=Hold
+		public Assignment getElementAssignment_4() { return cElementAssignment_4; }
+		
 		//Hold
-		public RuleCall getElementHoldParserRuleCall_3_0() { return cElementHoldParserRuleCall_3_0; }
+		public RuleCall getElementHoldParserRuleCall_4_0() { return cElementHoldParserRuleCall_4_0; }
+		
+		//element+=IngestNode
+		public Assignment getElementAssignment_5() { return cElementAssignment_5; }
+		
+		//IngestNode
+		public RuleCall getElementIngestNodeParserRuleCall_5_0() { return cElementIngestNodeParserRuleCall_5_0; }
+		
+		//element+=Include
+		public Assignment getElementAssignment_6() { return cElementAssignment_6; }
+		
+		//Include
+		public RuleCall getElementIncludeParserRuleCall_6_0() { return cElementIncludeParserRuleCall_6_0; }
 	}
 	public class VersionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ru.spbstu.application.configurator.model.InfoProject.Version");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cVersionKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameVERSION_NUMBERTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final RuleCall cSPACETerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameVERSION_NUMBERTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		
 		//Version:
-		//	'version:' name=VERSION_NUMBER;
+		//	'version:' SPACE name=VERSION_NUMBER;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'version:' name=VERSION_NUMBER
+		//'version:' SPACE name=VERSION_NUMBER
 		public Group getGroup() { return cGroup; }
 		
 		//'version:'
 		public Keyword getVersionKeyword_0() { return cVersionKeyword_0; }
 		
+		//SPACE
+		public RuleCall getSPACETerminalRuleCall_1() { return cSPACETerminalRuleCall_1; }
+		
 		//name=VERSION_NUMBER
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
 		
 		//VERSION_NUMBER
-		public RuleCall getNameVERSION_NUMBERTerminalRuleCall_1_0() { return cNameVERSION_NUMBERTerminalRuleCall_1_0; }
+		public RuleCall getNameVERSION_NUMBERTerminalRuleCall_2_0() { return cNameVERSION_NUMBERTerminalRuleCall_2_0; }
 	}
-	public class FeatureNameElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ru.spbstu.application.configurator.model.InfoProject.FeatureName");
+	public class NamespaceElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ru.spbstu.application.configurator.model.InfoProject.Namespace");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cNameKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cNamespaceKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cFeatureAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cFeaturePrefixParserRuleCall_1_0 = (RuleCall)cFeatureAssignment_1.eContents().get(0);
+		private final Assignment cFeatureAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cFeatureUriParserRuleCall_2_0 = (RuleCall)cFeatureAssignment_2.eContents().get(0);
+		
+		//Namespace:
+		//	'namespace:'
+		//	feature+=Prefix feature+=Uri;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'namespace:' feature+=Prefix feature+=Uri
+		public Group getGroup() { return cGroup; }
+		
+		//'namespace:'
+		public Keyword getNamespaceKeyword_0() { return cNamespaceKeyword_0; }
+		
+		//feature+=Prefix
+		public Assignment getFeatureAssignment_1() { return cFeatureAssignment_1; }
+		
+		//Prefix
+		public RuleCall getFeaturePrefixParserRuleCall_1_0() { return cFeaturePrefixParserRuleCall_1_0; }
+		
+		//feature+=Uri
+		public Assignment getFeatureAssignment_2() { return cFeatureAssignment_2; }
+		
+		//Uri
+		public RuleCall getFeatureUriParserRuleCall_2_0() { return cFeatureUriParserRuleCall_2_0; }
+	}
+	public class PrefixElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ru.spbstu.application.configurator.model.InfoProject.Prefix");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cPrefixKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		
-		//FeatureName:
-		//	'name: ' name=ID;
+		//Prefix:
+		//	'prefix: ' name=ID;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'name: ' name=ID
+		//'prefix: ' name=ID
 		public Group getGroup() { return cGroup; }
 		
-		//'name: '
-		public Keyword getNameKeyword_0() { return cNameKeyword_0; }
+		//'prefix: '
+		public Keyword getPrefixKeyword_0() { return cPrefixKeyword_0; }
 		
 		//name=ID
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 		
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+	}
+	public class UriElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ru.spbstu.application.configurator.model.InfoProject.Uri");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cUriAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cUriKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final RuleCall cSPACETerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		private final Assignment cNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final Alternatives cNameAlternatives_3_0 = (Alternatives)cNameAssignment_3.eContents().get(0);
+		private final RuleCall cNameIDTerminalRuleCall_3_0_0 = (RuleCall)cNameAlternatives_3_0.eContents().get(0);
+		private final Keyword cNameHyphenMinusKeyword_3_0_1 = (Keyword)cNameAlternatives_3_0.eContents().get(1);
+		private final Keyword cNameDollarSignKeyword_3_0_2 = (Keyword)cNameAlternatives_3_0.eContents().get(2);
+		private final Keyword cNameLeftCurlyBracketKeyword_3_0_3 = (Keyword)cNameAlternatives_3_0.eContents().get(3);
+		private final Keyword cNameRightCurlyBracketKeyword_3_0_4 = (Keyword)cNameAlternatives_3_0.eContents().get(4);
+		private final Keyword cNameCircumflexAccentKeyword_3_0_5 = (Keyword)cNameAlternatives_3_0.eContents().get(5);
+		private final Keyword cNameColonKeyword_3_0_6 = (Keyword)cNameAlternatives_3_0.eContents().get(6);
+		private final Keyword cNameFullStopKeyword_3_0_7 = (Keyword)cNameAlternatives_3_0.eContents().get(7);
+		private final RuleCall cNameVERSION_NUMBERTerminalRuleCall_3_0_8 = (RuleCall)cNameAlternatives_3_0.eContents().get(8);
+		
+		//Uri:
+		//	{Uri} 'uri:' SPACE name=(ID | '-' | '$' | '{' | '}' | '^' | ':' | '.' | VERSION_NUMBER)*;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//{Uri} 'uri:' SPACE name=(ID | '-' | '$' | '{' | '}' | '^' | ':' | '.' | VERSION_NUMBER)*
+		public Group getGroup() { return cGroup; }
+		
+		//{Uri}
+		public Action getUriAction_0() { return cUriAction_0; }
+		
+		//'uri:'
+		public Keyword getUriKeyword_1() { return cUriKeyword_1; }
+		
+		//SPACE
+		public RuleCall getSPACETerminalRuleCall_2() { return cSPACETerminalRuleCall_2; }
+		
+		//name=(ID | '-' | '$' | '{' | '}' | '^' | ':' | '.' | VERSION_NUMBER)*
+		public Assignment getNameAssignment_3() { return cNameAssignment_3; }
+		
+		//(ID | '-' | '$' | '{' | '}' | '^' | ':' | '.' | VERSION_NUMBER)
+		public Alternatives getNameAlternatives_3_0() { return cNameAlternatives_3_0; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_3_0_0() { return cNameIDTerminalRuleCall_3_0_0; }
+		
+		//'-'
+		public Keyword getNameHyphenMinusKeyword_3_0_1() { return cNameHyphenMinusKeyword_3_0_1; }
+		
+		//'$'
+		public Keyword getNameDollarSignKeyword_3_0_2() { return cNameDollarSignKeyword_3_0_2; }
+		
+		//'{'
+		public Keyword getNameLeftCurlyBracketKeyword_3_0_3() { return cNameLeftCurlyBracketKeyword_3_0_3; }
+		
+		//'}'
+		public Keyword getNameRightCurlyBracketKeyword_3_0_4() { return cNameRightCurlyBracketKeyword_3_0_4; }
+		
+		//'^'
+		public Keyword getNameCircumflexAccentKeyword_3_0_5() { return cNameCircumflexAccentKeyword_3_0_5; }
+		
+		//':'
+		public Keyword getNameColonKeyword_3_0_6() { return cNameColonKeyword_3_0_6; }
+		
+		//'.'
+		public Keyword getNameFullStopKeyword_3_0_7() { return cNameFullStopKeyword_3_0_7; }
+		
+		//VERSION_NUMBER
+		public RuleCall getNameVERSION_NUMBERTerminalRuleCall_3_0_8() { return cNameVERSION_NUMBERTerminalRuleCall_3_0_8; }
+	}
+	public class FeatureNameElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ru.spbstu.application.configurator.model.InfoProject.FeatureName");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cFeatureNameAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final Alternatives cNameAlternatives_2_0 = (Alternatives)cNameAssignment_2.eContents().get(0);
+		private final RuleCall cNameIDTerminalRuleCall_2_0_0 = (RuleCall)cNameAlternatives_2_0.eContents().get(0);
+		private final Keyword cNameHyphenMinusKeyword_2_0_1 = (Keyword)cNameAlternatives_2_0.eContents().get(1);
+		private final Keyword cNameDollarSignKeyword_2_0_2 = (Keyword)cNameAlternatives_2_0.eContents().get(2);
+		private final Keyword cNameLeftCurlyBracketKeyword_2_0_3 = (Keyword)cNameAlternatives_2_0.eContents().get(3);
+		private final Keyword cNameRightCurlyBracketKeyword_2_0_4 = (Keyword)cNameAlternatives_2_0.eContents().get(4);
+		private final Keyword cNameCircumflexAccentKeyword_2_0_5 = (Keyword)cNameAlternatives_2_0.eContents().get(5);
+		private final Keyword cNameColonKeyword_2_0_6 = (Keyword)cNameAlternatives_2_0.eContents().get(6);
+		private final Keyword cNameFullStopKeyword_2_0_7 = (Keyword)cNameAlternatives_2_0.eContents().get(7);
+		private final RuleCall cNameVERSION_NUMBERTerminalRuleCall_2_0_8 = (RuleCall)cNameAlternatives_2_0.eContents().get(8);
+		private final RuleCall cNameEXCEPTIONTerminalRuleCall_2_0_9 = (RuleCall)cNameAlternatives_2_0.eContents().get(9);
+		
+		//FeatureName hidden(WS, SPACE):
+		//	{FeatureName} 'name:' name=(ID | '-' | '$' | '{' | '}' | '^' | ':' | '.' | VERSION_NUMBER | EXCEPTION)*;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//{FeatureName} 'name:' name=(ID | '-' | '$' | '{' | '}' | '^' | ':' | '.' | VERSION_NUMBER | EXCEPTION)*
+		public Group getGroup() { return cGroup; }
+		
+		//{FeatureName}
+		public Action getFeatureNameAction_0() { return cFeatureNameAction_0; }
+		
+		//'name:'
+		public Keyword getNameKeyword_1() { return cNameKeyword_1; }
+		
+		//name=(ID | '-' | '$' | '{' | '}' | '^' | ':' | '.' | VERSION_NUMBER | EXCEPTION)*
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		
+		//(ID | '-' | '$' | '{' | '}' | '^' | ':' | '.' | VERSION_NUMBER | EXCEPTION)
+		public Alternatives getNameAlternatives_2_0() { return cNameAlternatives_2_0; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_2_0_0() { return cNameIDTerminalRuleCall_2_0_0; }
+		
+		//'-'
+		public Keyword getNameHyphenMinusKeyword_2_0_1() { return cNameHyphenMinusKeyword_2_0_1; }
+		
+		//'$'
+		public Keyword getNameDollarSignKeyword_2_0_2() { return cNameDollarSignKeyword_2_0_2; }
+		
+		//'{'
+		public Keyword getNameLeftCurlyBracketKeyword_2_0_3() { return cNameLeftCurlyBracketKeyword_2_0_3; }
+		
+		//'}'
+		public Keyword getNameRightCurlyBracketKeyword_2_0_4() { return cNameRightCurlyBracketKeyword_2_0_4; }
+		
+		//'^'
+		public Keyword getNameCircumflexAccentKeyword_2_0_5() { return cNameCircumflexAccentKeyword_2_0_5; }
+		
+		//':'
+		public Keyword getNameColonKeyword_2_0_6() { return cNameColonKeyword_2_0_6; }
+		
+		//'.'
+		public Keyword getNameFullStopKeyword_2_0_7() { return cNameFullStopKeyword_2_0_7; }
+		
+		//VERSION_NUMBER
+		public RuleCall getNameVERSION_NUMBERTerminalRuleCall_2_0_8() { return cNameVERSION_NUMBERTerminalRuleCall_2_0_8; }
+		
+		//EXCEPTION
+		public RuleCall getNameEXCEPTIONTerminalRuleCall_2_0_9() { return cNameEXCEPTIONTerminalRuleCall_2_0_9; }
 	}
 	public class ApplicationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ru.spbstu.application.configurator.model.InfoProject.Application");
@@ -244,13 +441,13 @@ public class InfoProjectGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cValueEnumOfArchiveTypeEnumRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
 		
 		//ArchiveType:
-		//	'archiveType:' value=enumOfArchiveType;
+		//	'archiveType: ' value=enumOfArchiveType;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'archiveType:' value=enumOfArchiveType
+		//'archiveType: ' value=enumOfArchiveType
 		public Group getGroup() { return cGroup; }
 		
-		//'archiveType:'
+		//'archiveType: '
 		public Keyword getArchiveTypeKeyword_0() { return cArchiveTypeKeyword_0; }
 		
 		//value=enumOfArchiveType
@@ -261,119 +458,531 @@ public class InfoProjectGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	public class CategoryElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ru.spbstu.application.configurator.model.InfoProject.Category");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cCategoryKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
+		private final Action cCategoryAction_0_0 = (Action)cGroup_0.eContents().get(0);
+		private final Keyword cCategoryKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
+		private final RuleCall cSPACETerminalRuleCall_0_2 = (RuleCall)cGroup_0.eContents().get(2);
+		private final Assignment cNameAssignment_0_3 = (Assignment)cGroup_0.eContents().get(3);
+		private final RuleCall cNameIDTerminalRuleCall_0_3_0 = (RuleCall)cNameAssignment_0_3.eContents().get(0);
+		private final RuleCall cSPACETerminalRuleCall_0_4 = (RuleCall)cGroup_0.eContents().get(4);
+		private final RuleCall cIDTerminalRuleCall_0_5 = (RuleCall)cGroup_0.eContents().get(5);
+		private final Alternatives cAlternatives_1 = (Alternatives)cAlternatives.eContents().get(1);
+		private final RuleCall cIDTerminalRuleCall_1_0 = (RuleCall)cAlternatives_1.eContents().get(0);
+		private final RuleCall cADDITIONTerminalRuleCall_1_1 = (RuleCall)cAlternatives_1.eContents().get(1);
+		private final RuleCall cVERSION_NUMBERTerminalRuleCall_1_2 = (RuleCall)cAlternatives_1.eContents().get(2);
 		
 		//Category:
-		//	'category:' name=ID;
+		//	{Category} 'category:' SPACE name=ID SPACE? ID? | (ID | ADDITION | VERSION_NUMBER)*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'category:' name=ID
-		public Group getGroup() { return cGroup; }
+		//{Category} 'category:' SPACE name=ID SPACE? ID? | (ID | ADDITION | VERSION_NUMBER)*
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//{Category} 'category:' SPACE name=ID SPACE? ID?
+		public Group getGroup_0() { return cGroup_0; }
+		
+		//{Category}
+		public Action getCategoryAction_0_0() { return cCategoryAction_0_0; }
 		
 		//'category:'
-		public Keyword getCategoryKeyword_0() { return cCategoryKeyword_0; }
+		public Keyword getCategoryKeyword_0_1() { return cCategoryKeyword_0_1; }
+		
+		//SPACE
+		public RuleCall getSPACETerminalRuleCall_0_2() { return cSPACETerminalRuleCall_0_2; }
 		
 		//name=ID
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		public Assignment getNameAssignment_0_3() { return cNameAssignment_0_3; }
 		
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		public RuleCall getNameIDTerminalRuleCall_0_3_0() { return cNameIDTerminalRuleCall_0_3_0; }
+		
+		//SPACE?
+		public RuleCall getSPACETerminalRuleCall_0_4() { return cSPACETerminalRuleCall_0_4; }
+		
+		//ID?
+		public RuleCall getIDTerminalRuleCall_0_5() { return cIDTerminalRuleCall_0_5; }
+		
+		//(ID | ADDITION | VERSION_NUMBER)*
+		public Alternatives getAlternatives_1() { return cAlternatives_1; }
+		
+		//ID
+		public RuleCall getIDTerminalRuleCall_1_0() { return cIDTerminalRuleCall_1_0; }
+		
+		//ADDITION
+		public RuleCall getADDITIONTerminalRuleCall_1_1() { return cADDITIONTerminalRuleCall_1_1; }
+		
+		//VERSION_NUMBER
+		public RuleCall getVERSION_NUMBERTerminalRuleCall_1_2() { return cVERSION_NUMBERTerminalRuleCall_1_2; }
 	}
 	public class DescriptionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ru.spbstu.application.configurator.model.InfoProject.Description");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cDescriptionKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Action cDescriptionAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cDescriptionKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final RuleCall cSPACETerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		private final Assignment cNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cNameIDTerminalRuleCall_3_0 = (RuleCall)cNameAssignment_3.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final RuleCall cSPACETerminalRuleCall_4_0 = (RuleCall)cGroup_4.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_4_1 = (RuleCall)cGroup_4.eContents().get(1);
 		
 		//Description:
-		//	'description:' name=ID;
+		//	{Description} 'description:' SPACE name=ID (SPACE ID)*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'description:' name=ID
+		//{Description} 'description:' SPACE name=ID (SPACE ID)*
 		public Group getGroup() { return cGroup; }
 		
+		//{Description}
+		public Action getDescriptionAction_0() { return cDescriptionAction_0; }
+		
 		//'description:'
-		public Keyword getDescriptionKeyword_0() { return cDescriptionKeyword_0; }
+		public Keyword getDescriptionKeyword_1() { return cDescriptionKeyword_1; }
+		
+		//SPACE
+		public RuleCall getSPACETerminalRuleCall_2() { return cSPACETerminalRuleCall_2; }
 		
 		//name=ID
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		public Assignment getNameAssignment_3() { return cNameAssignment_3; }
 		
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		public RuleCall getNameIDTerminalRuleCall_3_0() { return cNameIDTerminalRuleCall_3_0; }
+		
+		//(SPACE ID)*
+		public Group getGroup_4() { return cGroup_4; }
+		
+		//SPACE
+		public RuleCall getSPACETerminalRuleCall_4_0() { return cSPACETerminalRuleCall_4_0; }
+		
+		//ID
+		public RuleCall getIDTerminalRuleCall_4_1() { return cIDTerminalRuleCall_4_1; }
 	}
 	public class MCSElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ru.spbstu.application.configurator.model.InfoProject.MCS");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cMetadataCacheSizeKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Action cMCSAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cMetadataCacheSizeKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final Alternatives cNameAlternatives_2_0 = (Alternatives)cNameAssignment_2.eContents().get(0);
+		private final RuleCall cNameIDTerminalRuleCall_2_0_0 = (RuleCall)cNameAlternatives_2_0.eContents().get(0);
+		private final Keyword cNameHyphenMinusKeyword_2_0_1 = (Keyword)cNameAlternatives_2_0.eContents().get(1);
+		private final Keyword cNameDollarSignKeyword_2_0_2 = (Keyword)cNameAlternatives_2_0.eContents().get(2);
+		private final Keyword cNameLeftCurlyBracketKeyword_2_0_3 = (Keyword)cNameAlternatives_2_0.eContents().get(3);
+		private final Keyword cNameRightCurlyBracketKeyword_2_0_4 = (Keyword)cNameAlternatives_2_0.eContents().get(4);
+		private final Keyword cNameCircumflexAccentKeyword_2_0_5 = (Keyword)cNameAlternatives_2_0.eContents().get(5);
+		private final Keyword cNameColonKeyword_2_0_6 = (Keyword)cNameAlternatives_2_0.eContents().get(6);
+		private final Keyword cNameFullStopKeyword_2_0_7 = (Keyword)cNameAlternatives_2_0.eContents().get(7);
+		private final RuleCall cNameEXCEPTIONTerminalRuleCall_2_0_8 = (RuleCall)cNameAlternatives_2_0.eContents().get(8);
+		private final RuleCall cNameVERSION_NUMBERTerminalRuleCall_2_0_9 = (RuleCall)cNameAlternatives_2_0.eContents().get(9);
 		
 		//MCS:
-		//	'metadataCacheSize:' name=ID;
+		//	{MCS} 'metadataCacheSize: ' name=(ID | '-' | '$' | '{' | '}' | '^' | ':' | '.' | EXCEPTION | VERSION_NUMBER)*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'metadataCacheSize:' name=ID
+		//{MCS} 'metadataCacheSize: ' name=(ID | '-' | '$' | '{' | '}' | '^' | ':' | '.' | EXCEPTION | VERSION_NUMBER)*
 		public Group getGroup() { return cGroup; }
 		
-		//'metadataCacheSize:'
-		public Keyword getMetadataCacheSizeKeyword_0() { return cMetadataCacheSizeKeyword_0; }
+		//{MCS}
+		public Action getMCSAction_0() { return cMCSAction_0; }
 		
-		//name=ID
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		//'metadataCacheSize: '
+		public Keyword getMetadataCacheSizeKeyword_1() { return cMetadataCacheSizeKeyword_1; }
+		
+		//name=(ID | '-' | '$' | '{' | '}' | '^' | ':' | '.' | EXCEPTION | VERSION_NUMBER)*
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		
+		//(ID | '-' | '$' | '{' | '}' | '^' | ':' | '.' | EXCEPTION | VERSION_NUMBER)
+		public Alternatives getNameAlternatives_2_0() { return cNameAlternatives_2_0; }
 		
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		public RuleCall getNameIDTerminalRuleCall_2_0_0() { return cNameIDTerminalRuleCall_2_0_0; }
+		
+		//'-'
+		public Keyword getNameHyphenMinusKeyword_2_0_1() { return cNameHyphenMinusKeyword_2_0_1; }
+		
+		//'$'
+		public Keyword getNameDollarSignKeyword_2_0_2() { return cNameDollarSignKeyword_2_0_2; }
+		
+		//'{'
+		public Keyword getNameLeftCurlyBracketKeyword_2_0_3() { return cNameLeftCurlyBracketKeyword_2_0_3; }
+		
+		//'}'
+		public Keyword getNameRightCurlyBracketKeyword_2_0_4() { return cNameRightCurlyBracketKeyword_2_0_4; }
+		
+		//'^'
+		public Keyword getNameCircumflexAccentKeyword_2_0_5() { return cNameCircumflexAccentKeyword_2_0_5; }
+		
+		//':'
+		public Keyword getNameColonKeyword_2_0_6() { return cNameColonKeyword_2_0_6; }
+		
+		//'.'
+		public Keyword getNameFullStopKeyword_2_0_7() { return cNameFullStopKeyword_2_0_7; }
+		
+		//EXCEPTION
+		public RuleCall getNameEXCEPTIONTerminalRuleCall_2_0_8() { return cNameEXCEPTIONTerminalRuleCall_2_0_8; }
+		
+		//VERSION_NUMBER
+		public RuleCall getNameVERSION_NUMBERTerminalRuleCall_2_0_9() { return cNameVERSION_NUMBERTerminalRuleCall_2_0_9; }
 	}
 	public class TypeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ru.spbstu.application.configurator.model.InfoProject.Type");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cTypeKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cValueEnumOfTypesEnumRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
+		private final Action cTypeAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cTypeKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final RuleCall cSPACETerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		private final Assignment cValueAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cValueEnumOfTypesEnumRuleCall_3_0 = (RuleCall)cValueAssignment_3.eContents().get(0);
 		
 		//Type:
-		//	'type:' value=enumOfTypes;
+		//	{Type} 'type:' SPACE value=enumOfTypes;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'type:' value=enumOfTypes
+		//{Type} 'type:' SPACE value=enumOfTypes
 		public Group getGroup() { return cGroup; }
 		
+		//{Type}
+		public Action getTypeAction_0() { return cTypeAction_0; }
+		
 		//'type:'
-		public Keyword getTypeKeyword_0() { return cTypeKeyword_0; }
+		public Keyword getTypeKeyword_1() { return cTypeKeyword_1; }
+		
+		//SPACE
+		public RuleCall getSPACETerminalRuleCall_2() { return cSPACETerminalRuleCall_2; }
 		
 		//value=enumOfTypes
-		public Assignment getValueAssignment_1() { return cValueAssignment_1; }
+		public Assignment getValueAssignment_3() { return cValueAssignment_3; }
 		
 		//enumOfTypes
-		public RuleCall getValueEnumOfTypesEnumRuleCall_1_0() { return cValueEnumOfTypesEnumRuleCall_1_0; }
+		public RuleCall getValueEnumOfTypesEnumRuleCall_3_0() { return cValueEnumOfTypesEnumRuleCall_3_0; }
 	}
 	public class HoldTypeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ru.spbstu.application.configurator.model.InfoProject.HoldType");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cHoldTypeKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cFeaturesAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cFeaturesTypeParserRuleCall_1_0 = (RuleCall)cFeaturesAssignment_1.eContents().get(0);
+		private final RuleCall cWSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cFeaturesAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cFeaturesFeatureNameParserRuleCall_2_0 = (RuleCall)cFeaturesAssignment_2.eContents().get(0);
+		private final Assignment cFeaturesAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cFeaturesTypeAttributeParserRuleCall_3_0 = (RuleCall)cFeaturesAssignment_3.eContents().get(0);
 		
 		//HoldType:
-		//	'holdType:'
-		//	features+=Type;
+		//	'holdType:'+ WS
+		//	features+=FeatureName?
+		//	features+=TypeAttribute;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'holdType:' features+=Type
+		//'holdType:'+ WS features+=FeatureName? features+=TypeAttribute
 		public Group getGroup() { return cGroup; }
 		
-		//'holdType:'
+		//'holdType:'+
 		public Keyword getHoldTypeKeyword_0() { return cHoldTypeKeyword_0; }
 		
-		//features+=Type
-		public Assignment getFeaturesAssignment_1() { return cFeaturesAssignment_1; }
+		//WS
+		public RuleCall getWSTerminalRuleCall_1() { return cWSTerminalRuleCall_1; }
 		
-		//Type
-		public RuleCall getFeaturesTypeParserRuleCall_1_0() { return cFeaturesTypeParserRuleCall_1_0; }
+		//features+=FeatureName?
+		public Assignment getFeaturesAssignment_2() { return cFeaturesAssignment_2; }
+		
+		//FeatureName
+		public RuleCall getFeaturesFeatureNameParserRuleCall_2_0() { return cFeaturesFeatureNameParserRuleCall_2_0; }
+		
+		//features+=TypeAttribute
+		public Assignment getFeaturesAssignment_3() { return cFeaturesAssignment_3; }
+		
+		//TypeAttribute
+		public RuleCall getFeaturesTypeAttributeParserRuleCall_3_0() { return cFeaturesTypeAttributeParserRuleCall_3_0; }
+	}
+	public class TypeAttributeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ru.spbstu.application.configurator.model.InfoProject.TypeAttribute");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cTypeKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		
+		//TypeAttribute hidden(WS, SPACE):
+		//	'type:' name=ID;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'type:' name=ID
+		public Group getGroup() { return cGroup; }
+		
+		//'type:'
+		public Keyword getTypeKeyword_0() { return cTypeKeyword_0; }
+		
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+	}
+	public class IncludeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ru.spbstu.application.configurator.model.InfoProject.Include");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cIncludeAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cIncludesKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final RuleCall cWSTerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		private final Assignment cFilesAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cFilesFileDeclarationParserRuleCall_3_0 = (RuleCall)cFilesAssignment_3.eContents().get(0);
+		
+		//Include:
+		//	{Include} 'includes:'+ WS
+		//	files+=FileDeclaration*;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//{Include} 'includes:'+ WS files+=FileDeclaration*
+		public Group getGroup() { return cGroup; }
+		
+		//{Include}
+		public Action getIncludeAction_0() { return cIncludeAction_0; }
+		
+		//'includes:'+
+		public Keyword getIncludesKeyword_1() { return cIncludesKeyword_1; }
+		
+		//WS
+		public RuleCall getWSTerminalRuleCall_2() { return cWSTerminalRuleCall_2; }
+		
+		//files+=FileDeclaration*
+		public Assignment getFilesAssignment_3() { return cFilesAssignment_3; }
+		
+		//FileDeclaration
+		public RuleCall getFilesFileDeclarationParserRuleCall_3_0() { return cFilesFileDeclarationParserRuleCall_3_0; }
+	}
+	public class FileDeclarationElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ru.spbstu.application.configurator.model.InfoProject.FileDeclaration");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
+		private final Keyword cHyphenMinusKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
+		private final RuleCall cSPACETerminalRuleCall_0_1 = (RuleCall)cGroup_0.eContents().get(1);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cSolidusKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Keyword cFullStopFullStopSolidusKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Alternatives cAlternatives_2_0 = (Alternatives)cGroup_2.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_2_0_0 = (RuleCall)cAlternatives_2_0.eContents().get(0);
+		private final Keyword cHyphenMinusKeyword_2_0_1 = (Keyword)cAlternatives_2_0.eContents().get(1);
+		private final Keyword cDollarSignKeyword_2_0_2 = (Keyword)cAlternatives_2_0.eContents().get(2);
+		private final Keyword cLeftCurlyBracketKeyword_2_0_3 = (Keyword)cAlternatives_2_0.eContents().get(3);
+		private final Keyword cRightCurlyBracketKeyword_2_0_4 = (Keyword)cAlternatives_2_0.eContents().get(4);
+		private final Keyword cSolidusKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Alternatives cAlternatives_3_0 = (Alternatives)cGroup_3.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_3_0_0 = (RuleCall)cAlternatives_3_0.eContents().get(0);
+		private final Keyword cHyphenMinusKeyword_3_0_1 = (Keyword)cAlternatives_3_0.eContents().get(1);
+		private final Keyword cDollarSignKeyword_3_0_2 = (Keyword)cAlternatives_3_0.eContents().get(2);
+		private final Keyword cLeftCurlyBracketKeyword_3_0_3 = (Keyword)cAlternatives_3_0.eContents().get(3);
+		private final Keyword cRightCurlyBracketKeyword_3_0_4 = (Keyword)cAlternatives_3_0.eContents().get(4);
+		private final Keyword cFullStopKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
+		private final RuleCall cIDTerminalRuleCall_3_2 = (RuleCall)cGroup_3.eContents().get(2);
+		
+		//FileDeclaration:
+		//	('-' SPACE) ('/'? '../')* ((ID | '-' | '$' | '{' | '}')* '/')* ((ID | '-' | '$' | '{' | '}')* '.'? ID?);
+		@Override public ParserRule getRule() { return rule; }
+		
+		//('-' SPACE) ('/'? '../')* ((ID | '-' | '$' | '{' | '}')* '/')* ((ID | '-' | '$' | '{' | '}')* '.'? ID?)
+		public Group getGroup() { return cGroup; }
+		
+		//'-' SPACE
+		public Group getGroup_0() { return cGroup_0; }
+		
+		//'-'
+		public Keyword getHyphenMinusKeyword_0_0() { return cHyphenMinusKeyword_0_0; }
+		
+		//SPACE
+		public RuleCall getSPACETerminalRuleCall_0_1() { return cSPACETerminalRuleCall_0_1; }
+		
+		//('/'? '../')*
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//'/'?
+		public Keyword getSolidusKeyword_1_0() { return cSolidusKeyword_1_0; }
+		
+		//'../'
+		public Keyword getFullStopFullStopSolidusKeyword_1_1() { return cFullStopFullStopSolidusKeyword_1_1; }
+		
+		//((ID | '-' | '$' | '{' | '}')* '/')*
+		public Group getGroup_2() { return cGroup_2; }
+		
+		//(ID | '-' | '$' | '{' | '}')*
+		public Alternatives getAlternatives_2_0() { return cAlternatives_2_0; }
+		
+		//ID
+		public RuleCall getIDTerminalRuleCall_2_0_0() { return cIDTerminalRuleCall_2_0_0; }
+		
+		//'-'
+		public Keyword getHyphenMinusKeyword_2_0_1() { return cHyphenMinusKeyword_2_0_1; }
+		
+		//'$'
+		public Keyword getDollarSignKeyword_2_0_2() { return cDollarSignKeyword_2_0_2; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_2_0_3() { return cLeftCurlyBracketKeyword_2_0_3; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_2_0_4() { return cRightCurlyBracketKeyword_2_0_4; }
+		
+		//'/'
+		public Keyword getSolidusKeyword_2_1() { return cSolidusKeyword_2_1; }
+		
+		//(ID | '-' | '$' | '{' | '}')* '.'? ID?
+		public Group getGroup_3() { return cGroup_3; }
+		
+		//(ID | '-' | '$' | '{' | '}')*
+		public Alternatives getAlternatives_3_0() { return cAlternatives_3_0; }
+		
+		//ID
+		public RuleCall getIDTerminalRuleCall_3_0_0() { return cIDTerminalRuleCall_3_0_0; }
+		
+		//'-'
+		public Keyword getHyphenMinusKeyword_3_0_1() { return cHyphenMinusKeyword_3_0_1; }
+		
+		//'$'
+		public Keyword getDollarSignKeyword_3_0_2() { return cDollarSignKeyword_3_0_2; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_3_0_3() { return cLeftCurlyBracketKeyword_3_0_3; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_3_0_4() { return cRightCurlyBracketKeyword_3_0_4; }
+		
+		//'.'?
+		public Keyword getFullStopKeyword_3_1() { return cFullStopKeyword_3_1; }
+		
+		//ID?
+		public RuleCall getIDTerminalRuleCall_3_2() { return cIDTerminalRuleCall_3_2; }
+	}
+	public class IngestNodeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ru.spbstu.application.configurator.model.InfoProject.IngestNode");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cIngestNodeKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final RuleCall cWSTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cFeaturesAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cFeaturesFeatureNameParserRuleCall_2_0 = (RuleCall)cFeaturesAssignment_2.eContents().get(0);
+		private final Assignment cFeaturesAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cFeaturesEnumCODParserRuleCall_3_0 = (RuleCall)cFeaturesAssignment_3.eContents().get(0);
+		private final Assignment cFeaturesAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cFeaturesEnumMRParserRuleCall_4_0 = (RuleCall)cFeaturesAssignment_4.eContents().get(0);
+		private final Assignment cFeaturesAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cFeaturesLogLevelParserRuleCall_5_0 = (RuleCall)cFeaturesAssignment_5.eContents().get(0);
+		
+		//IngestNode:
+		//	'ingestNode:' WS
+		//	features+=FeatureName features+=EnumCOD features+=EnumMR features+=LogLevel;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'ingestNode:' WS features+=FeatureName features+=EnumCOD features+=EnumMR features+=LogLevel
+		public Group getGroup() { return cGroup; }
+		
+		//'ingestNode:'
+		public Keyword getIngestNodeKeyword_0() { return cIngestNodeKeyword_0; }
+		
+		//WS
+		public RuleCall getWSTerminalRuleCall_1() { return cWSTerminalRuleCall_1; }
+		
+		//features+=FeatureName
+		public Assignment getFeaturesAssignment_2() { return cFeaturesAssignment_2; }
+		
+		//FeatureName
+		public RuleCall getFeaturesFeatureNameParserRuleCall_2_0() { return cFeaturesFeatureNameParserRuleCall_2_0; }
+		
+		//features+=EnumCOD
+		public Assignment getFeaturesAssignment_3() { return cFeaturesAssignment_3; }
+		
+		//EnumCOD
+		public RuleCall getFeaturesEnumCODParserRuleCall_3_0() { return cFeaturesEnumCODParserRuleCall_3_0; }
+		
+		//features+=EnumMR
+		public Assignment getFeaturesAssignment_4() { return cFeaturesAssignment_4; }
+		
+		//EnumMR
+		public RuleCall getFeaturesEnumMRParserRuleCall_4_0() { return cFeaturesEnumMRParserRuleCall_4_0; }
+		
+		//features+=LogLevel
+		public Assignment getFeaturesAssignment_5() { return cFeaturesAssignment_5; }
+		
+		//LogLevel
+		public RuleCall getFeaturesLogLevelParserRuleCall_5_0() { return cFeaturesLogLevelParserRuleCall_5_0; }
+	}
+	public class EnumCODElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ru.spbstu.application.configurator.model.InfoProject.EnumCOD");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cEnumerationCutoffDaysKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final RuleCall cSPACETerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameVERSION_NUMBERTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		
+		//EnumCOD:
+		//	'enumerationCutoffDays:' SPACE name=VERSION_NUMBER;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'enumerationCutoffDays:' SPACE name=VERSION_NUMBER
+		public Group getGroup() { return cGroup; }
+		
+		//'enumerationCutoffDays:'
+		public Keyword getEnumerationCutoffDaysKeyword_0() { return cEnumerationCutoffDaysKeyword_0; }
+		
+		//SPACE
+		public RuleCall getSPACETerminalRuleCall_1() { return cSPACETerminalRuleCall_1; }
+		
+		//name=VERSION_NUMBER
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		
+		//VERSION_NUMBER
+		public RuleCall getNameVERSION_NUMBERTerminalRuleCall_2_0() { return cNameVERSION_NUMBERTerminalRuleCall_2_0; }
+	}
+	public class EnumMRElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ru.spbstu.application.configurator.model.InfoProject.EnumMR");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cEnumerationMinusRunningKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final RuleCall cSPACETerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		
+		//EnumMR:
+		//	'enumerationMinusRunning:' SPACE name=ID;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'enumerationMinusRunning:' SPACE name=ID
+		public Group getGroup() { return cGroup; }
+		
+		//'enumerationMinusRunning:'
+		public Keyword getEnumerationMinusRunningKeyword_0() { return cEnumerationMinusRunningKeyword_0; }
+		
+		//SPACE
+		public RuleCall getSPACETerminalRuleCall_1() { return cSPACETerminalRuleCall_1; }
+		
+		//name=ID
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
+	}
+	public class LogLevelElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ru.spbstu.application.configurator.model.InfoProject.LogLevel");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cLogLevelKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final RuleCall cSPACETerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		
+		//LogLevel:
+		//	'logLevel:' SPACE name=ID;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'logLevel:' SPACE name=ID
+		public Group getGroup() { return cGroup; }
+		
+		//'logLevel:'
+		public Keyword getLogLevelKeyword_0() { return cLogLevelKeyword_0; }
+		
+		//SPACE
+		public RuleCall getSPACETerminalRuleCall_1() { return cSPACETerminalRuleCall_1; }
+		
+		//name=ID
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
 	}
 	
 	public class EnumOfArchiveTypeElements extends AbstractEnumRuleElementFinder {
@@ -434,6 +1043,9 @@ public class InfoProjectGrammarAccess extends AbstractGrammarElementFinder {
 	private final ModelElements pModel;
 	private final TerminalRule tVERSION_NUMBER;
 	private final VersionElements pVersion;
+	private final NamespaceElements pNamespace;
+	private final PrefixElements pPrefix;
+	private final UriElements pUri;
 	private final FeatureNameElements pFeatureName;
 	private final ApplicationElements pApplication;
 	private final TenantElements pTenant;
@@ -446,6 +1058,18 @@ public class InfoProjectGrammarAccess extends AbstractGrammarElementFinder {
 	private final EnumOfTypesElements eEnumOfTypes;
 	private final TypeElements pType;
 	private final HoldTypeElements pHoldType;
+	private final TypeAttributeElements pTypeAttribute;
+	private final IncludeElements pInclude;
+	private final FileDeclarationElements pFileDeclaration;
+	private final IngestNodeElements pIngestNode;
+	private final EnumCODElements pEnumCOD;
+	private final EnumMRElements pEnumMR;
+	private final LogLevelElements pLogLevel;
+	private final TerminalRule tML_COMMENT;
+	private final TerminalRule tSPACE;
+	private final TerminalRule tADDITION;
+	private final TerminalRule tEXCEPTION;
+	private final TerminalRule tMY_INT;
 	
 	private final Grammar grammar;
 	
@@ -459,6 +1083,9 @@ public class InfoProjectGrammarAccess extends AbstractGrammarElementFinder {
 		this.pModel = new ModelElements();
 		this.tVERSION_NUMBER = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ru.spbstu.application.configurator.model.InfoProject.VERSION_NUMBER");
 		this.pVersion = new VersionElements();
+		this.pNamespace = new NamespaceElements();
+		this.pPrefix = new PrefixElements();
+		this.pUri = new UriElements();
 		this.pFeatureName = new FeatureNameElements();
 		this.pApplication = new ApplicationElements();
 		this.pTenant = new TenantElements();
@@ -471,6 +1098,18 @@ public class InfoProjectGrammarAccess extends AbstractGrammarElementFinder {
 		this.eEnumOfTypes = new EnumOfTypesElements();
 		this.pType = new TypeElements();
 		this.pHoldType = new HoldTypeElements();
+		this.pTypeAttribute = new TypeAttributeElements();
+		this.pInclude = new IncludeElements();
+		this.pFileDeclaration = new FileDeclarationElements();
+		this.pIngestNode = new IngestNodeElements();
+		this.pEnumCOD = new EnumCODElements();
+		this.pEnumMR = new EnumMRElements();
+		this.pLogLevel = new LogLevelElements();
+		this.tML_COMMENT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ru.spbstu.application.configurator.model.InfoProject.ML_COMMENT");
+		this.tSPACE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ru.spbstu.application.configurator.model.InfoProject.SPACE");
+		this.tADDITION = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ru.spbstu.application.configurator.model.InfoProject.ADDITION");
+		this.tEXCEPTION = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ru.spbstu.application.configurator.model.InfoProject.EXCEPTION");
+		this.tMY_INT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ru.spbstu.application.configurator.model.InfoProject.MY_INT");
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -500,8 +1139,9 @@ public class InfoProjectGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	
-	//Model:
-	//	element+=Version element+=Application element+=Tenant element+=Hold;
+	//Model hidden(WS):
+	//	element+=Version element+=Namespace element+=Tenant element+=Application element+=Hold element+=IngestNode
+	//	element+=Include;
 	public ModelElements getModelAccess() {
 		return pModel;
 	}
@@ -517,7 +1157,7 @@ public class InfoProjectGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Version:
-	//	'version:' name=VERSION_NUMBER;
+	//	'version:' SPACE name=VERSION_NUMBER;
 	public VersionElements getVersionAccess() {
 		return pVersion;
 	}
@@ -526,8 +1166,39 @@ public class InfoProjectGrammarAccess extends AbstractGrammarElementFinder {
 		return getVersionAccess().getRule();
 	}
 	
-	//FeatureName:
-	//	'name: ' name=ID;
+	//Namespace:
+	//	'namespace:'
+	//	feature+=Prefix feature+=Uri;
+	public NamespaceElements getNamespaceAccess() {
+		return pNamespace;
+	}
+	
+	public ParserRule getNamespaceRule() {
+		return getNamespaceAccess().getRule();
+	}
+	
+	//Prefix:
+	//	'prefix: ' name=ID;
+	public PrefixElements getPrefixAccess() {
+		return pPrefix;
+	}
+	
+	public ParserRule getPrefixRule() {
+		return getPrefixAccess().getRule();
+	}
+	
+	//Uri:
+	//	{Uri} 'uri:' SPACE name=(ID | '-' | '$' | '{' | '}' | '^' | ':' | '.' | VERSION_NUMBER)*;
+	public UriElements getUriAccess() {
+		return pUri;
+	}
+	
+	public ParserRule getUriRule() {
+		return getUriAccess().getRule();
+	}
+	
+	//FeatureName hidden(WS, SPACE):
+	//	{FeatureName} 'name:' name=(ID | '-' | '$' | '{' | '}' | '^' | ':' | '.' | VERSION_NUMBER | EXCEPTION)*;
 	public FeatureNameElements getFeatureNameAccess() {
 		return pFeatureName;
 	}
@@ -581,7 +1252,7 @@ public class InfoProjectGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//ArchiveType:
-	//	'archiveType:' value=enumOfArchiveType;
+	//	'archiveType: ' value=enumOfArchiveType;
 	public ArchiveTypeElements getArchiveTypeAccess() {
 		return pArchiveType;
 	}
@@ -591,7 +1262,7 @@ public class InfoProjectGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Category:
-	//	'category:' name=ID;
+	//	{Category} 'category:' SPACE name=ID SPACE? ID? | (ID | ADDITION | VERSION_NUMBER)*;
 	public CategoryElements getCategoryAccess() {
 		return pCategory;
 	}
@@ -601,7 +1272,7 @@ public class InfoProjectGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Description:
-	//	'description:' name=ID;
+	//	{Description} 'description:' SPACE name=ID (SPACE ID)*;
 	public DescriptionElements getDescriptionAccess() {
 		return pDescription;
 	}
@@ -611,7 +1282,7 @@ public class InfoProjectGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//MCS:
-	//	'metadataCacheSize:' name=ID;
+	//	{MCS} 'metadataCacheSize: ' name=(ID | '-' | '$' | '{' | '}' | '^' | ':' | '.' | EXCEPTION | VERSION_NUMBER)*;
 	public MCSElements getMCSAccess() {
 		return pMCS;
 	}
@@ -631,7 +1302,7 @@ public class InfoProjectGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Type:
-	//	'type:' value=enumOfTypes;
+	//	{Type} 'type:' SPACE value=enumOfTypes;
 	public TypeElements getTypeAccess() {
 		return pType;
 	}
@@ -641,14 +1312,118 @@ public class InfoProjectGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//HoldType:
-	//	'holdType:'
-	//	features+=Type;
+	//	'holdType:'+ WS
+	//	features+=FeatureName?
+	//	features+=TypeAttribute;
 	public HoldTypeElements getHoldTypeAccess() {
 		return pHoldType;
 	}
 	
 	public ParserRule getHoldTypeRule() {
 		return getHoldTypeAccess().getRule();
+	}
+	
+	//TypeAttribute hidden(WS, SPACE):
+	//	'type:' name=ID;
+	public TypeAttributeElements getTypeAttributeAccess() {
+		return pTypeAttribute;
+	}
+	
+	public ParserRule getTypeAttributeRule() {
+		return getTypeAttributeAccess().getRule();
+	}
+	
+	//Include:
+	//	{Include} 'includes:'+ WS
+	//	files+=FileDeclaration*;
+	public IncludeElements getIncludeAccess() {
+		return pInclude;
+	}
+	
+	public ParserRule getIncludeRule() {
+		return getIncludeAccess().getRule();
+	}
+	
+	//FileDeclaration:
+	//	('-' SPACE) ('/'? '../')* ((ID | '-' | '$' | '{' | '}')* '/')* ((ID | '-' | '$' | '{' | '}')* '.'? ID?);
+	public FileDeclarationElements getFileDeclarationAccess() {
+		return pFileDeclaration;
+	}
+	
+	public ParserRule getFileDeclarationRule() {
+		return getFileDeclarationAccess().getRule();
+	}
+	
+	//IngestNode:
+	//	'ingestNode:' WS
+	//	features+=FeatureName features+=EnumCOD features+=EnumMR features+=LogLevel;
+	public IngestNodeElements getIngestNodeAccess() {
+		return pIngestNode;
+	}
+	
+	public ParserRule getIngestNodeRule() {
+		return getIngestNodeAccess().getRule();
+	}
+	
+	//EnumCOD:
+	//	'enumerationCutoffDays:' SPACE name=VERSION_NUMBER;
+	public EnumCODElements getEnumCODAccess() {
+		return pEnumCOD;
+	}
+	
+	public ParserRule getEnumCODRule() {
+		return getEnumCODAccess().getRule();
+	}
+	
+	//EnumMR:
+	//	'enumerationMinusRunning:' SPACE name=ID;
+	public EnumMRElements getEnumMRAccess() {
+		return pEnumMR;
+	}
+	
+	public ParserRule getEnumMRRule() {
+		return getEnumMRAccess().getRule();
+	}
+	
+	//LogLevel:
+	//	'logLevel:' SPACE name=ID;
+	public LogLevelElements getLogLevelAccess() {
+		return pLogLevel;
+	}
+	
+	public ParserRule getLogLevelRule() {
+		return getLogLevelAccess().getRule();
+	}
+	
+	//@Override
+	//terminal ML_COMMENT:
+	//	'#'->'\n';
+	public TerminalRule getML_COMMENTRule() {
+		return tML_COMMENT;
+	}
+	
+	//terminal SPACE:
+	//	' ';
+	public TerminalRule getSPACERule() {
+		return tSPACE;
+	}
+	
+	//terminal ADDITION:
+	//	'$'* | '{'* | '}'* | '-'* | '.'* | ' '* | ':'*;
+	public TerminalRule getADDITIONRule() {
+		return tADDITION;
+	}
+	
+	//terminal EXCEPTION:
+	//	'name:'? | 'metadataCacheSize:'?;
+	public TerminalRule getEXCEPTIONRule() {
+		return tEXCEPTION;
+	}
+	
+	//terminal MY_INT:
+	//	'0'..'9'+;
+	public TerminalRule getMY_INTRule() {
+		return tMY_INT;
 	}
 	
 	//terminal ID:
@@ -667,12 +1442,6 @@ public class InfoProjectGrammarAccess extends AbstractGrammarElementFinder {
 	//	'"' ('\\' . | !('\\' | '"'))* '"' | "'" ('\\' . | !('\\' | "'"))* "'";
 	public TerminalRule getSTRINGRule() {
 		return gaTerminals.getSTRINGRule();
-	}
-	
-	//terminal ML_COMMENT:
-	//	'/*'->'*/';
-	public TerminalRule getML_COMMENTRule() {
-		return gaTerminals.getML_COMMENTRule();
 	}
 	
 	//terminal SL_COMMENT:

@@ -27,10 +27,10 @@ import ru.spbstu.application.configurator.model.infoProject.Tenant;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link ru.spbstu.application.configurator.model.infoProject.impl.TenantImpl#getFeatures1 <em>Features1</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -460,4 +460,15 @@
 			<newWizardShortcut id="ru.spbstu.application.configurator.model.ui.wizard.InfoProjectNewProjectWizard"/>
 		</perspectiveExtension>
 	</extension>
+ <extension
+       id="customview"
+       point="org.eclipse.ui.views">
+    <view
+          id="ru.spbstu.application.configurator.model.ui.customview"
+          name="YAML problems"
+          class="ru.spbstu.application.configurator.model.ui.InfoProjectExecutableExtensionFactory:ru.spbstu.application.configurator.model.ui.customview.CustomView"
+			
+          restorable="true">
+    </view>
+ </extension>
 </plugin>

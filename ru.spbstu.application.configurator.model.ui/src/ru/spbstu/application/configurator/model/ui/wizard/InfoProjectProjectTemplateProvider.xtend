@@ -22,9 +22,11 @@ final class InfoProject {
 		generator.generate(new PluginProjectFactory => [
 			projectName = projectInfo.projectName
 			location = projectInfo.locationPath
-			builderIds += JavaCore.BUILDER_ID
+			builderIds += XtextProjectHelper.BUILDER_ID
+			projectNatures += XtextProjectHelper.NATURE_ID
 			folders += "config"
 			folders +="data"
+			folders +="lib"
 			folders +="config//custom-presentations"
 			folders +="config//data-model-config"
             folders +="config//exports"

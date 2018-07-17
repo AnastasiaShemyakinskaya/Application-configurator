@@ -12,10 +12,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link ru.spbstu.application.configurator.model.infoProject.Type#getValue <em>Value</em>}</li>
  * </ul>
- * </p>
  *
  * @see ru.spbstu.application.configurator.model.infoProject.InfoProjectPackage#getType()
  * @model

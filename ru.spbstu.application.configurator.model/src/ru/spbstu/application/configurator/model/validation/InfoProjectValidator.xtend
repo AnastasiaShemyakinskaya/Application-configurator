@@ -3,6 +3,11 @@
  */
 package ru.spbstu.application.configurator.model.validation
 
+import org.eclipse.xtext.validation.Check
+import ru.spbstu.application.configurator.model.infoProject.Include
+import org.eclipse.core.resources.ResourcesPlugin
+import org.eclipse.core.runtime.Path
+
 
 /**
  * This class contains custom validation rules. 
@@ -10,16 +15,6 @@ package ru.spbstu.application.configurator.model.validation
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#validation
  */
 class InfoProjectValidator extends AbstractInfoProjectValidator {
-	
-//	public static val INVALID_NAME = 'invalidName'
-//
-//	@Check
-//	def checkGreetingStartsWithCapital(Greeting greeting) {
-//		if (!Character.isUpperCase(greeting.name.charAt(0))) {
-//			warning('Name should start with a capital', 
-//					InfoProjectPackage.Literals.GREETING__NAME,
-//					INVALID_NAME)
-//		}
-//	}
+		
 	
 }

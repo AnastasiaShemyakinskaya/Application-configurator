@@ -15,14 +15,23 @@ import ru.spbstu.application.configurator.model.infoProject.Application;
 import ru.spbstu.application.configurator.model.infoProject.ArchiveType;
 import ru.spbstu.application.configurator.model.infoProject.Category;
 import ru.spbstu.application.configurator.model.infoProject.Description;
+import ru.spbstu.application.configurator.model.infoProject.EnumCOD;
+import ru.spbstu.application.configurator.model.infoProject.EnumMR;
 import ru.spbstu.application.configurator.model.infoProject.FeatureName;
 import ru.spbstu.application.configurator.model.infoProject.Hold;
 import ru.spbstu.application.configurator.model.infoProject.HoldType;
+import ru.spbstu.application.configurator.model.infoProject.Include;
 import ru.spbstu.application.configurator.model.infoProject.InfoProjectFactory;
 import ru.spbstu.application.configurator.model.infoProject.InfoProjectPackage;
+import ru.spbstu.application.configurator.model.infoProject.IngestNode;
+import ru.spbstu.application.configurator.model.infoProject.LogLevel;
 import ru.spbstu.application.configurator.model.infoProject.Model;
+import ru.spbstu.application.configurator.model.infoProject.Namespace;
+import ru.spbstu.application.configurator.model.infoProject.Prefix;
 import ru.spbstu.application.configurator.model.infoProject.Tenant;
 import ru.spbstu.application.configurator.model.infoProject.Type;
+import ru.spbstu.application.configurator.model.infoProject.TypeAttribute;
+import ru.spbstu.application.configurator.model.infoProject.Uri;
 import ru.spbstu.application.configurator.model.infoProject.Version;
 import ru.spbstu.application.configurator.model.infoProject.enumOfArchiveType;
 import ru.spbstu.application.configurator.model.infoProject.enumOfTypes;
@@ -48,6 +57,27 @@ public class InfoProjectPackageImpl extends EPackageImpl implements InfoProjectP
    * @generated
    */
   private EClass versionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass namespaceEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass prefixEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass uriEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -124,6 +154,48 @@ public class InfoProjectPackageImpl extends EPackageImpl implements InfoProjectP
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass typeAttributeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass includeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass ingestNodeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass enumCODEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass enumMREClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass logLevelEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EEnum enumOfArchiveTypeEEnum = null;
 
   /**
@@ -162,7 +234,7 @@ public class InfoProjectPackageImpl extends EPackageImpl implements InfoProjectP
 
   /**
    * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-   * 
+   *
    * <p>This method is used to initialize {@link InfoProjectPackage#eINSTANCE} when that field is accessed.
    * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
    * <!-- begin-user-doc -->
@@ -177,7 +249,8 @@ public class InfoProjectPackageImpl extends EPackageImpl implements InfoProjectP
     if (isInited) return (InfoProjectPackage)EPackage.Registry.INSTANCE.getEPackage(InfoProjectPackage.eNS_URI);
 
     // Obtain or create and register package
-    InfoProjectPackageImpl theInfoProjectPackage = (InfoProjectPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof InfoProjectPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new InfoProjectPackageImpl());
+    Object registeredInfoProjectPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+    InfoProjectPackageImpl theInfoProjectPackage = registeredInfoProjectPackage instanceof InfoProjectPackageImpl ? (InfoProjectPackageImpl)registeredInfoProjectPackage : new InfoProjectPackageImpl();
 
     isInited = true;
 
@@ -190,7 +263,6 @@ public class InfoProjectPackageImpl extends EPackageImpl implements InfoProjectP
     // Mark meta-data to indicate it can't be changed
     theInfoProjectPackage.freeze();
 
-  
     // Update the registry and return the package
     EPackage.Registry.INSTANCE.put(InfoProjectPackage.eNS_URI, theInfoProjectPackage);
     return theInfoProjectPackage;
@@ -234,6 +306,66 @@ public class InfoProjectPackageImpl extends EPackageImpl implements InfoProjectP
   public EAttribute getVersion_Name()
   {
     return (EAttribute)versionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getNamespace()
+  {
+    return namespaceEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getNamespace_Feature()
+  {
+    return (EReference)namespaceEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPrefix()
+  {
+    return prefixEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPrefix_Name()
+  {
+    return (EAttribute)prefixEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getUri()
+  {
+    return uriEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getUri_Name()
+  {
+    return (EAttribute)uriEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -471,6 +603,126 @@ public class InfoProjectPackageImpl extends EPackageImpl implements InfoProjectP
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getTypeAttribute()
+  {
+    return typeAttributeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTypeAttribute_Name()
+  {
+    return (EAttribute)typeAttributeEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getInclude()
+  {
+    return includeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getInclude_Files()
+  {
+    return (EAttribute)includeEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getIngestNode()
+  {
+    return ingestNodeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getIngestNode_Features()
+  {
+    return (EReference)ingestNodeEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getEnumCOD()
+  {
+    return enumCODEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getEnumCOD_Name()
+  {
+    return (EAttribute)enumCODEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getEnumMR()
+  {
+    return enumMREClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getEnumMR_Name()
+  {
+    return (EAttribute)enumMREClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLogLevel()
+  {
+    return logLevelEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLogLevel_Name()
+  {
+    return (EAttribute)logLevelEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EEnum getenumOfArchiveType()
   {
     return enumOfArchiveTypeEEnum;
@@ -522,6 +774,15 @@ public class InfoProjectPackageImpl extends EPackageImpl implements InfoProjectP
     versionEClass = createEClass(VERSION);
     createEAttribute(versionEClass, VERSION__NAME);
 
+    namespaceEClass = createEClass(NAMESPACE);
+    createEReference(namespaceEClass, NAMESPACE__FEATURE);
+
+    prefixEClass = createEClass(PREFIX);
+    createEAttribute(prefixEClass, PREFIX__NAME);
+
+    uriEClass = createEClass(URI);
+    createEAttribute(uriEClass, URI__NAME);
+
     featureNameEClass = createEClass(FEATURE_NAME);
     createEAttribute(featureNameEClass, FEATURE_NAME__NAME);
 
@@ -554,6 +815,24 @@ public class InfoProjectPackageImpl extends EPackageImpl implements InfoProjectP
 
     holdTypeEClass = createEClass(HOLD_TYPE);
     createEReference(holdTypeEClass, HOLD_TYPE__FEATURES);
+
+    typeAttributeEClass = createEClass(TYPE_ATTRIBUTE);
+    createEAttribute(typeAttributeEClass, TYPE_ATTRIBUTE__NAME);
+
+    includeEClass = createEClass(INCLUDE);
+    createEAttribute(includeEClass, INCLUDE__FILES);
+
+    ingestNodeEClass = createEClass(INGEST_NODE);
+    createEReference(ingestNodeEClass, INGEST_NODE__FEATURES);
+
+    enumCODEClass = createEClass(ENUM_COD);
+    createEAttribute(enumCODEClass, ENUM_COD__NAME);
+
+    enumMREClass = createEClass(ENUM_MR);
+    createEAttribute(enumMREClass, ENUM_MR__NAME);
+
+    logLevelEClass = createEClass(LOG_LEVEL);
+    createEAttribute(logLevelEClass, LOG_LEVEL__NAME);
 
     // Create enums
     enumOfArchiveTypeEEnum = createEEnum(ENUM_OF_ARCHIVE_TYPE);
@@ -597,6 +876,15 @@ public class InfoProjectPackageImpl extends EPackageImpl implements InfoProjectP
     initEClass(versionEClass, Version.class, "Version", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getVersion_Name(), ecorePackage.getEString(), "name", null, 0, 1, Version.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(namespaceEClass, Namespace.class, "Namespace", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getNamespace_Feature(), ecorePackage.getEObject(), null, "feature", null, 0, -1, Namespace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(prefixEClass, Prefix.class, "Prefix", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getPrefix_Name(), ecorePackage.getEString(), "name", null, 0, 1, Prefix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(uriEClass, Uri.class, "Uri", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getUri_Name(), ecorePackage.getEString(), "name", null, 0, 1, Uri.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(featureNameEClass, FeatureName.class, "FeatureName", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getFeatureName_Name(), ecorePackage.getEString(), "name", null, 0, 1, FeatureName.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -628,7 +916,25 @@ public class InfoProjectPackageImpl extends EPackageImpl implements InfoProjectP
     initEAttribute(getType_Value(), this.getenumOfTypes(), "value", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(holdTypeEClass, HoldType.class, "HoldType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getHoldType_Features(), this.getType(), null, "features", null, 0, -1, HoldType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getHoldType_Features(), ecorePackage.getEObject(), null, "features", null, 0, -1, HoldType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(typeAttributeEClass, TypeAttribute.class, "TypeAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTypeAttribute_Name(), ecorePackage.getEString(), "name", null, 0, 1, TypeAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(includeEClass, Include.class, "Include", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getInclude_Files(), ecorePackage.getEString(), "files", null, 0, -1, Include.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(ingestNodeEClass, IngestNode.class, "IngestNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getIngestNode_Features(), ecorePackage.getEObject(), null, "features", null, 0, -1, IngestNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(enumCODEClass, EnumCOD.class, "EnumCOD", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getEnumCOD_Name(), ecorePackage.getEString(), "name", null, 0, 1, EnumCOD.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(enumMREClass, EnumMR.class, "EnumMR", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getEnumMR_Name(), ecorePackage.getEString(), "name", null, 0, 1, EnumMR.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(logLevelEClass, LogLevel.class, "LogLevel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getLogLevel_Name(), ecorePackage.getEString(), "name", null, 0, 1, LogLevel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
     initEEnum(enumOfArchiveTypeEEnum, enumOfArchiveType.class, "enumOfArchiveType");

@@ -42,6 +42,33 @@ public interface InfoProjectFactory extends EFactory
   Version createVersion();
 
   /**
+   * Returns a new object of class '<em>Namespace</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Namespace</em>'.
+   * @generated
+   */
+  Namespace createNamespace();
+
+  /**
+   * Returns a new object of class '<em>Prefix</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Prefix</em>'.
+   * @generated
+   */
+  Prefix createPrefix();
+
+  /**
+   * Returns a new object of class '<em>Uri</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Uri</em>'.
+   * @generated
+   */
+  Uri createUri();
+
+  /**
    * Returns a new object of class '<em>Feature Name</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -130,6 +157,60 @@ public interface InfoProjectFactory extends EFactory
    * @generated
    */
   HoldType createHoldType();
+
+  /**
+   * Returns a new object of class '<em>Type Attribute</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Type Attribute</em>'.
+   * @generated
+   */
+  TypeAttribute createTypeAttribute();
+
+  /**
+   * Returns a new object of class '<em>Include</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Include</em>'.
+   * @generated
+   */
+  Include createInclude();
+
+  /**
+   * Returns a new object of class '<em>Ingest Node</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Ingest Node</em>'.
+   * @generated
+   */
+  IngestNode createIngestNode();
+
+  /**
+   * Returns a new object of class '<em>Enum COD</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Enum COD</em>'.
+   * @generated
+   */
+  EnumCOD createEnumCOD();
+
+  /**
+   * Returns a new object of class '<em>Enum MR</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Enum MR</em>'.
+   * @generated
+   */
+  EnumMR createEnumMR();
+
+  /**
+   * Returns a new object of class '<em>Log Level</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Log Level</em>'.
+   * @generated
+   */
+  LogLevel createLogLevel();
 
   /**
    * Returns the package supported by this factory.

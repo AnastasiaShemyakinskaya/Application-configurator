@@ -22,11 +22,12 @@ Require-Bundle: ru.spbstu.application.configurator.model,
  org.eclipse.core.runtime,
  org.eclipse.core.resources,
  org.eclipse.pde.core,
- org.eclipse.ui.forms
-Import-Package: org.apache.log4j
+ org.eclipse.ui.forms,
+ org.apache.log4j
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: ru.spbstu.application.configurator.model.ui.contentassist,
  ru.spbstu.application.configurator.model.ui.internal,
  ru.spbstu.application.configurator.model.ui.quickfix,
  ru.spbstu.application.configurator.model.ui.wizard
 Bundle-Activator: ru.spbstu.application.configurator.model.ui.internal.ModelActivator
+Import-Package: org.apache.log4j

@@ -14,10 +14,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link ru.spbstu.application.configurator.model.infoProject.Tenant#getFeatures1 <em>Features1</em>}</li>
  * </ul>
- * </p>
  *
  * @see ru.spbstu.application.configurator.model.infoProject.InfoProjectPackage#getTenant()
  * @model

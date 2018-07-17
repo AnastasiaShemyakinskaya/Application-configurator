@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -19,7 +20,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import ru.spbstu.application.configurator.model.infoProject.HoldType;
 import ru.spbstu.application.configurator.model.infoProject.InfoProjectPackage;
-import ru.spbstu.application.configurator.model.infoProject.Type;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,10 +27,10 @@ import ru.spbstu.application.configurator.model.infoProject.Type;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link ru.spbstu.application.configurator.model.infoProject.impl.HoldTypeImpl#getFeatures <em>Features</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -44,7 +44,7 @@ public class HoldTypeImpl extends MinimalEObjectImpl.Container implements HoldTy
    * @generated
    * @ordered
    */
-  protected EList<Type> features;
+  protected EList<EObject> features;
 
   /**
    * <!-- begin-user-doc -->
@@ -72,11 +72,11 @@ public class HoldTypeImpl extends MinimalEObjectImpl.Container implements HoldTy
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Type> getFeatures()
+  public EList<EObject> getFeatures()
   {
     if (features == null)
     {
-      features = new EObjectContainmentEList<Type>(Type.class, this, InfoProjectPackage.HOLD_TYPE__FEATURES);
+      features = new EObjectContainmentEList<EObject>(EObject.class, this, InfoProjectPackage.HOLD_TYPE__FEATURES);
     }
     return features;
   }
@@ -126,7 +126,7 @@ public class HoldTypeImpl extends MinimalEObjectImpl.Container implements HoldTy
     {
       case InfoProjectPackage.HOLD_TYPE__FEATURES:
         getFeatures().clear();
-        getFeatures().addAll((Collection<? extends Type>)newValue);
+        getFeatures().addAll((Collection<? extends EObject>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
