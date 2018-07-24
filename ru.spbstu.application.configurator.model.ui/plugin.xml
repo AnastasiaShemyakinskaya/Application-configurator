@@ -459,5 +459,193 @@
 		<perspectiveExtension targetID="org.eclipse.jdt.ui.JavaPerspective">
 			<newWizardShortcut id="ru.spbstu.application.configurator.model.ui.wizard.InfoProjectNewProjectWizard"/>
 		</perspectiveExtension>
+		
+	
+	
+  <perspectiveExtension
+        targetID="org.eclipse.ui.resourcePerspective">
+     <view
+           id="org.eclipse.ui.Navigator"
+           ratio="0.5"
+           relationship="stack"
+           relative="org.eclipse.ui.navigator.ProjectExplorer">
+     </view>
+  </perspectiveExtension>
 	</extension>
+ <extension
+       point="org.eclipse.ui.views">
+    <view
+          class="org.eclipse.ui.navigator.CommonNavigator"
+          icon="icons/InfoProject_icon.png"
+          id="org.eclipse.ui.Navigator"
+          name="InfoProject Navigator">
+    </view>
+ </extension>
+ <extension
+       point="org.eclipse.ui.navigator.viewer">
+    <viewerActionBinding
+          viewerId="org.eclipse.ui.Navigator">
+       <includes>
+          <actionExtension
+                pattern="org.eclipse.ui.navigator.resources.*">
+          </actionExtension>
+       </includes>
+    </viewerActionBinding>
+    <viewerContentBinding
+          viewerId="org.eclipse.ui.Navigator">
+       <includes>
+          <contentExtension
+                pattern="org.eclipse.ui.navigator.resourceContent">
+          </contentExtension>
+          <contentExtension
+                pattern="org.eclipse.ui.navigator.resources.filters.*">
+          </contentExtension>
+          <contentExtension
+                pattern="org.eclipse.ui.navigator.resources.linkHelper">
+          </contentExtension>
+          <contentExtension
+                pattern="org.eclipse.ui.navigator.resources.workingSets">
+          </contentExtension>
+       </includes>
+    </viewerContentBinding>
+    <viewer
+          viewerId="org.eclipse.ui.Navigator">
+    </viewer>
+    <viewerContentBinding
+          viewerId="org.eclipse.ui.Navigator">
+       <includes>
+          <contentExtension
+                pattern="ru.spbstu.application.configurator.model.ui.propertiesContent">
+          </contentExtension>
+          <contentExtension
+                pattern="ru.spbstu.application.configurator.model.ui.folderContent">
+          </contentExtension>
+          <contentExtension
+                pattern="ru.spbstu.application.configurator.model.ui.ymlContent">
+          </contentExtension>
+          <contentExtension
+                pattern="ru.spbstu.application.configurator.model.ui.txtContent">
+          </contentExtension>
+          <contentExtension
+                pattern="ru.spbstu.application.configurator.model.ui.xmlContent">
+          </contentExtension>
+          <contentExtension
+                pattern="ru.spbstu.application.configurator.model.ui.projectContent">
+          </contentExtension></includes>
+    </viewerContentBinding>
+ </extension>
+  <extension
+         point="org.eclipse.ui.navigator.navigatorContent">   
+      <navigatorContent
+            activeByDefault="true"
+            contentProvider="navigatorContent.contentProvider"
+            icon="icons/properties.gif"
+            id="ru.spbstu.application.configurator.model.ui.propertiesContent"
+            labelProvider="navigatorContent.PropertiesLabelProvider"
+            name="Properties File Contents"
+            priority="normal">
+         <triggerPoints>
+         </triggerPoints>
+         <possibleChildren>
+            <and>
+	               <instanceof value="org.eclipse.core.resources.IResource"/>
+	               <test
+	                     forcePluginActivation="true"
+	                     property="org.eclipse.core.resources.extension"
+	                     value="properties"/>
+	        </and>
+         </possibleChildren>
+      </navigatorContent>
+      
+      <navigatorContent
+            activeByDefault="true"
+            contentProvider="navigatorContent.contentProvider"
+            icon="icons/folder.gif"
+            id="ru.spbstu.application.configurator.model.ui.folderContent"
+            labelProvider="navigatorContent.FolderLabelProvider"
+            name="Folder Content"
+            priority="normal">
+            <triggerPoints>     	
+	        </triggerPoints>
+	        <possibleChildren>
+	        <and>
+	               <instanceof  
+                     value="org.eclipse.core.resources.IFolder" /> 
+	           </and>
+         </possibleChildren>
+      </navigatorContent>
+      <navigatorContent
+            activeByDefault="true"
+            contentProvider="navigatorContent.contentProvider"
+            icon="icons/yml.gif"
+            id="ru.spbstu.application.configurator.model.ui.ymlContent"
+            labelProvider="navigatorContent.YMLLabelProvider"
+            name="YML File Content"
+            priority="normal">
+            <triggerPoints>     	
+	        </triggerPoints>
+	        <possibleChildren>
+	        <and>
+	               <instanceof value="org.eclipse.core.resources.IResource"/>
+	               <test
+	                     forcePluginActivation="true"
+	                     property="org.eclipse.core.resources.extension"
+	                     value="yml"/>
+	           </and>
+         </possibleChildren>
+      </navigatorContent>
+      <navigatorContent
+            activeByDefault="true"
+            contentProvider="navigatorContent.contentProvider"
+            icon="icons/txt.gif"
+            id="ru.spbstu.application.configurator.model.ui.txtContent"
+            labelProvider="navigatorContent.TxtLabelProvider"
+            name="TXT File Content"
+            priority="normal">
+         <triggerPoints></triggerPoints>
+         <possibleChildren>
+	        <and>
+	               <instanceof value="org.eclipse.core.resources.IResource"/>
+	               <test
+	                     forcePluginActivation="true"
+	                     property="org.eclipse.core.resources.extension"
+	                     value="txt"/>
+	           </and>
+         </possibleChildren>
+      </navigatorContent>
+      <navigatorContent
+            activeByDefault="true"
+            contentProvider="navigatorContent.contentProvider"
+            icon="icons/xml.gif"
+            id="ru.spbstu.application.configurator.model.ui.xmlContent"
+            labelProvider="navigatorContent.XmlLabelProvider"
+            name="XML File Content"
+            priority="normal">
+         <triggerPoints></triggerPoints>
+         <possibleChildren>
+	        <and>
+	               <instanceof value="org.eclipse.core.resources.IResource"/>
+	               <test
+	                     forcePluginActivation="true"
+	                     property="org.eclipse.core.resources.extension"
+	                     value="xml"/>
+	        </and>
+         </possibleChildren>
+      </navigatorContent>
+      <navigatorContent
+            contentProvider="navigatorContent.contentProvider"
+            icon="icons/InfoProject.gif"
+            id="ru.spbstu.application.configurator.model.ui.projectContent"
+            labelProvider="navigatorContent.ProjectLabelProvider"
+            name="Project Content">
+            <triggerPoints>     	
+	        </triggerPoints>
+	        <possibleChildren>
+	        <and>
+	               <instanceof  
+                     value="org.eclipse.core.resources.IProject" /> 
+	           </and>
+         </possibleChildren>
+      </navigatorContent>
+   </extension>	
 </plugin>

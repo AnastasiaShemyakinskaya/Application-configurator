@@ -1,8 +1,8 @@
 package ru.spbstu.application.configurator.model.ui.wizard;
 
 import java.util.List;
-import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.xtend2.lib.StringConcatenation;
+import org.eclipse.xtext.ui.XtextProjectHelper;
 import org.eclipse.xtext.ui.util.PluginProjectFactory;
 import org.eclipse.xtext.ui.wizard.template.AbstractProjectTemplate;
 import org.eclipse.xtext.ui.wizard.template.IProjectGenerator;
@@ -19,8 +19,10 @@ public final class InfoProject extends AbstractProjectTemplate {
     final Procedure1<PluginProjectFactory> _function = (PluginProjectFactory it) -> {
       it.setProjectName(this.getProjectInfo().getProjectName());
       it.setLocation(this.getProjectInfo().getLocationPath());
+      List<String> _projectNatures = it.getProjectNatures();
+      _projectNatures.add(XtextProjectHelper.NATURE_ID);
       List<String> _builderIds = it.getBuilderIds();
-      _builderIds.add(JavaCore.BUILDER_ID);
+      _builderIds.add(XtextProjectHelper.BUILDER_ID);
       List<String> _folders = it.getFolders();
       _folders.add("config");
       List<String> _folders_1 = it.getFolders();
@@ -36,13 +38,7 @@ public final class InfoProject extends AbstractProjectTemplate {
       StringConcatenation _builder = new StringConcatenation();
       _builder.append("config//configuration.yml");
       StringConcatenation _builder_1 = new StringConcatenation();
-      _builder_1.append("/*");
-      _builder_1.newLine();
-      _builder_1.append(" ");
-      _builder_1.append("* This is an example model of yml configuration");
-      _builder_1.newLine();
-      _builder_1.append(" ");
-      _builder_1.append("*/");
+      _builder_1.append("# This is an example model of yml configuration");
       _builder_1.newLine();
       this.addFile(it, _builder, _builder_1);
       StringConcatenation _builder_2 = new StringConcatenation();

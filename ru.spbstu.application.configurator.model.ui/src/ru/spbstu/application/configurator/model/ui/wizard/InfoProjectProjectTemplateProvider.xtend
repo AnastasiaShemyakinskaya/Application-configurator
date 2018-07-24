@@ -22,7 +22,8 @@ final class InfoProject {
 		generator.generate(new PluginProjectFactory => [
 			projectName = projectInfo.projectName
 			location = projectInfo.locationPath
-			builderIds += JavaCore.BUILDER_ID
+			projectNatures += XtextProjectHelper.NATURE_ID
+			builderIds += XtextProjectHelper.BUILDER_ID
 			folders += "config"
 			folders +="data"
 			folders +="config//custom-presentations"
@@ -30,9 +31,7 @@ final class InfoProject {
             folders +="config//exports"
             folders +="config//searches"
 			addFile('''config//configuration.yml''', '''
-				/*
-				 * This is an example model of yml configuration
-				 */
+				 # This is an example model of yml configuration
 			''')
 			addFile('''config//configuration.properties''', '''
 				/*
