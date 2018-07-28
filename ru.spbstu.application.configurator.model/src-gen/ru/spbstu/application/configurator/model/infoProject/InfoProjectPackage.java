@@ -115,6 +115,90 @@ public interface InfoProjectPackage extends EPackage
   int VERSION_FEATURE_COUNT = 1;
 
   /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.NamespaceImpl <em>Namespace</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.NamespaceImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getNamespace()
+   * @generated
+   */
+  int NAMESPACE = 2;
+
+  /**
+   * The feature id for the '<em><b>Feature</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NAMESPACE__FEATURE = 0;
+
+  /**
+   * The number of structural features of the '<em>Namespace</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NAMESPACE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.PrefixImpl <em>Prefix</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.PrefixImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getPrefix()
+   * @generated
+   */
+  int PREFIX = 3;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PREFIX__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Prefix</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PREFIX_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.UriImpl <em>Uri</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.UriImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getUri()
+   * @generated
+   */
+  int URI = 4;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int URI__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Uri</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int URI_FEATURE_COUNT = 1;
+
+  /**
    * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.FeatureNameImpl <em>Feature Name</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -122,7 +206,7 @@ public interface InfoProjectPackage extends EPackage
    * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getFeatureName()
    * @generated
    */
-  int FEATURE_NAME = 2;
+  int FEATURE_NAME = 5;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -150,7 +234,7 @@ public interface InfoProjectPackage extends EPackage
    * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getApplication()
    * @generated
    */
-  int APPLICATION = 3;
+  int APPLICATION = 6;
 
   /**
    * The feature id for the '<em><b>Features1</b></em>' containment reference list.
@@ -196,16 +280,16 @@ public interface InfoProjectPackage extends EPackage
    * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getTenant()
    * @generated
    */
-  int TENANT = 4;
+  int TENANT = 7;
 
   /**
-   * The feature id for the '<em><b>Features1</b></em>' containment reference list.
+   * The feature id for the '<em><b>Features</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TENANT__FEATURES1 = 0;
+  int TENANT__FEATURES = 0;
 
   /**
    * The number of structural features of the '<em>Tenant</em>' class.
@@ -224,7 +308,7 @@ public interface InfoProjectPackage extends EPackage
    * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getHold()
    * @generated
    */
-  int HOLD = 5;
+  int HOLD = 8;
 
   /**
    * The feature id for the '<em><b>Features1</b></em>' containment reference list.
@@ -261,7 +345,7 @@ public interface InfoProjectPackage extends EPackage
    * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getArchiveType()
    * @generated
    */
-  int ARCHIVE_TYPE = 6;
+  int ARCHIVE_TYPE = 9;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -289,7 +373,7 @@ public interface InfoProjectPackage extends EPackage
    * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getCategory()
    * @generated
    */
-  int CATEGORY = 7;
+  int CATEGORY = 10;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -317,7 +401,7 @@ public interface InfoProjectPackage extends EPackage
    * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getDescription()
    * @generated
    */
-  int DESCRIPTION = 8;
+  int DESCRIPTION = 11;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -345,7 +429,7 @@ public interface InfoProjectPackage extends EPackage
    * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getMCS()
    * @generated
    */
-  int MCS = 9;
+  int MCS = 12;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -373,7 +457,7 @@ public interface InfoProjectPackage extends EPackage
    * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getType()
    * @generated
    */
-  int TYPE = 10;
+  int TYPE = 13;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -401,7 +485,7 @@ public interface InfoProjectPackage extends EPackage
    * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getHoldType()
    * @generated
    */
-  int HOLD_TYPE = 11;
+  int HOLD_TYPE = 14;
 
   /**
    * The feature id for the '<em><b>Features</b></em>' containment reference list.
@@ -422,6 +506,2199 @@ public interface InfoProjectPackage extends EPackage
   int HOLD_TYPE_FEATURE_COUNT = 1;
 
   /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.TypeAttributeImpl <em>Type Attribute</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.TypeAttributeImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getTypeAttribute()
+   * @generated
+   */
+  int TYPE_ATTRIBUTE = 15;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_ATTRIBUTE__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Type Attribute</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPE_ATTRIBUTE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.ReceiveNodeImpl <em>Receive Node</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.ReceiveNodeImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getReceiveNode()
+   * @generated
+   */
+  int RECEIVE_NODE = 16;
+
+  /**
+   * The feature id for the '<em><b>Features</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RECEIVE_NODE__FEATURES = 0;
+
+  /**
+   * The number of structural features of the '<em>Receive Node</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RECEIVE_NODE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.RetentionPolicyImpl <em>Retention Policy</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.RetentionPolicyImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getRetentionPolicy()
+   * @generated
+   */
+  int RETENTION_POLICY = 17;
+
+  /**
+   * The feature id for the '<em><b>Features</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RETENTION_POLICY__FEATURES = 0;
+
+  /**
+   * The number of structural features of the '<em>Retention Policy</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RETENTION_POLICY_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.AgingPeriodImpl <em>Aging Period</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.AgingPeriodImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getAgingPeriod()
+   * @generated
+   */
+  int AGING_PERIOD = 18;
+
+  /**
+   * The feature id for the '<em><b>Features</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AGING_PERIOD__FEATURES = 0;
+
+  /**
+   * The number of structural features of the '<em>Aging Period</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AGING_PERIOD_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.UnitsImpl <em>Units</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.UnitsImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getUnits()
+   * @generated
+   */
+  int UNITS = 19;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int UNITS__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Units</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int UNITS_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.ValueImpl <em>Value</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.ValueImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getValue()
+   * @generated
+   */
+  int VALUE = 20;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUE__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Value</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.AgingStrategyImpl <em>Aging Strategy</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.AgingStrategyImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getAgingStrategy()
+   * @generated
+   */
+  int AGING_STRATEGY = 21;
+
+  /**
+   * The feature id for the '<em><b>Features</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AGING_STRATEGY__FEATURES = 0;
+
+  /**
+   * The number of structural features of the '<em>Aging Strategy</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AGING_STRATEGY_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.DispositionStrategyImpl <em>Disposition Strategy</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.DispositionStrategyImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getDispositionStrategy()
+   * @generated
+   */
+  int DISPOSITION_STRATEGY = 22;
+
+  /**
+   * The feature id for the '<em><b>Features</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DISPOSITION_STRATEGY__FEATURES = 0;
+
+  /**
+   * The number of structural features of the '<em>Disposition Strategy</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DISPOSITION_STRATEGY_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.Space_attrImpl <em>Space attr</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.Space_attrImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getSpace_attr()
+   * @generated
+   */
+  int SPACE_ATTR = 23;
+
+  /**
+   * The feature id for the '<em><b>Features</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SPACE_ATTR__FEATURES = 0;
+
+  /**
+   * The number of structural features of the '<em>Space attr</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SPACE_ATTR_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.CryptoObjectImpl <em>Crypto Object</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.CryptoObjectImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getCryptoObject()
+   * @generated
+   */
+  int CRYPTO_OBJECT = 24;
+
+  /**
+   * The feature id for the '<em><b>Features</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CRYPTO_OBJECT__FEATURES = 0;
+
+  /**
+   * The number of structural features of the '<em>Crypto Object</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CRYPTO_OBJECT_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.ConfigureImpl <em>Configure</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.ConfigureImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getConfigure()
+   * @generated
+   */
+  int CONFIGURE = 25;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONFIGURE__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Configure</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONFIGURE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.PaddingSchemeImpl <em>Padding Scheme</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.PaddingSchemeImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getPaddingScheme()
+   * @generated
+   */
+  int PADDING_SCHEME = 26;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PADDING_SCHEME__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Padding Scheme</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PADDING_SCHEME_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.SecurityProviderImpl <em>Security Provider</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.SecurityProviderImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getSecurityProvider()
+   * @generated
+   */
+  int SECURITY_PROVIDER = 27;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SECURITY_PROVIDER__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Security Provider</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SECURITY_PROVIDER_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.XdbFederationImpl <em>Xdb Federation</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.XdbFederationImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getXdbFederation()
+   * @generated
+   */
+  int XDB_FEDERATION = 28;
+
+  /**
+   * The feature id for the '<em><b>Feature</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int XDB_FEDERATION__FEATURE = 0;
+
+  /**
+   * The number of structural features of the '<em>Xdb Federation</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int XDB_FEDERATION_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.BootstrapImpl <em>Bootstrap</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.BootstrapImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getBootstrap()
+   * @generated
+   */
+  int BOOTSTRAP = 29;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOTSTRAP__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Bootstrap</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOTSTRAP_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.SuperUserPasswordImpl <em>Super User Password</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.SuperUserPasswordImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getSuperUserPassword()
+   * @generated
+   */
+  int SUPER_USER_PASSWORD = 30;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUPER_USER_PASSWORD__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Super User Password</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUPER_USER_PASSWORD_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.XdbDatabaseImpl <em>Xdb Database</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.XdbDatabaseImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getXdbDatabase()
+   * @generated
+   */
+  int XDB_DATABASE = 31;
+
+  /**
+   * The feature id for the '<em><b>Features</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int XDB_DATABASE__FEATURES = 0;
+
+  /**
+   * The number of structural features of the '<em>Xdb Database</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int XDB_DATABASE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.DefaultImpl <em>Default</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.DefaultImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getDefault()
+   * @generated
+   */
+  int DEFAULT = 32;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEFAULT__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Default</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEFAULT_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.AdminPasswordImpl <em>Admin Password</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.AdminPasswordImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getAdminPassword()
+   * @generated
+   */
+  int ADMIN_PASSWORD = 33;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADMIN_PASSWORD__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Admin Password</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADMIN_PASSWORD_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.SpaceRootXdbLibraryImpl <em>Space Root Xdb Library</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.SpaceRootXdbLibraryImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getSpaceRootXdbLibrary()
+   * @generated
+   */
+  int SPACE_ROOT_XDB_LIBRARY = 34;
+
+  /**
+   * The feature id for the '<em><b>Features</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SPACE_ROOT_XDB_LIBRARY__FEATURES = 0;
+
+  /**
+   * The number of structural features of the '<em>Space Root Xdb Library</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SPACE_ROOT_XDB_LIBRARY_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.XdbLibraryImpl <em>Xdb Library</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.XdbLibraryImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getXdbLibrary()
+   * @generated
+   */
+  int XDB_LIBRARY = 35;
+
+  /**
+   * The feature id for the '<em><b>Features</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int XDB_LIBRARY__FEATURES = 0;
+
+  /**
+   * The number of structural features of the '<em>Xdb Library</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int XDB_LIBRARY_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.ParentSpaceRootXdbLibraryImpl <em>Parent Space Root Xdb Library</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.ParentSpaceRootXdbLibraryImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getParentSpaceRootXdbLibrary()
+   * @generated
+   */
+  int PARENT_SPACE_ROOT_XDB_LIBRARY = 36;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARENT_SPACE_ROOT_XDB_LIBRARY__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Parent Space Root Xdb Library</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARENT_SPACE_ROOT_XDB_LIBRARY_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.SubPathImpl <em>Sub Path</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.SubPathImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getSubPath()
+   * @generated
+   */
+  int SUB_PATH = 37;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUB_PATH__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Sub Path</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUB_PATH_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.XdbLibraryPolicyImpl <em>Xdb Library Policy</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.XdbLibraryPolicyImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getXdbLibraryPolicy()
+   * @generated
+   */
+  int XDB_LIBRARY_POLICY = 38;
+
+  /**
+   * The feature id for the '<em><b>Features</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int XDB_LIBRARY_POLICY__FEATURES = 0;
+
+  /**
+   * The number of structural features of the '<em>Xdb Library Policy</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int XDB_LIBRARY_POLICY_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.AipQuotaImpl <em>Aip Quota</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.AipQuotaImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getAipQuota()
+   * @generated
+   */
+  int AIP_QUOTA = 39;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AIP_QUOTA__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Aip Quota</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AIP_QUOTA_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.AiuQuotaImpl <em>Aiu Quota</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.AiuQuotaImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getAiuQuota()
+   * @generated
+   */
+  int AIU_QUOTA = 40;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AIU_QUOTA__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Aiu Quota</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AIU_QUOTA_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.CloseHintDateQueryImpl <em>Close Hint Date Query</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.CloseHintDateQueryImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getCloseHintDateQuery()
+   * @generated
+   */
+  int CLOSE_HINT_DATE_QUERY = 41;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CLOSE_HINT_DATE_QUERY__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Close Hint Date Query</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CLOSE_HINT_DATE_QUERY_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.CloseModeImpl <em>Close Mode</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.CloseModeImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getCloseMode()
+   * @generated
+   */
+  int CLOSE_MODE = 42;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CLOSE_MODE__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Close Mode</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CLOSE_MODE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.ClosePeriodImpl <em>Close Period</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.ClosePeriodImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getClosePeriod()
+   * @generated
+   */
+  int CLOSE_PERIOD = 43;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CLOSE_PERIOD__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Close Period</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CLOSE_PERIOD_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.AiuThresholdImpl <em>Aiu Threshold</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.AiuThresholdImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getAiuThreshold()
+   * @generated
+   */
+  int AIU_THRESHOLD = 44;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AIU_THRESHOLD__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Aiu Threshold</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AIU_THRESHOLD_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.PKeyQueryImpl <em>PKey Query</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.PKeyQueryImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getPKeyQuery()
+   * @generated
+   */
+  int PKEY_QUERY = 45;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PKEY_QUERY__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>PKey Query</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PKEY_QUERY_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.HoldingImpl <em>Holding</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.HoldingImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getHolding()
+   * @generated
+   */
+  int HOLDING = 46;
+
+  /**
+   * The feature id for the '<em><b>Features</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HOLDING__FEATURES = 0;
+
+  /**
+   * The number of structural features of the '<em>Holding</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HOLDING_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.CiStoreImpl <em>Ci Store</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.CiStoreImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getCiStore()
+   * @generated
+   */
+  int CI_STORE = 47;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CI_STORE__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Ci Store</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CI_STORE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.DefaultRetentionClassImpl <em>Default Retention Class</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.DefaultRetentionClassImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getDefaultRetentionClass()
+   * @generated
+   */
+  int DEFAULT_RETENTION_CLASS = 48;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEFAULT_RETENTION_CLASS__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Default Retention Class</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEFAULT_RETENTION_CLASS_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.LogStoreImpl <em>Log Store</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.LogStoreImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getLogStore()
+   * @generated
+   */
+  int LOG_STORE = 49;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOG_STORE__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Log Store</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOG_STORE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.ManagedItemStoreImpl <em>Managed Item Store</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.ManagedItemStoreImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getManagedItemStore()
+   * @generated
+   */
+  int MANAGED_ITEM_STORE = 50;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MANAGED_ITEM_STORE__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Managed Item Store</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MANAGED_ITEM_STORE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.PdiConfigsImpl <em>Pdi Configs</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.PdiConfigsImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getPdiConfigs()
+   * @generated
+   */
+  int PDI_CONFIGS = 51;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PDI_CONFIGS__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Pdi Configs</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PDI_CONFIGS_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.PriorityImpl <em>Priority</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.PriorityImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getPriority()
+   * @generated
+   */
+  int PRIORITY = 52;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRIORITY__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Priority</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRIORITY_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.RenditionStoreImpl <em>Rendition Store</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.RenditionStoreImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getRenditionStore()
+   * @generated
+   */
+  int RENDITION_STORE = 53;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RENDITION_STORE__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Rendition Store</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RENDITION_STORE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.RetentionClassesImpl <em>Retention Classes</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.RetentionClassesImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getRetentionClasses()
+   * @generated
+   */
+  int RETENTION_CLASSES = 54;
+
+  /**
+   * The feature id for the '<em><b>Features</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RETENTION_CLASSES__FEATURES = 0;
+
+  /**
+   * The feature id for the '<em><b>Feature</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RETENTION_CLASSES__FEATURE = 1;
+
+  /**
+   * The number of structural features of the '<em>Retention Classes</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RETENTION_CLASSES_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.PoliciesImpl <em>Policies</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.PoliciesImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getPolicies()
+   * @generated
+   */
+  int POLICIES = 55;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POLICIES__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Policies</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int POLICIES_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.SipStoreImpl <em>Sip Store</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.SipStoreImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getSipStore()
+   * @generated
+   */
+  int SIP_STORE = 56;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIP_STORE__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Sip Store</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIP_STORE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.StagingStoreImpl <em>Staging Store</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.StagingStoreImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getStagingStore()
+   * @generated
+   */
+  int STAGING_STORE = 57;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STAGING_STORE__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Staging Store</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STAGING_STORE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.SubPrioritiesImpl <em>Sub Priorities</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.SubPrioritiesImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getSubPriorities()
+   * @generated
+   */
+  int SUB_PRIORITIES = 58;
+
+  /**
+   * The feature id for the '<em><b>Features</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUB_PRIORITIES__FEATURES = 0;
+
+  /**
+   * The number of structural features of the '<em>Sub Priorities</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUB_PRIORITIES_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.DeadlineImpl <em>Deadline</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.DeadlineImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getDeadline()
+   * @generated
+   */
+  int DEADLINE = 59;
+
+  /**
+   * The feature id for the '<em><b>Features</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEADLINE__FEATURES = 0;
+
+  /**
+   * The number of structural features of the '<em>Deadline</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEADLINE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.XdbLibraryParentImpl <em>Xdb Library Parent</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.XdbLibraryParentImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getXdbLibraryParent()
+   * @generated
+   */
+  int XDB_LIBRARY_PARENT = 60;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int XDB_LIBRARY_PARENT__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Xdb Library Parent</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int XDB_LIBRARY_PARENT_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.XdbModeImpl <em>Xdb Mode</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.XdbModeImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getXdbMode()
+   * @generated
+   */
+  int XDB_MODE = 61;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int XDB_MODE__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Xdb Mode</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int XDB_MODE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.XdbStoreImpl <em>Xdb Store</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.XdbStoreImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getXdbStore()
+   * @generated
+   */
+  int XDB_STORE = 62;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int XDB_STORE__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Xdb Store</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int XDB_STORE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.XmlStoreImpl <em>Xml Store</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.XmlStoreImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getXmlStore()
+   * @generated
+   */
+  int XML_STORE = 63;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int XML_STORE__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Xml Store</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int XML_STORE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.AuditEventImpl <em>Audit Event</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.AuditEventImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getAuditEvent()
+   * @generated
+   */
+  int AUDIT_EVENT = 64;
+
+  /**
+   * The feature id for the '<em><b>Feature</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AUDIT_EVENT__FEATURE = 0;
+
+  /**
+   * The number of structural features of the '<em>Audit Event</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AUDIT_EVENT_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.Application_attrImpl <em>Application attr</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.Application_attrImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getApplication_attr()
+   * @generated
+   */
+  int APPLICATION_ATTR = 65;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int APPLICATION_ATTR__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Application attr</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int APPLICATION_ATTR_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.Tenant_attrImpl <em>Tenant attr</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.Tenant_attrImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getTenant_attr()
+   * @generated
+   */
+  int TENANT_ATTR = 66;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TENANT_ATTR__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Tenant attr</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TENANT_ATTR_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.DeliveryChannelImpl <em>Delivery Channel</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.DeliveryChannelImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getDeliveryChannel()
+   * @generated
+   */
+  int DELIVERY_CHANNEL = 67;
+
+  /**
+   * The feature id for the '<em><b>Feature</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DELIVERY_CHANNEL__FEATURE = 0;
+
+  /**
+   * The number of structural features of the '<em>Delivery Channel</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DELIVERY_CHANNEL_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.FileNameImpl <em>File Name</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.FileNameImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getFileName()
+   * @generated
+   */
+  int FILE_NAME = 68;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FILE_NAME__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>File Name</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FILE_NAME_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.OverwriteImpl <em>Overwrite</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.OverwriteImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getOverwrite()
+   * @generated
+   */
+  int OVERWRITE = 69;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OVERWRITE__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Overwrite</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OVERWRITE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.StoreImpl <em>Store</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.StoreImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getStore()
+   * @generated
+   */
+  int STORE = 70;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STORE__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Store</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STORE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.SuffixImpl <em>Suffix</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.SuffixImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getSuffix()
+   * @generated
+   */
+  int SUFFIX = 71;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUFFIX__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Suffix</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUFFIX_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.ConfirmationImpl <em>Confirmation</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.ConfirmationImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getConfirmation()
+   * @generated
+   */
+  int CONFIRMATION = 72;
+
+  /**
+   * The feature id for the '<em><b>Feature</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONFIRMATION__FEATURE = 0;
+
+  /**
+   * The number of structural features of the '<em>Confirmation</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONFIRMATION_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.DeliveryChannelParametersImpl <em>Delivery Channel Parameters</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.DeliveryChannelParametersImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getDeliveryChannelParameters()
+   * @generated
+   */
+  int DELIVERY_CHANNEL_PARAMETERS = 73;
+
+  /**
+   * The feature id for the '<em><b>Feature</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DELIVERY_CHANNEL_PARAMETERS__FEATURE = 0;
+
+  /**
+   * The number of structural features of the '<em>Delivery Channel Parameters</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DELIVERY_CHANNEL_PARAMETERS_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.Aip_idImpl <em>Aip id</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.Aip_idImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getAip_id()
+   * @generated
+   */
+  int AIP_ID = 74;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AIP_ID__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Aip id</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AIP_ID_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.Ia_conf_datetimeImpl <em>Ia conf datetime</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.Ia_conf_datetimeImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getIa_conf_datetime()
+   * @generated
+   */
+  int IA_CONF_DATETIME = 75;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IA_CONF_DATETIME__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Ia conf datetime</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IA_CONF_DATETIME_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.Ia_conf_typeImpl <em>Ia conf type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.Ia_conf_typeImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getIa_conf_type()
+   * @generated
+   */
+  int IA_CONF_TYPE = 76;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IA_CONF_TYPE__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Ia conf type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IA_CONF_TYPE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.HoldingsImpl <em>Holdings</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.HoldingsImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getHoldings()
+   * @generated
+   */
+  int HOLDINGS = 77;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HOLDINGS__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Holdings</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HOLDINGS_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.TypesImpl <em>Types</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.TypesImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getTypes()
+   * @generated
+   */
+  int TYPES = 78;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPES__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Types</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TYPES_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.HoldingCryptoImpl <em>Holding Crypto</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.HoldingCryptoImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getHoldingCrypto()
+   * @generated
+   */
+  int HOLDING_CRYPTO = 79;
+
+  /**
+   * The feature id for the '<em><b>Feature</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HOLDING_CRYPTO__FEATURE = 0;
+
+  /**
+   * The number of structural features of the '<em>Holding Crypto</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HOLDING_CRYPTO_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.CryptoEncodingImpl <em>Crypto Encoding</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.CryptoEncodingImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getCryptoEncoding()
+   * @generated
+   */
+  int CRYPTO_ENCODING = 80;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CRYPTO_ENCODING__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Crypto Encoding</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CRYPTO_ENCODING_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.CiImpl <em>Ci</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.CiImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getCi()
+   * @generated
+   */
+  int CI = 81;
+
+  /**
+   * The feature id for the '<em><b>Feature</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CI__FEATURE = 0;
+
+  /**
+   * The number of structural features of the '<em>Ci</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CI_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.CryptoEnabledImpl <em>Crypto Enabled</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.CryptoEnabledImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getCryptoEnabled()
+   * @generated
+   */
+  int CRYPTO_ENABLED = 82;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CRYPTO_ENABLED__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Crypto Enabled</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CRYPTO_ENABLED_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.CryptoObject_attrImpl <em>Crypto Object attr</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.CryptoObject_attrImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getCryptoObject_attr()
+   * @generated
+   */
+  int CRYPTO_OBJECT_ATTR = 83;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CRYPTO_OBJECT_ATTR__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Crypto Object attr</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CRYPTO_OBJECT_ATTR_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.PdiImpl <em>Pdi</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.PdiImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getPdi()
+   * @generated
+   */
+  int PDI = 84;
+
+  /**
+   * The feature id for the '<em><b>Feature</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PDI__FEATURE = 0;
+
+  /**
+   * The number of structural features of the '<em>Pdi</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PDI_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.SipImpl <em>Sip</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.SipImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getSip()
+   * @generated
+   */
+  int SIP = 85;
+
+  /**
+   * The feature id for the '<em><b>Feature</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIP__FEATURE = 0;
+
+  /**
+   * The number of structural features of the '<em>Sip</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIP_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.PdisImpl <em>Pdis</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.PdisImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getPdis()
+   * @generated
+   */
+  int PDIS = 86;
+
+  /**
+   * The feature id for the '<em><b>Feature</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PDIS__FEATURE = 0;
+
+  /**
+   * The number of structural features of the '<em>Pdis</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PDIS_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.SchemaImpl <em>Schema</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.SchemaImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getSchema()
+   * @generated
+   */
+  int SCHEMA = 87;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SCHEMA__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Schema</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SCHEMA_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.IncludeImpl <em>Include</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.IncludeImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getInclude()
+   * @generated
+   */
+  int INCLUDE = 88;
+
+  /**
+   * The feature id for the '<em><b>Files</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INCLUDE__FILES = 0;
+
+  /**
+   * The number of structural features of the '<em>Include</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INCLUDE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.IngestNodeImpl <em>Ingest Node</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.IngestNodeImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getIngestNode()
+   * @generated
+   */
+  int INGEST_NODE = 89;
+
+  /**
+   * The feature id for the '<em><b>Features</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INGEST_NODE__FEATURES = 0;
+
+  /**
+   * The number of structural features of the '<em>Ingest Node</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INGEST_NODE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.EnumCODImpl <em>Enum COD</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.EnumCODImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getEnumCOD()
+   * @generated
+   */
+  int ENUM_COD = 90;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENUM_COD__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Enum COD</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENUM_COD_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.EnumMRImpl <em>Enum MR</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.EnumMRImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getEnumMR()
+   * @generated
+   */
+  int ENUM_MR = 91;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENUM_MR__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Enum MR</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ENUM_MR_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.LogLevelImpl <em>Log Level</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.LogLevelImpl
+   * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getLogLevel()
+   * @generated
+   */
+  int LOG_LEVEL = 92;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOG_LEVEL__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Log Level</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LOG_LEVEL_FEATURE_COUNT = 1;
+
+  /**
    * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.enumOfArchiveType <em>enum Of Archive Type</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -429,7 +2706,7 @@ public interface InfoProjectPackage extends EPackage
    * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getenumOfArchiveType()
    * @generated
    */
-  int ENUM_OF_ARCHIVE_TYPE = 12;
+  int ENUM_OF_ARCHIVE_TYPE = 93;
 
   /**
    * The meta object id for the '{@link ru.spbstu.application.configurator.model.infoProject.enumOfTypes <em>enum Of Types</em>}' enum.
@@ -439,7 +2716,7 @@ public interface InfoProjectPackage extends EPackage
    * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getenumOfTypes()
    * @generated
    */
-  int ENUM_OF_TYPES = 13;
+  int ENUM_OF_TYPES = 94;
 
 
   /**
@@ -483,6 +2760,69 @@ public interface InfoProjectPackage extends EPackage
    * @generated
    */
   EAttribute getVersion_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Namespace <em>Namespace</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Namespace</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Namespace
+   * @generated
+   */
+  EClass getNamespace();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link ru.spbstu.application.configurator.model.infoProject.Namespace#getFeature <em>Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Feature</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Namespace#getFeature()
+   * @see #getNamespace()
+   * @generated
+   */
+  EReference getNamespace_Feature();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Prefix <em>Prefix</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Prefix</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Prefix
+   * @generated
+   */
+  EClass getPrefix();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.Prefix#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Prefix#getName()
+   * @see #getPrefix()
+   * @generated
+   */
+  EAttribute getPrefix_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Uri <em>Uri</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Uri</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Uri
+   * @generated
+   */
+  EClass getUri();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.Uri#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Uri#getName()
+   * @see #getUri()
+   * @generated
+   */
+  EAttribute getUri_Name();
 
   /**
    * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.FeatureName <em>Feature Name</em>}'.
@@ -559,15 +2899,15 @@ public interface InfoProjectPackage extends EPackage
   EClass getTenant();
 
   /**
-   * Returns the meta object for the containment reference list '{@link ru.spbstu.application.configurator.model.infoProject.Tenant#getFeatures1 <em>Features1</em>}'.
+   * Returns the meta object for the containment reference list '{@link ru.spbstu.application.configurator.model.infoProject.Tenant#getFeatures <em>Features</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Features1</em>'.
-   * @see ru.spbstu.application.configurator.model.infoProject.Tenant#getFeatures1()
+   * @return the meta object for the containment reference list '<em>Features</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Tenant#getFeatures()
    * @see #getTenant()
    * @generated
    */
-  EReference getTenant_Features1();
+  EReference getTenant_Features();
 
   /**
    * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Hold <em>Hold</em>}'.
@@ -728,6 +3068,1655 @@ public interface InfoProjectPackage extends EPackage
   EReference getHoldType_Features();
 
   /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.TypeAttribute <em>Type Attribute</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Type Attribute</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.TypeAttribute
+   * @generated
+   */
+  EClass getTypeAttribute();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.TypeAttribute#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.TypeAttribute#getName()
+   * @see #getTypeAttribute()
+   * @generated
+   */
+  EAttribute getTypeAttribute_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.ReceiveNode <em>Receive Node</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Receive Node</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.ReceiveNode
+   * @generated
+   */
+  EClass getReceiveNode();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link ru.spbstu.application.configurator.model.infoProject.ReceiveNode#getFeatures <em>Features</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Features</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.ReceiveNode#getFeatures()
+   * @see #getReceiveNode()
+   * @generated
+   */
+  EReference getReceiveNode_Features();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.RetentionPolicy <em>Retention Policy</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Retention Policy</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.RetentionPolicy
+   * @generated
+   */
+  EClass getRetentionPolicy();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link ru.spbstu.application.configurator.model.infoProject.RetentionPolicy#getFeatures <em>Features</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Features</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.RetentionPolicy#getFeatures()
+   * @see #getRetentionPolicy()
+   * @generated
+   */
+  EReference getRetentionPolicy_Features();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.AgingPeriod <em>Aging Period</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Aging Period</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.AgingPeriod
+   * @generated
+   */
+  EClass getAgingPeriod();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link ru.spbstu.application.configurator.model.infoProject.AgingPeriod#getFeatures <em>Features</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Features</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.AgingPeriod#getFeatures()
+   * @see #getAgingPeriod()
+   * @generated
+   */
+  EReference getAgingPeriod_Features();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Units <em>Units</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Units</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Units
+   * @generated
+   */
+  EClass getUnits();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.Units#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Units#getName()
+   * @see #getUnits()
+   * @generated
+   */
+  EAttribute getUnits_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Value <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Value</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Value
+   * @generated
+   */
+  EClass getValue();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.Value#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Value#getName()
+   * @see #getValue()
+   * @generated
+   */
+  EAttribute getValue_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.AgingStrategy <em>Aging Strategy</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Aging Strategy</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.AgingStrategy
+   * @generated
+   */
+  EClass getAgingStrategy();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link ru.spbstu.application.configurator.model.infoProject.AgingStrategy#getFeatures <em>Features</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Features</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.AgingStrategy#getFeatures()
+   * @see #getAgingStrategy()
+   * @generated
+   */
+  EReference getAgingStrategy_Features();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.DispositionStrategy <em>Disposition Strategy</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Disposition Strategy</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.DispositionStrategy
+   * @generated
+   */
+  EClass getDispositionStrategy();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link ru.spbstu.application.configurator.model.infoProject.DispositionStrategy#getFeatures <em>Features</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Features</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.DispositionStrategy#getFeatures()
+   * @see #getDispositionStrategy()
+   * @generated
+   */
+  EReference getDispositionStrategy_Features();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Space_attr <em>Space attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Space attr</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Space_attr
+   * @generated
+   */
+  EClass getSpace_attr();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link ru.spbstu.application.configurator.model.infoProject.Space_attr#getFeatures <em>Features</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Features</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Space_attr#getFeatures()
+   * @see #getSpace_attr()
+   * @generated
+   */
+  EReference getSpace_attr_Features();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.CryptoObject <em>Crypto Object</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Crypto Object</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.CryptoObject
+   * @generated
+   */
+  EClass getCryptoObject();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link ru.spbstu.application.configurator.model.infoProject.CryptoObject#getFeatures <em>Features</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Features</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.CryptoObject#getFeatures()
+   * @see #getCryptoObject()
+   * @generated
+   */
+  EReference getCryptoObject_Features();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Configure <em>Configure</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Configure</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Configure
+   * @generated
+   */
+  EClass getConfigure();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.Configure#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Configure#getName()
+   * @see #getConfigure()
+   * @generated
+   */
+  EAttribute getConfigure_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.PaddingScheme <em>Padding Scheme</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Padding Scheme</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.PaddingScheme
+   * @generated
+   */
+  EClass getPaddingScheme();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.PaddingScheme#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.PaddingScheme#getName()
+   * @see #getPaddingScheme()
+   * @generated
+   */
+  EAttribute getPaddingScheme_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.SecurityProvider <em>Security Provider</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Security Provider</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.SecurityProvider
+   * @generated
+   */
+  EClass getSecurityProvider();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.SecurityProvider#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.SecurityProvider#getName()
+   * @see #getSecurityProvider()
+   * @generated
+   */
+  EAttribute getSecurityProvider_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.XdbFederation <em>Xdb Federation</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Xdb Federation</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.XdbFederation
+   * @generated
+   */
+  EClass getXdbFederation();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link ru.spbstu.application.configurator.model.infoProject.XdbFederation#getFeature <em>Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Feature</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.XdbFederation#getFeature()
+   * @see #getXdbFederation()
+   * @generated
+   */
+  EReference getXdbFederation_Feature();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Bootstrap <em>Bootstrap</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Bootstrap</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Bootstrap
+   * @generated
+   */
+  EClass getBootstrap();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.Bootstrap#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Bootstrap#getName()
+   * @see #getBootstrap()
+   * @generated
+   */
+  EAttribute getBootstrap_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.SuperUserPassword <em>Super User Password</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Super User Password</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.SuperUserPassword
+   * @generated
+   */
+  EClass getSuperUserPassword();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.SuperUserPassword#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.SuperUserPassword#getName()
+   * @see #getSuperUserPassword()
+   * @generated
+   */
+  EAttribute getSuperUserPassword_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.XdbDatabase <em>Xdb Database</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Xdb Database</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.XdbDatabase
+   * @generated
+   */
+  EClass getXdbDatabase();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link ru.spbstu.application.configurator.model.infoProject.XdbDatabase#getFeatures <em>Features</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Features</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.XdbDatabase#getFeatures()
+   * @see #getXdbDatabase()
+   * @generated
+   */
+  EReference getXdbDatabase_Features();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Default <em>Default</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Default</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Default
+   * @generated
+   */
+  EClass getDefault();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.Default#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Default#getName()
+   * @see #getDefault()
+   * @generated
+   */
+  EAttribute getDefault_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.AdminPassword <em>Admin Password</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Admin Password</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.AdminPassword
+   * @generated
+   */
+  EClass getAdminPassword();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.AdminPassword#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.AdminPassword#getName()
+   * @see #getAdminPassword()
+   * @generated
+   */
+  EAttribute getAdminPassword_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.SpaceRootXdbLibrary <em>Space Root Xdb Library</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Space Root Xdb Library</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.SpaceRootXdbLibrary
+   * @generated
+   */
+  EClass getSpaceRootXdbLibrary();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link ru.spbstu.application.configurator.model.infoProject.SpaceRootXdbLibrary#getFeatures <em>Features</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Features</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.SpaceRootXdbLibrary#getFeatures()
+   * @see #getSpaceRootXdbLibrary()
+   * @generated
+   */
+  EReference getSpaceRootXdbLibrary_Features();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.XdbLibrary <em>Xdb Library</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Xdb Library</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.XdbLibrary
+   * @generated
+   */
+  EClass getXdbLibrary();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link ru.spbstu.application.configurator.model.infoProject.XdbLibrary#getFeatures <em>Features</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Features</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.XdbLibrary#getFeatures()
+   * @see #getXdbLibrary()
+   * @generated
+   */
+  EReference getXdbLibrary_Features();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.ParentSpaceRootXdbLibrary <em>Parent Space Root Xdb Library</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Parent Space Root Xdb Library</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.ParentSpaceRootXdbLibrary
+   * @generated
+   */
+  EClass getParentSpaceRootXdbLibrary();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.ParentSpaceRootXdbLibrary#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.ParentSpaceRootXdbLibrary#getName()
+   * @see #getParentSpaceRootXdbLibrary()
+   * @generated
+   */
+  EAttribute getParentSpaceRootXdbLibrary_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.SubPath <em>Sub Path</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Sub Path</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.SubPath
+   * @generated
+   */
+  EClass getSubPath();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.SubPath#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.SubPath#getName()
+   * @see #getSubPath()
+   * @generated
+   */
+  EAttribute getSubPath_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.XdbLibraryPolicy <em>Xdb Library Policy</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Xdb Library Policy</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.XdbLibraryPolicy
+   * @generated
+   */
+  EClass getXdbLibraryPolicy();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link ru.spbstu.application.configurator.model.infoProject.XdbLibraryPolicy#getFeatures <em>Features</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Features</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.XdbLibraryPolicy#getFeatures()
+   * @see #getXdbLibraryPolicy()
+   * @generated
+   */
+  EReference getXdbLibraryPolicy_Features();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.AipQuota <em>Aip Quota</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Aip Quota</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.AipQuota
+   * @generated
+   */
+  EClass getAipQuota();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.AipQuota#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.AipQuota#getName()
+   * @see #getAipQuota()
+   * @generated
+   */
+  EAttribute getAipQuota_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.AiuQuota <em>Aiu Quota</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Aiu Quota</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.AiuQuota
+   * @generated
+   */
+  EClass getAiuQuota();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.AiuQuota#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.AiuQuota#getName()
+   * @see #getAiuQuota()
+   * @generated
+   */
+  EAttribute getAiuQuota_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.CloseHintDateQuery <em>Close Hint Date Query</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Close Hint Date Query</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.CloseHintDateQuery
+   * @generated
+   */
+  EClass getCloseHintDateQuery();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.CloseHintDateQuery#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.CloseHintDateQuery#getName()
+   * @see #getCloseHintDateQuery()
+   * @generated
+   */
+  EAttribute getCloseHintDateQuery_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.CloseMode <em>Close Mode</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Close Mode</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.CloseMode
+   * @generated
+   */
+  EClass getCloseMode();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.CloseMode#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.CloseMode#getName()
+   * @see #getCloseMode()
+   * @generated
+   */
+  EAttribute getCloseMode_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.ClosePeriod <em>Close Period</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Close Period</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.ClosePeriod
+   * @generated
+   */
+  EClass getClosePeriod();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.ClosePeriod#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.ClosePeriod#getName()
+   * @see #getClosePeriod()
+   * @generated
+   */
+  EAttribute getClosePeriod_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.AiuThreshold <em>Aiu Threshold</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Aiu Threshold</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.AiuThreshold
+   * @generated
+   */
+  EClass getAiuThreshold();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.AiuThreshold#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.AiuThreshold#getName()
+   * @see #getAiuThreshold()
+   * @generated
+   */
+  EAttribute getAiuThreshold_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.PKeyQuery <em>PKey Query</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>PKey Query</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.PKeyQuery
+   * @generated
+   */
+  EClass getPKeyQuery();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.PKeyQuery#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.PKeyQuery#getName()
+   * @see #getPKeyQuery()
+   * @generated
+   */
+  EAttribute getPKeyQuery_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Holding <em>Holding</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Holding</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Holding
+   * @generated
+   */
+  EClass getHolding();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link ru.spbstu.application.configurator.model.infoProject.Holding#getFeatures <em>Features</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Features</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Holding#getFeatures()
+   * @see #getHolding()
+   * @generated
+   */
+  EReference getHolding_Features();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.CiStore <em>Ci Store</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Ci Store</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.CiStore
+   * @generated
+   */
+  EClass getCiStore();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.CiStore#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.CiStore#getName()
+   * @see #getCiStore()
+   * @generated
+   */
+  EAttribute getCiStore_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.DefaultRetentionClass <em>Default Retention Class</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Default Retention Class</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.DefaultRetentionClass
+   * @generated
+   */
+  EClass getDefaultRetentionClass();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.DefaultRetentionClass#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.DefaultRetentionClass#getName()
+   * @see #getDefaultRetentionClass()
+   * @generated
+   */
+  EAttribute getDefaultRetentionClass_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.LogStore <em>Log Store</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Log Store</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.LogStore
+   * @generated
+   */
+  EClass getLogStore();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.LogStore#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.LogStore#getName()
+   * @see #getLogStore()
+   * @generated
+   */
+  EAttribute getLogStore_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.ManagedItemStore <em>Managed Item Store</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Managed Item Store</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.ManagedItemStore
+   * @generated
+   */
+  EClass getManagedItemStore();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.ManagedItemStore#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.ManagedItemStore#getName()
+   * @see #getManagedItemStore()
+   * @generated
+   */
+  EAttribute getManagedItemStore_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.PdiConfigs <em>Pdi Configs</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Pdi Configs</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.PdiConfigs
+   * @generated
+   */
+  EClass getPdiConfigs();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.PdiConfigs#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.PdiConfigs#getName()
+   * @see #getPdiConfigs()
+   * @generated
+   */
+  EAttribute getPdiConfigs_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Priority <em>Priority</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Priority</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Priority
+   * @generated
+   */
+  EClass getPriority();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.Priority#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Priority#getName()
+   * @see #getPriority()
+   * @generated
+   */
+  EAttribute getPriority_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.RenditionStore <em>Rendition Store</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Rendition Store</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.RenditionStore
+   * @generated
+   */
+  EClass getRenditionStore();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.RenditionStore#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.RenditionStore#getName()
+   * @see #getRenditionStore()
+   * @generated
+   */
+  EAttribute getRenditionStore_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.RetentionClasses <em>Retention Classes</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Retention Classes</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.RetentionClasses
+   * @generated
+   */
+  EClass getRetentionClasses();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link ru.spbstu.application.configurator.model.infoProject.RetentionClasses#getFeatures <em>Features</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Features</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.RetentionClasses#getFeatures()
+   * @see #getRetentionClasses()
+   * @generated
+   */
+  EReference getRetentionClasses_Features();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link ru.spbstu.application.configurator.model.infoProject.RetentionClasses#getFeature <em>Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Feature</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.RetentionClasses#getFeature()
+   * @see #getRetentionClasses()
+   * @generated
+   */
+  EReference getRetentionClasses_Feature();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Policies <em>Policies</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Policies</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Policies
+   * @generated
+   */
+  EClass getPolicies();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.Policies#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Policies#getName()
+   * @see #getPolicies()
+   * @generated
+   */
+  EAttribute getPolicies_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.SipStore <em>Sip Store</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Sip Store</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.SipStore
+   * @generated
+   */
+  EClass getSipStore();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.SipStore#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.SipStore#getName()
+   * @see #getSipStore()
+   * @generated
+   */
+  EAttribute getSipStore_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.StagingStore <em>Staging Store</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Staging Store</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.StagingStore
+   * @generated
+   */
+  EClass getStagingStore();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.StagingStore#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.StagingStore#getName()
+   * @see #getStagingStore()
+   * @generated
+   */
+  EAttribute getStagingStore_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.SubPriorities <em>Sub Priorities</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Sub Priorities</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.SubPriorities
+   * @generated
+   */
+  EClass getSubPriorities();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link ru.spbstu.application.configurator.model.infoProject.SubPriorities#getFeatures <em>Features</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Features</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.SubPriorities#getFeatures()
+   * @see #getSubPriorities()
+   * @generated
+   */
+  EReference getSubPriorities_Features();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Deadline <em>Deadline</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Deadline</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Deadline
+   * @generated
+   */
+  EClass getDeadline();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link ru.spbstu.application.configurator.model.infoProject.Deadline#getFeatures <em>Features</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Features</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Deadline#getFeatures()
+   * @see #getDeadline()
+   * @generated
+   */
+  EReference getDeadline_Features();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.XdbLibraryParent <em>Xdb Library Parent</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Xdb Library Parent</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.XdbLibraryParent
+   * @generated
+   */
+  EClass getXdbLibraryParent();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.XdbLibraryParent#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.XdbLibraryParent#getName()
+   * @see #getXdbLibraryParent()
+   * @generated
+   */
+  EAttribute getXdbLibraryParent_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.XdbMode <em>Xdb Mode</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Xdb Mode</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.XdbMode
+   * @generated
+   */
+  EClass getXdbMode();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.XdbMode#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.XdbMode#getName()
+   * @see #getXdbMode()
+   * @generated
+   */
+  EAttribute getXdbMode_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.XdbStore <em>Xdb Store</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Xdb Store</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.XdbStore
+   * @generated
+   */
+  EClass getXdbStore();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.XdbStore#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.XdbStore#getName()
+   * @see #getXdbStore()
+   * @generated
+   */
+  EAttribute getXdbStore_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.XmlStore <em>Xml Store</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Xml Store</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.XmlStore
+   * @generated
+   */
+  EClass getXmlStore();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.XmlStore#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.XmlStore#getName()
+   * @see #getXmlStore()
+   * @generated
+   */
+  EAttribute getXmlStore_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.AuditEvent <em>Audit Event</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Audit Event</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.AuditEvent
+   * @generated
+   */
+  EClass getAuditEvent();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link ru.spbstu.application.configurator.model.infoProject.AuditEvent#getFeature <em>Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Feature</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.AuditEvent#getFeature()
+   * @see #getAuditEvent()
+   * @generated
+   */
+  EReference getAuditEvent_Feature();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Application_attr <em>Application attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Application attr</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Application_attr
+   * @generated
+   */
+  EClass getApplication_attr();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.Application_attr#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Application_attr#getName()
+   * @see #getApplication_attr()
+   * @generated
+   */
+  EAttribute getApplication_attr_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Tenant_attr <em>Tenant attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Tenant attr</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Tenant_attr
+   * @generated
+   */
+  EClass getTenant_attr();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.Tenant_attr#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Tenant_attr#getName()
+   * @see #getTenant_attr()
+   * @generated
+   */
+  EAttribute getTenant_attr_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.DeliveryChannel <em>Delivery Channel</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Delivery Channel</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.DeliveryChannel
+   * @generated
+   */
+  EClass getDeliveryChannel();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link ru.spbstu.application.configurator.model.infoProject.DeliveryChannel#getFeature <em>Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Feature</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.DeliveryChannel#getFeature()
+   * @see #getDeliveryChannel()
+   * @generated
+   */
+  EReference getDeliveryChannel_Feature();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.FileName <em>File Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>File Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.FileName
+   * @generated
+   */
+  EClass getFileName();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.FileName#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.FileName#getName()
+   * @see #getFileName()
+   * @generated
+   */
+  EAttribute getFileName_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Overwrite <em>Overwrite</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Overwrite</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Overwrite
+   * @generated
+   */
+  EClass getOverwrite();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.Overwrite#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Overwrite#getName()
+   * @see #getOverwrite()
+   * @generated
+   */
+  EAttribute getOverwrite_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Store <em>Store</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Store</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Store
+   * @generated
+   */
+  EClass getStore();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.Store#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Store#getName()
+   * @see #getStore()
+   * @generated
+   */
+  EAttribute getStore_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Suffix <em>Suffix</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Suffix</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Suffix
+   * @generated
+   */
+  EClass getSuffix();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.Suffix#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Suffix#getName()
+   * @see #getSuffix()
+   * @generated
+   */
+  EAttribute getSuffix_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Confirmation <em>Confirmation</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Confirmation</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Confirmation
+   * @generated
+   */
+  EClass getConfirmation();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link ru.spbstu.application.configurator.model.infoProject.Confirmation#getFeature <em>Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Feature</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Confirmation#getFeature()
+   * @see #getConfirmation()
+   * @generated
+   */
+  EReference getConfirmation_Feature();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.DeliveryChannelParameters <em>Delivery Channel Parameters</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Delivery Channel Parameters</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.DeliveryChannelParameters
+   * @generated
+   */
+  EClass getDeliveryChannelParameters();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link ru.spbstu.application.configurator.model.infoProject.DeliveryChannelParameters#getFeature <em>Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Feature</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.DeliveryChannelParameters#getFeature()
+   * @see #getDeliveryChannelParameters()
+   * @generated
+   */
+  EReference getDeliveryChannelParameters_Feature();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Aip_id <em>Aip id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Aip id</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Aip_id
+   * @generated
+   */
+  EClass getAip_id();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.Aip_id#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Aip_id#getName()
+   * @see #getAip_id()
+   * @generated
+   */
+  EAttribute getAip_id_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Ia_conf_datetime <em>Ia conf datetime</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Ia conf datetime</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Ia_conf_datetime
+   * @generated
+   */
+  EClass getIa_conf_datetime();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.Ia_conf_datetime#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Ia_conf_datetime#getName()
+   * @see #getIa_conf_datetime()
+   * @generated
+   */
+  EAttribute getIa_conf_datetime_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Ia_conf_type <em>Ia conf type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Ia conf type</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Ia_conf_type
+   * @generated
+   */
+  EClass getIa_conf_type();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.Ia_conf_type#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Ia_conf_type#getName()
+   * @see #getIa_conf_type()
+   * @generated
+   */
+  EAttribute getIa_conf_type_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Holdings <em>Holdings</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Holdings</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Holdings
+   * @generated
+   */
+  EClass getHoldings();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.Holdings#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Holdings#getName()
+   * @see #getHoldings()
+   * @generated
+   */
+  EAttribute getHoldings_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Types <em>Types</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Types</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Types
+   * @generated
+   */
+  EClass getTypes();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.Types#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Types#getName()
+   * @see #getTypes()
+   * @generated
+   */
+  EAttribute getTypes_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.HoldingCrypto <em>Holding Crypto</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Holding Crypto</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.HoldingCrypto
+   * @generated
+   */
+  EClass getHoldingCrypto();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link ru.spbstu.application.configurator.model.infoProject.HoldingCrypto#getFeature <em>Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Feature</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.HoldingCrypto#getFeature()
+   * @see #getHoldingCrypto()
+   * @generated
+   */
+  EReference getHoldingCrypto_Feature();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.CryptoEncoding <em>Crypto Encoding</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Crypto Encoding</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.CryptoEncoding
+   * @generated
+   */
+  EClass getCryptoEncoding();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.CryptoEncoding#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.CryptoEncoding#getName()
+   * @see #getCryptoEncoding()
+   * @generated
+   */
+  EAttribute getCryptoEncoding_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Ci <em>Ci</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Ci</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Ci
+   * @generated
+   */
+  EClass getCi();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link ru.spbstu.application.configurator.model.infoProject.Ci#getFeature <em>Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Feature</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Ci#getFeature()
+   * @see #getCi()
+   * @generated
+   */
+  EReference getCi_Feature();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.CryptoEnabled <em>Crypto Enabled</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Crypto Enabled</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.CryptoEnabled
+   * @generated
+   */
+  EClass getCryptoEnabled();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.CryptoEnabled#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.CryptoEnabled#getName()
+   * @see #getCryptoEnabled()
+   * @generated
+   */
+  EAttribute getCryptoEnabled_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.CryptoObject_attr <em>Crypto Object attr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Crypto Object attr</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.CryptoObject_attr
+   * @generated
+   */
+  EClass getCryptoObject_attr();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.CryptoObject_attr#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.CryptoObject_attr#getName()
+   * @see #getCryptoObject_attr()
+   * @generated
+   */
+  EAttribute getCryptoObject_attr_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Pdi <em>Pdi</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Pdi</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Pdi
+   * @generated
+   */
+  EClass getPdi();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link ru.spbstu.application.configurator.model.infoProject.Pdi#getFeature <em>Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Feature</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Pdi#getFeature()
+   * @see #getPdi()
+   * @generated
+   */
+  EReference getPdi_Feature();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Sip <em>Sip</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Sip</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Sip
+   * @generated
+   */
+  EClass getSip();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link ru.spbstu.application.configurator.model.infoProject.Sip#getFeature <em>Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Feature</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Sip#getFeature()
+   * @see #getSip()
+   * @generated
+   */
+  EReference getSip_Feature();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Pdis <em>Pdis</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Pdis</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Pdis
+   * @generated
+   */
+  EClass getPdis();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link ru.spbstu.application.configurator.model.infoProject.Pdis#getFeature <em>Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Feature</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Pdis#getFeature()
+   * @see #getPdis()
+   * @generated
+   */
+  EReference getPdis_Feature();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Schema <em>Schema</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Schema</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Schema
+   * @generated
+   */
+  EClass getSchema();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.Schema#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Schema#getName()
+   * @see #getSchema()
+   * @generated
+   */
+  EAttribute getSchema_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.Include <em>Include</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Include</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Include
+   * @generated
+   */
+  EClass getInclude();
+
+  /**
+   * Returns the meta object for the attribute list '{@link ru.spbstu.application.configurator.model.infoProject.Include#getFiles <em>Files</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Files</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.Include#getFiles()
+   * @see #getInclude()
+   * @generated
+   */
+  EAttribute getInclude_Files();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.IngestNode <em>Ingest Node</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Ingest Node</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.IngestNode
+   * @generated
+   */
+  EClass getIngestNode();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link ru.spbstu.application.configurator.model.infoProject.IngestNode#getFeatures <em>Features</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Features</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.IngestNode#getFeatures()
+   * @see #getIngestNode()
+   * @generated
+   */
+  EReference getIngestNode_Features();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.EnumCOD <em>Enum COD</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Enum COD</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.EnumCOD
+   * @generated
+   */
+  EClass getEnumCOD();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.EnumCOD#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.EnumCOD#getName()
+   * @see #getEnumCOD()
+   * @generated
+   */
+  EAttribute getEnumCOD_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.EnumMR <em>Enum MR</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Enum MR</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.EnumMR
+   * @generated
+   */
+  EClass getEnumMR();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.EnumMR#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.EnumMR#getName()
+   * @see #getEnumMR()
+   * @generated
+   */
+  EAttribute getEnumMR_Name();
+
+  /**
+   * Returns the meta object for class '{@link ru.spbstu.application.configurator.model.infoProject.LogLevel <em>Log Level</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Log Level</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.LogLevel
+   * @generated
+   */
+  EClass getLogLevel();
+
+  /**
+   * Returns the meta object for the attribute '{@link ru.spbstu.application.configurator.model.infoProject.LogLevel#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see ru.spbstu.application.configurator.model.infoProject.LogLevel#getName()
+   * @see #getLogLevel()
+   * @generated
+   */
+  EAttribute getLogLevel_Name();
+
+  /**
    * Returns the meta object for enum '{@link ru.spbstu.application.configurator.model.infoProject.enumOfArchiveType <em>enum Of Archive Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -807,6 +4796,60 @@ public interface InfoProjectPackage extends EPackage
     EAttribute VERSION__NAME = eINSTANCE.getVersion_Name();
 
     /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.NamespaceImpl <em>Namespace</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.NamespaceImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getNamespace()
+     * @generated
+     */
+    EClass NAMESPACE = eINSTANCE.getNamespace();
+
+    /**
+     * The meta object literal for the '<em><b>Feature</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference NAMESPACE__FEATURE = eINSTANCE.getNamespace_Feature();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.PrefixImpl <em>Prefix</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.PrefixImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getPrefix()
+     * @generated
+     */
+    EClass PREFIX = eINSTANCE.getPrefix();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PREFIX__NAME = eINSTANCE.getPrefix_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.UriImpl <em>Uri</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.UriImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getUri()
+     * @generated
+     */
+    EClass URI = eINSTANCE.getUri();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute URI__NAME = eINSTANCE.getUri_Name();
+
+    /**
      * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.FeatureNameImpl <em>Feature Name</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -869,12 +4912,12 @@ public interface InfoProjectPackage extends EPackage
     EClass TENANT = eINSTANCE.getTenant();
 
     /**
-     * The meta object literal for the '<em><b>Features1</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TENANT__FEATURES1 = eINSTANCE.getTenant_Features1();
+    EReference TENANT__FEATURES = eINSTANCE.getTenant_Features();
 
     /**
      * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.HoldImpl <em>Hold</em>}' class.
@@ -1009,6 +5052,1418 @@ public interface InfoProjectPackage extends EPackage
      * @generated
      */
     EReference HOLD_TYPE__FEATURES = eINSTANCE.getHoldType_Features();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.TypeAttributeImpl <em>Type Attribute</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.TypeAttributeImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getTypeAttribute()
+     * @generated
+     */
+    EClass TYPE_ATTRIBUTE = eINSTANCE.getTypeAttribute();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TYPE_ATTRIBUTE__NAME = eINSTANCE.getTypeAttribute_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.ReceiveNodeImpl <em>Receive Node</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.ReceiveNodeImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getReceiveNode()
+     * @generated
+     */
+    EClass RECEIVE_NODE = eINSTANCE.getReceiveNode();
+
+    /**
+     * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference RECEIVE_NODE__FEATURES = eINSTANCE.getReceiveNode_Features();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.RetentionPolicyImpl <em>Retention Policy</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.RetentionPolicyImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getRetentionPolicy()
+     * @generated
+     */
+    EClass RETENTION_POLICY = eINSTANCE.getRetentionPolicy();
+
+    /**
+     * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference RETENTION_POLICY__FEATURES = eINSTANCE.getRetentionPolicy_Features();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.AgingPeriodImpl <em>Aging Period</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.AgingPeriodImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getAgingPeriod()
+     * @generated
+     */
+    EClass AGING_PERIOD = eINSTANCE.getAgingPeriod();
+
+    /**
+     * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference AGING_PERIOD__FEATURES = eINSTANCE.getAgingPeriod_Features();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.UnitsImpl <em>Units</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.UnitsImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getUnits()
+     * @generated
+     */
+    EClass UNITS = eINSTANCE.getUnits();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute UNITS__NAME = eINSTANCE.getUnits_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.ValueImpl <em>Value</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.ValueImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getValue()
+     * @generated
+     */
+    EClass VALUE = eINSTANCE.getValue();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute VALUE__NAME = eINSTANCE.getValue_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.AgingStrategyImpl <em>Aging Strategy</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.AgingStrategyImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getAgingStrategy()
+     * @generated
+     */
+    EClass AGING_STRATEGY = eINSTANCE.getAgingStrategy();
+
+    /**
+     * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference AGING_STRATEGY__FEATURES = eINSTANCE.getAgingStrategy_Features();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.DispositionStrategyImpl <em>Disposition Strategy</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.DispositionStrategyImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getDispositionStrategy()
+     * @generated
+     */
+    EClass DISPOSITION_STRATEGY = eINSTANCE.getDispositionStrategy();
+
+    /**
+     * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DISPOSITION_STRATEGY__FEATURES = eINSTANCE.getDispositionStrategy_Features();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.Space_attrImpl <em>Space attr</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.Space_attrImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getSpace_attr()
+     * @generated
+     */
+    EClass SPACE_ATTR = eINSTANCE.getSpace_attr();
+
+    /**
+     * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SPACE_ATTR__FEATURES = eINSTANCE.getSpace_attr_Features();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.CryptoObjectImpl <em>Crypto Object</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.CryptoObjectImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getCryptoObject()
+     * @generated
+     */
+    EClass CRYPTO_OBJECT = eINSTANCE.getCryptoObject();
+
+    /**
+     * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CRYPTO_OBJECT__FEATURES = eINSTANCE.getCryptoObject_Features();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.ConfigureImpl <em>Configure</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.ConfigureImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getConfigure()
+     * @generated
+     */
+    EClass CONFIGURE = eINSTANCE.getConfigure();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CONFIGURE__NAME = eINSTANCE.getConfigure_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.PaddingSchemeImpl <em>Padding Scheme</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.PaddingSchemeImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getPaddingScheme()
+     * @generated
+     */
+    EClass PADDING_SCHEME = eINSTANCE.getPaddingScheme();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PADDING_SCHEME__NAME = eINSTANCE.getPaddingScheme_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.SecurityProviderImpl <em>Security Provider</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.SecurityProviderImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getSecurityProvider()
+     * @generated
+     */
+    EClass SECURITY_PROVIDER = eINSTANCE.getSecurityProvider();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SECURITY_PROVIDER__NAME = eINSTANCE.getSecurityProvider_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.XdbFederationImpl <em>Xdb Federation</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.XdbFederationImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getXdbFederation()
+     * @generated
+     */
+    EClass XDB_FEDERATION = eINSTANCE.getXdbFederation();
+
+    /**
+     * The meta object literal for the '<em><b>Feature</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference XDB_FEDERATION__FEATURE = eINSTANCE.getXdbFederation_Feature();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.BootstrapImpl <em>Bootstrap</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.BootstrapImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getBootstrap()
+     * @generated
+     */
+    EClass BOOTSTRAP = eINSTANCE.getBootstrap();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BOOTSTRAP__NAME = eINSTANCE.getBootstrap_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.SuperUserPasswordImpl <em>Super User Password</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.SuperUserPasswordImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getSuperUserPassword()
+     * @generated
+     */
+    EClass SUPER_USER_PASSWORD = eINSTANCE.getSuperUserPassword();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SUPER_USER_PASSWORD__NAME = eINSTANCE.getSuperUserPassword_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.XdbDatabaseImpl <em>Xdb Database</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.XdbDatabaseImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getXdbDatabase()
+     * @generated
+     */
+    EClass XDB_DATABASE = eINSTANCE.getXdbDatabase();
+
+    /**
+     * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference XDB_DATABASE__FEATURES = eINSTANCE.getXdbDatabase_Features();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.DefaultImpl <em>Default</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.DefaultImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getDefault()
+     * @generated
+     */
+    EClass DEFAULT = eINSTANCE.getDefault();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute DEFAULT__NAME = eINSTANCE.getDefault_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.AdminPasswordImpl <em>Admin Password</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.AdminPasswordImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getAdminPassword()
+     * @generated
+     */
+    EClass ADMIN_PASSWORD = eINSTANCE.getAdminPassword();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ADMIN_PASSWORD__NAME = eINSTANCE.getAdminPassword_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.SpaceRootXdbLibraryImpl <em>Space Root Xdb Library</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.SpaceRootXdbLibraryImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getSpaceRootXdbLibrary()
+     * @generated
+     */
+    EClass SPACE_ROOT_XDB_LIBRARY = eINSTANCE.getSpaceRootXdbLibrary();
+
+    /**
+     * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SPACE_ROOT_XDB_LIBRARY__FEATURES = eINSTANCE.getSpaceRootXdbLibrary_Features();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.XdbLibraryImpl <em>Xdb Library</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.XdbLibraryImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getXdbLibrary()
+     * @generated
+     */
+    EClass XDB_LIBRARY = eINSTANCE.getXdbLibrary();
+
+    /**
+     * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference XDB_LIBRARY__FEATURES = eINSTANCE.getXdbLibrary_Features();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.ParentSpaceRootXdbLibraryImpl <em>Parent Space Root Xdb Library</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.ParentSpaceRootXdbLibraryImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getParentSpaceRootXdbLibrary()
+     * @generated
+     */
+    EClass PARENT_SPACE_ROOT_XDB_LIBRARY = eINSTANCE.getParentSpaceRootXdbLibrary();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PARENT_SPACE_ROOT_XDB_LIBRARY__NAME = eINSTANCE.getParentSpaceRootXdbLibrary_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.SubPathImpl <em>Sub Path</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.SubPathImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getSubPath()
+     * @generated
+     */
+    EClass SUB_PATH = eINSTANCE.getSubPath();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SUB_PATH__NAME = eINSTANCE.getSubPath_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.XdbLibraryPolicyImpl <em>Xdb Library Policy</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.XdbLibraryPolicyImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getXdbLibraryPolicy()
+     * @generated
+     */
+    EClass XDB_LIBRARY_POLICY = eINSTANCE.getXdbLibraryPolicy();
+
+    /**
+     * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference XDB_LIBRARY_POLICY__FEATURES = eINSTANCE.getXdbLibraryPolicy_Features();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.AipQuotaImpl <em>Aip Quota</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.AipQuotaImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getAipQuota()
+     * @generated
+     */
+    EClass AIP_QUOTA = eINSTANCE.getAipQuota();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute AIP_QUOTA__NAME = eINSTANCE.getAipQuota_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.AiuQuotaImpl <em>Aiu Quota</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.AiuQuotaImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getAiuQuota()
+     * @generated
+     */
+    EClass AIU_QUOTA = eINSTANCE.getAiuQuota();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute AIU_QUOTA__NAME = eINSTANCE.getAiuQuota_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.CloseHintDateQueryImpl <em>Close Hint Date Query</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.CloseHintDateQueryImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getCloseHintDateQuery()
+     * @generated
+     */
+    EClass CLOSE_HINT_DATE_QUERY = eINSTANCE.getCloseHintDateQuery();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CLOSE_HINT_DATE_QUERY__NAME = eINSTANCE.getCloseHintDateQuery_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.CloseModeImpl <em>Close Mode</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.CloseModeImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getCloseMode()
+     * @generated
+     */
+    EClass CLOSE_MODE = eINSTANCE.getCloseMode();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CLOSE_MODE__NAME = eINSTANCE.getCloseMode_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.ClosePeriodImpl <em>Close Period</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.ClosePeriodImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getClosePeriod()
+     * @generated
+     */
+    EClass CLOSE_PERIOD = eINSTANCE.getClosePeriod();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CLOSE_PERIOD__NAME = eINSTANCE.getClosePeriod_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.AiuThresholdImpl <em>Aiu Threshold</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.AiuThresholdImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getAiuThreshold()
+     * @generated
+     */
+    EClass AIU_THRESHOLD = eINSTANCE.getAiuThreshold();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute AIU_THRESHOLD__NAME = eINSTANCE.getAiuThreshold_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.PKeyQueryImpl <em>PKey Query</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.PKeyQueryImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getPKeyQuery()
+     * @generated
+     */
+    EClass PKEY_QUERY = eINSTANCE.getPKeyQuery();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PKEY_QUERY__NAME = eINSTANCE.getPKeyQuery_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.HoldingImpl <em>Holding</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.HoldingImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getHolding()
+     * @generated
+     */
+    EClass HOLDING = eINSTANCE.getHolding();
+
+    /**
+     * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference HOLDING__FEATURES = eINSTANCE.getHolding_Features();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.CiStoreImpl <em>Ci Store</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.CiStoreImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getCiStore()
+     * @generated
+     */
+    EClass CI_STORE = eINSTANCE.getCiStore();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CI_STORE__NAME = eINSTANCE.getCiStore_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.DefaultRetentionClassImpl <em>Default Retention Class</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.DefaultRetentionClassImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getDefaultRetentionClass()
+     * @generated
+     */
+    EClass DEFAULT_RETENTION_CLASS = eINSTANCE.getDefaultRetentionClass();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute DEFAULT_RETENTION_CLASS__NAME = eINSTANCE.getDefaultRetentionClass_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.LogStoreImpl <em>Log Store</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.LogStoreImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getLogStore()
+     * @generated
+     */
+    EClass LOG_STORE = eINSTANCE.getLogStore();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LOG_STORE__NAME = eINSTANCE.getLogStore_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.ManagedItemStoreImpl <em>Managed Item Store</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.ManagedItemStoreImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getManagedItemStore()
+     * @generated
+     */
+    EClass MANAGED_ITEM_STORE = eINSTANCE.getManagedItemStore();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MANAGED_ITEM_STORE__NAME = eINSTANCE.getManagedItemStore_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.PdiConfigsImpl <em>Pdi Configs</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.PdiConfigsImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getPdiConfigs()
+     * @generated
+     */
+    EClass PDI_CONFIGS = eINSTANCE.getPdiConfigs();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PDI_CONFIGS__NAME = eINSTANCE.getPdiConfigs_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.PriorityImpl <em>Priority</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.PriorityImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getPriority()
+     * @generated
+     */
+    EClass PRIORITY = eINSTANCE.getPriority();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PRIORITY__NAME = eINSTANCE.getPriority_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.RenditionStoreImpl <em>Rendition Store</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.RenditionStoreImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getRenditionStore()
+     * @generated
+     */
+    EClass RENDITION_STORE = eINSTANCE.getRenditionStore();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute RENDITION_STORE__NAME = eINSTANCE.getRenditionStore_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.RetentionClassesImpl <em>Retention Classes</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.RetentionClassesImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getRetentionClasses()
+     * @generated
+     */
+    EClass RETENTION_CLASSES = eINSTANCE.getRetentionClasses();
+
+    /**
+     * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference RETENTION_CLASSES__FEATURES = eINSTANCE.getRetentionClasses_Features();
+
+    /**
+     * The meta object literal for the '<em><b>Feature</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference RETENTION_CLASSES__FEATURE = eINSTANCE.getRetentionClasses_Feature();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.PoliciesImpl <em>Policies</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.PoliciesImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getPolicies()
+     * @generated
+     */
+    EClass POLICIES = eINSTANCE.getPolicies();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute POLICIES__NAME = eINSTANCE.getPolicies_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.SipStoreImpl <em>Sip Store</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.SipStoreImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getSipStore()
+     * @generated
+     */
+    EClass SIP_STORE = eINSTANCE.getSipStore();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SIP_STORE__NAME = eINSTANCE.getSipStore_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.StagingStoreImpl <em>Staging Store</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.StagingStoreImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getStagingStore()
+     * @generated
+     */
+    EClass STAGING_STORE = eINSTANCE.getStagingStore();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute STAGING_STORE__NAME = eINSTANCE.getStagingStore_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.SubPrioritiesImpl <em>Sub Priorities</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.SubPrioritiesImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getSubPriorities()
+     * @generated
+     */
+    EClass SUB_PRIORITIES = eINSTANCE.getSubPriorities();
+
+    /**
+     * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SUB_PRIORITIES__FEATURES = eINSTANCE.getSubPriorities_Features();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.DeadlineImpl <em>Deadline</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.DeadlineImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getDeadline()
+     * @generated
+     */
+    EClass DEADLINE = eINSTANCE.getDeadline();
+
+    /**
+     * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DEADLINE__FEATURES = eINSTANCE.getDeadline_Features();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.XdbLibraryParentImpl <em>Xdb Library Parent</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.XdbLibraryParentImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getXdbLibraryParent()
+     * @generated
+     */
+    EClass XDB_LIBRARY_PARENT = eINSTANCE.getXdbLibraryParent();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute XDB_LIBRARY_PARENT__NAME = eINSTANCE.getXdbLibraryParent_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.XdbModeImpl <em>Xdb Mode</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.XdbModeImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getXdbMode()
+     * @generated
+     */
+    EClass XDB_MODE = eINSTANCE.getXdbMode();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute XDB_MODE__NAME = eINSTANCE.getXdbMode_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.XdbStoreImpl <em>Xdb Store</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.XdbStoreImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getXdbStore()
+     * @generated
+     */
+    EClass XDB_STORE = eINSTANCE.getXdbStore();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute XDB_STORE__NAME = eINSTANCE.getXdbStore_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.XmlStoreImpl <em>Xml Store</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.XmlStoreImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getXmlStore()
+     * @generated
+     */
+    EClass XML_STORE = eINSTANCE.getXmlStore();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute XML_STORE__NAME = eINSTANCE.getXmlStore_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.AuditEventImpl <em>Audit Event</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.AuditEventImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getAuditEvent()
+     * @generated
+     */
+    EClass AUDIT_EVENT = eINSTANCE.getAuditEvent();
+
+    /**
+     * The meta object literal for the '<em><b>Feature</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference AUDIT_EVENT__FEATURE = eINSTANCE.getAuditEvent_Feature();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.Application_attrImpl <em>Application attr</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.Application_attrImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getApplication_attr()
+     * @generated
+     */
+    EClass APPLICATION_ATTR = eINSTANCE.getApplication_attr();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute APPLICATION_ATTR__NAME = eINSTANCE.getApplication_attr_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.Tenant_attrImpl <em>Tenant attr</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.Tenant_attrImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getTenant_attr()
+     * @generated
+     */
+    EClass TENANT_ATTR = eINSTANCE.getTenant_attr();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TENANT_ATTR__NAME = eINSTANCE.getTenant_attr_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.DeliveryChannelImpl <em>Delivery Channel</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.DeliveryChannelImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getDeliveryChannel()
+     * @generated
+     */
+    EClass DELIVERY_CHANNEL = eINSTANCE.getDeliveryChannel();
+
+    /**
+     * The meta object literal for the '<em><b>Feature</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DELIVERY_CHANNEL__FEATURE = eINSTANCE.getDeliveryChannel_Feature();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.FileNameImpl <em>File Name</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.FileNameImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getFileName()
+     * @generated
+     */
+    EClass FILE_NAME = eINSTANCE.getFileName();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FILE_NAME__NAME = eINSTANCE.getFileName_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.OverwriteImpl <em>Overwrite</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.OverwriteImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getOverwrite()
+     * @generated
+     */
+    EClass OVERWRITE = eINSTANCE.getOverwrite();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute OVERWRITE__NAME = eINSTANCE.getOverwrite_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.StoreImpl <em>Store</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.StoreImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getStore()
+     * @generated
+     */
+    EClass STORE = eINSTANCE.getStore();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute STORE__NAME = eINSTANCE.getStore_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.SuffixImpl <em>Suffix</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.SuffixImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getSuffix()
+     * @generated
+     */
+    EClass SUFFIX = eINSTANCE.getSuffix();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SUFFIX__NAME = eINSTANCE.getSuffix_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.ConfirmationImpl <em>Confirmation</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.ConfirmationImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getConfirmation()
+     * @generated
+     */
+    EClass CONFIRMATION = eINSTANCE.getConfirmation();
+
+    /**
+     * The meta object literal for the '<em><b>Feature</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONFIRMATION__FEATURE = eINSTANCE.getConfirmation_Feature();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.DeliveryChannelParametersImpl <em>Delivery Channel Parameters</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.DeliveryChannelParametersImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getDeliveryChannelParameters()
+     * @generated
+     */
+    EClass DELIVERY_CHANNEL_PARAMETERS = eINSTANCE.getDeliveryChannelParameters();
+
+    /**
+     * The meta object literal for the '<em><b>Feature</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DELIVERY_CHANNEL_PARAMETERS__FEATURE = eINSTANCE.getDeliveryChannelParameters_Feature();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.Aip_idImpl <em>Aip id</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.Aip_idImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getAip_id()
+     * @generated
+     */
+    EClass AIP_ID = eINSTANCE.getAip_id();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute AIP_ID__NAME = eINSTANCE.getAip_id_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.Ia_conf_datetimeImpl <em>Ia conf datetime</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.Ia_conf_datetimeImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getIa_conf_datetime()
+     * @generated
+     */
+    EClass IA_CONF_DATETIME = eINSTANCE.getIa_conf_datetime();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute IA_CONF_DATETIME__NAME = eINSTANCE.getIa_conf_datetime_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.Ia_conf_typeImpl <em>Ia conf type</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.Ia_conf_typeImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getIa_conf_type()
+     * @generated
+     */
+    EClass IA_CONF_TYPE = eINSTANCE.getIa_conf_type();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute IA_CONF_TYPE__NAME = eINSTANCE.getIa_conf_type_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.HoldingsImpl <em>Holdings</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.HoldingsImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getHoldings()
+     * @generated
+     */
+    EClass HOLDINGS = eINSTANCE.getHoldings();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute HOLDINGS__NAME = eINSTANCE.getHoldings_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.TypesImpl <em>Types</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.TypesImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getTypes()
+     * @generated
+     */
+    EClass TYPES = eINSTANCE.getTypes();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TYPES__NAME = eINSTANCE.getTypes_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.HoldingCryptoImpl <em>Holding Crypto</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.HoldingCryptoImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getHoldingCrypto()
+     * @generated
+     */
+    EClass HOLDING_CRYPTO = eINSTANCE.getHoldingCrypto();
+
+    /**
+     * The meta object literal for the '<em><b>Feature</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference HOLDING_CRYPTO__FEATURE = eINSTANCE.getHoldingCrypto_Feature();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.CryptoEncodingImpl <em>Crypto Encoding</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.CryptoEncodingImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getCryptoEncoding()
+     * @generated
+     */
+    EClass CRYPTO_ENCODING = eINSTANCE.getCryptoEncoding();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CRYPTO_ENCODING__NAME = eINSTANCE.getCryptoEncoding_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.CiImpl <em>Ci</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.CiImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getCi()
+     * @generated
+     */
+    EClass CI = eINSTANCE.getCi();
+
+    /**
+     * The meta object literal for the '<em><b>Feature</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CI__FEATURE = eINSTANCE.getCi_Feature();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.CryptoEnabledImpl <em>Crypto Enabled</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.CryptoEnabledImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getCryptoEnabled()
+     * @generated
+     */
+    EClass CRYPTO_ENABLED = eINSTANCE.getCryptoEnabled();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CRYPTO_ENABLED__NAME = eINSTANCE.getCryptoEnabled_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.CryptoObject_attrImpl <em>Crypto Object attr</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.CryptoObject_attrImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getCryptoObject_attr()
+     * @generated
+     */
+    EClass CRYPTO_OBJECT_ATTR = eINSTANCE.getCryptoObject_attr();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CRYPTO_OBJECT_ATTR__NAME = eINSTANCE.getCryptoObject_attr_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.PdiImpl <em>Pdi</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.PdiImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getPdi()
+     * @generated
+     */
+    EClass PDI = eINSTANCE.getPdi();
+
+    /**
+     * The meta object literal for the '<em><b>Feature</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PDI__FEATURE = eINSTANCE.getPdi_Feature();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.SipImpl <em>Sip</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.SipImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getSip()
+     * @generated
+     */
+    EClass SIP = eINSTANCE.getSip();
+
+    /**
+     * The meta object literal for the '<em><b>Feature</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SIP__FEATURE = eINSTANCE.getSip_Feature();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.PdisImpl <em>Pdis</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.PdisImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getPdis()
+     * @generated
+     */
+    EClass PDIS = eINSTANCE.getPdis();
+
+    /**
+     * The meta object literal for the '<em><b>Feature</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PDIS__FEATURE = eINSTANCE.getPdis_Feature();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.SchemaImpl <em>Schema</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.SchemaImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getSchema()
+     * @generated
+     */
+    EClass SCHEMA = eINSTANCE.getSchema();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SCHEMA__NAME = eINSTANCE.getSchema_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.IncludeImpl <em>Include</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.IncludeImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getInclude()
+     * @generated
+     */
+    EClass INCLUDE = eINSTANCE.getInclude();
+
+    /**
+     * The meta object literal for the '<em><b>Files</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute INCLUDE__FILES = eINSTANCE.getInclude_Files();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.IngestNodeImpl <em>Ingest Node</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.IngestNodeImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getIngestNode()
+     * @generated
+     */
+    EClass INGEST_NODE = eINSTANCE.getIngestNode();
+
+    /**
+     * The meta object literal for the '<em><b>Features</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INGEST_NODE__FEATURES = eINSTANCE.getIngestNode_Features();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.EnumCODImpl <em>Enum COD</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.EnumCODImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getEnumCOD()
+     * @generated
+     */
+    EClass ENUM_COD = eINSTANCE.getEnumCOD();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ENUM_COD__NAME = eINSTANCE.getEnumCOD_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.EnumMRImpl <em>Enum MR</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.EnumMRImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getEnumMR()
+     * @generated
+     */
+    EClass ENUM_MR = eINSTANCE.getEnumMR();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ENUM_MR__NAME = eINSTANCE.getEnumMR_Name();
+
+    /**
+     * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.impl.LogLevelImpl <em>Log Level</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.LogLevelImpl
+     * @see ru.spbstu.application.configurator.model.infoProject.impl.InfoProjectPackageImpl#getLogLevel()
+     * @generated
+     */
+    EClass LOG_LEVEL = eINSTANCE.getLogLevel();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LOG_LEVEL__NAME = eINSTANCE.getLogLevel_Name();
 
     /**
      * The meta object literal for the '{@link ru.spbstu.application.configurator.model.infoProject.enumOfArchiveType <em>enum Of Archive Type</em>}' enum.

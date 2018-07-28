@@ -42,6 +42,33 @@ public interface InfoProjectFactory extends EFactory
   Version createVersion();
 
   /**
+   * Returns a new object of class '<em>Namespace</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Namespace</em>'.
+   * @generated
+   */
+  Namespace createNamespace();
+
+  /**
+   * Returns a new object of class '<em>Prefix</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Prefix</em>'.
+   * @generated
+   */
+  Prefix createPrefix();
+
+  /**
+   * Returns a new object of class '<em>Uri</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Uri</em>'.
+   * @generated
+   */
+  Uri createUri();
+
+  /**
    * Returns a new object of class '<em>Feature Name</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -130,6 +157,708 @@ public interface InfoProjectFactory extends EFactory
    * @generated
    */
   HoldType createHoldType();
+
+  /**
+   * Returns a new object of class '<em>Type Attribute</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Type Attribute</em>'.
+   * @generated
+   */
+  TypeAttribute createTypeAttribute();
+
+  /**
+   * Returns a new object of class '<em>Receive Node</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Receive Node</em>'.
+   * @generated
+   */
+  ReceiveNode createReceiveNode();
+
+  /**
+   * Returns a new object of class '<em>Retention Policy</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Retention Policy</em>'.
+   * @generated
+   */
+  RetentionPolicy createRetentionPolicy();
+
+  /**
+   * Returns a new object of class '<em>Aging Period</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Aging Period</em>'.
+   * @generated
+   */
+  AgingPeriod createAgingPeriod();
+
+  /**
+   * Returns a new object of class '<em>Units</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Units</em>'.
+   * @generated
+   */
+  Units createUnits();
+
+  /**
+   * Returns a new object of class '<em>Value</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Value</em>'.
+   * @generated
+   */
+  Value createValue();
+
+  /**
+   * Returns a new object of class '<em>Aging Strategy</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Aging Strategy</em>'.
+   * @generated
+   */
+  AgingStrategy createAgingStrategy();
+
+  /**
+   * Returns a new object of class '<em>Disposition Strategy</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Disposition Strategy</em>'.
+   * @generated
+   */
+  DispositionStrategy createDispositionStrategy();
+
+  /**
+   * Returns a new object of class '<em>Space attr</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Space attr</em>'.
+   * @generated
+   */
+  Space_attr createSpace_attr();
+
+  /**
+   * Returns a new object of class '<em>Crypto Object</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Crypto Object</em>'.
+   * @generated
+   */
+  CryptoObject createCryptoObject();
+
+  /**
+   * Returns a new object of class '<em>Configure</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Configure</em>'.
+   * @generated
+   */
+  Configure createConfigure();
+
+  /**
+   * Returns a new object of class '<em>Padding Scheme</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Padding Scheme</em>'.
+   * @generated
+   */
+  PaddingScheme createPaddingScheme();
+
+  /**
+   * Returns a new object of class '<em>Security Provider</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Security Provider</em>'.
+   * @generated
+   */
+  SecurityProvider createSecurityProvider();
+
+  /**
+   * Returns a new object of class '<em>Xdb Federation</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Xdb Federation</em>'.
+   * @generated
+   */
+  XdbFederation createXdbFederation();
+
+  /**
+   * Returns a new object of class '<em>Bootstrap</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Bootstrap</em>'.
+   * @generated
+   */
+  Bootstrap createBootstrap();
+
+  /**
+   * Returns a new object of class '<em>Super User Password</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Super User Password</em>'.
+   * @generated
+   */
+  SuperUserPassword createSuperUserPassword();
+
+  /**
+   * Returns a new object of class '<em>Xdb Database</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Xdb Database</em>'.
+   * @generated
+   */
+  XdbDatabase createXdbDatabase();
+
+  /**
+   * Returns a new object of class '<em>Default</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Default</em>'.
+   * @generated
+   */
+  Default createDefault();
+
+  /**
+   * Returns a new object of class '<em>Admin Password</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Admin Password</em>'.
+   * @generated
+   */
+  AdminPassword createAdminPassword();
+
+  /**
+   * Returns a new object of class '<em>Space Root Xdb Library</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Space Root Xdb Library</em>'.
+   * @generated
+   */
+  SpaceRootXdbLibrary createSpaceRootXdbLibrary();
+
+  /**
+   * Returns a new object of class '<em>Xdb Library</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Xdb Library</em>'.
+   * @generated
+   */
+  XdbLibrary createXdbLibrary();
+
+  /**
+   * Returns a new object of class '<em>Parent Space Root Xdb Library</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Parent Space Root Xdb Library</em>'.
+   * @generated
+   */
+  ParentSpaceRootXdbLibrary createParentSpaceRootXdbLibrary();
+
+  /**
+   * Returns a new object of class '<em>Sub Path</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Sub Path</em>'.
+   * @generated
+   */
+  SubPath createSubPath();
+
+  /**
+   * Returns a new object of class '<em>Xdb Library Policy</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Xdb Library Policy</em>'.
+   * @generated
+   */
+  XdbLibraryPolicy createXdbLibraryPolicy();
+
+  /**
+   * Returns a new object of class '<em>Aip Quota</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Aip Quota</em>'.
+   * @generated
+   */
+  AipQuota createAipQuota();
+
+  /**
+   * Returns a new object of class '<em>Aiu Quota</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Aiu Quota</em>'.
+   * @generated
+   */
+  AiuQuota createAiuQuota();
+
+  /**
+   * Returns a new object of class '<em>Close Hint Date Query</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Close Hint Date Query</em>'.
+   * @generated
+   */
+  CloseHintDateQuery createCloseHintDateQuery();
+
+  /**
+   * Returns a new object of class '<em>Close Mode</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Close Mode</em>'.
+   * @generated
+   */
+  CloseMode createCloseMode();
+
+  /**
+   * Returns a new object of class '<em>Close Period</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Close Period</em>'.
+   * @generated
+   */
+  ClosePeriod createClosePeriod();
+
+  /**
+   * Returns a new object of class '<em>Aiu Threshold</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Aiu Threshold</em>'.
+   * @generated
+   */
+  AiuThreshold createAiuThreshold();
+
+  /**
+   * Returns a new object of class '<em>PKey Query</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>PKey Query</em>'.
+   * @generated
+   */
+  PKeyQuery createPKeyQuery();
+
+  /**
+   * Returns a new object of class '<em>Holding</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Holding</em>'.
+   * @generated
+   */
+  Holding createHolding();
+
+  /**
+   * Returns a new object of class '<em>Ci Store</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Ci Store</em>'.
+   * @generated
+   */
+  CiStore createCiStore();
+
+  /**
+   * Returns a new object of class '<em>Default Retention Class</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Default Retention Class</em>'.
+   * @generated
+   */
+  DefaultRetentionClass createDefaultRetentionClass();
+
+  /**
+   * Returns a new object of class '<em>Log Store</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Log Store</em>'.
+   * @generated
+   */
+  LogStore createLogStore();
+
+  /**
+   * Returns a new object of class '<em>Managed Item Store</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Managed Item Store</em>'.
+   * @generated
+   */
+  ManagedItemStore createManagedItemStore();
+
+  /**
+   * Returns a new object of class '<em>Pdi Configs</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Pdi Configs</em>'.
+   * @generated
+   */
+  PdiConfigs createPdiConfigs();
+
+  /**
+   * Returns a new object of class '<em>Priority</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Priority</em>'.
+   * @generated
+   */
+  Priority createPriority();
+
+  /**
+   * Returns a new object of class '<em>Rendition Store</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Rendition Store</em>'.
+   * @generated
+   */
+  RenditionStore createRenditionStore();
+
+  /**
+   * Returns a new object of class '<em>Retention Classes</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Retention Classes</em>'.
+   * @generated
+   */
+  RetentionClasses createRetentionClasses();
+
+  /**
+   * Returns a new object of class '<em>Policies</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Policies</em>'.
+   * @generated
+   */
+  Policies createPolicies();
+
+  /**
+   * Returns a new object of class '<em>Sip Store</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Sip Store</em>'.
+   * @generated
+   */
+  SipStore createSipStore();
+
+  /**
+   * Returns a new object of class '<em>Staging Store</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Staging Store</em>'.
+   * @generated
+   */
+  StagingStore createStagingStore();
+
+  /**
+   * Returns a new object of class '<em>Sub Priorities</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Sub Priorities</em>'.
+   * @generated
+   */
+  SubPriorities createSubPriorities();
+
+  /**
+   * Returns a new object of class '<em>Deadline</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Deadline</em>'.
+   * @generated
+   */
+  Deadline createDeadline();
+
+  /**
+   * Returns a new object of class '<em>Xdb Library Parent</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Xdb Library Parent</em>'.
+   * @generated
+   */
+  XdbLibraryParent createXdbLibraryParent();
+
+  /**
+   * Returns a new object of class '<em>Xdb Mode</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Xdb Mode</em>'.
+   * @generated
+   */
+  XdbMode createXdbMode();
+
+  /**
+   * Returns a new object of class '<em>Xdb Store</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Xdb Store</em>'.
+   * @generated
+   */
+  XdbStore createXdbStore();
+
+  /**
+   * Returns a new object of class '<em>Xml Store</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Xml Store</em>'.
+   * @generated
+   */
+  XmlStore createXmlStore();
+
+  /**
+   * Returns a new object of class '<em>Audit Event</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Audit Event</em>'.
+   * @generated
+   */
+  AuditEvent createAuditEvent();
+
+  /**
+   * Returns a new object of class '<em>Application attr</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Application attr</em>'.
+   * @generated
+   */
+  Application_attr createApplication_attr();
+
+  /**
+   * Returns a new object of class '<em>Tenant attr</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Tenant attr</em>'.
+   * @generated
+   */
+  Tenant_attr createTenant_attr();
+
+  /**
+   * Returns a new object of class '<em>Delivery Channel</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Delivery Channel</em>'.
+   * @generated
+   */
+  DeliveryChannel createDeliveryChannel();
+
+  /**
+   * Returns a new object of class '<em>File Name</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>File Name</em>'.
+   * @generated
+   */
+  FileName createFileName();
+
+  /**
+   * Returns a new object of class '<em>Overwrite</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Overwrite</em>'.
+   * @generated
+   */
+  Overwrite createOverwrite();
+
+  /**
+   * Returns a new object of class '<em>Store</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Store</em>'.
+   * @generated
+   */
+  Store createStore();
+
+  /**
+   * Returns a new object of class '<em>Suffix</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Suffix</em>'.
+   * @generated
+   */
+  Suffix createSuffix();
+
+  /**
+   * Returns a new object of class '<em>Confirmation</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Confirmation</em>'.
+   * @generated
+   */
+  Confirmation createConfirmation();
+
+  /**
+   * Returns a new object of class '<em>Delivery Channel Parameters</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Delivery Channel Parameters</em>'.
+   * @generated
+   */
+  DeliveryChannelParameters createDeliveryChannelParameters();
+
+  /**
+   * Returns a new object of class '<em>Aip id</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Aip id</em>'.
+   * @generated
+   */
+  Aip_id createAip_id();
+
+  /**
+   * Returns a new object of class '<em>Ia conf datetime</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Ia conf datetime</em>'.
+   * @generated
+   */
+  Ia_conf_datetime createIa_conf_datetime();
+
+  /**
+   * Returns a new object of class '<em>Ia conf type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Ia conf type</em>'.
+   * @generated
+   */
+  Ia_conf_type createIa_conf_type();
+
+  /**
+   * Returns a new object of class '<em>Holdings</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Holdings</em>'.
+   * @generated
+   */
+  Holdings createHoldings();
+
+  /**
+   * Returns a new object of class '<em>Types</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Types</em>'.
+   * @generated
+   */
+  Types createTypes();
+
+  /**
+   * Returns a new object of class '<em>Holding Crypto</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Holding Crypto</em>'.
+   * @generated
+   */
+  HoldingCrypto createHoldingCrypto();
+
+  /**
+   * Returns a new object of class '<em>Crypto Encoding</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Crypto Encoding</em>'.
+   * @generated
+   */
+  CryptoEncoding createCryptoEncoding();
+
+  /**
+   * Returns a new object of class '<em>Ci</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Ci</em>'.
+   * @generated
+   */
+  Ci createCi();
+
+  /**
+   * Returns a new object of class '<em>Crypto Enabled</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Crypto Enabled</em>'.
+   * @generated
+   */
+  CryptoEnabled createCryptoEnabled();
+
+  /**
+   * Returns a new object of class '<em>Crypto Object attr</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Crypto Object attr</em>'.
+   * @generated
+   */
+  CryptoObject_attr createCryptoObject_attr();
+
+  /**
+   * Returns a new object of class '<em>Pdi</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Pdi</em>'.
+   * @generated
+   */
+  Pdi createPdi();
+
+  /**
+   * Returns a new object of class '<em>Sip</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Sip</em>'.
+   * @generated
+   */
+  Sip createSip();
+
+  /**
+   * Returns a new object of class '<em>Pdis</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Pdis</em>'.
+   * @generated
+   */
+  Pdis createPdis();
+
+  /**
+   * Returns a new object of class '<em>Schema</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Schema</em>'.
+   * @generated
+   */
+  Schema createSchema();
+
+  /**
+   * Returns a new object of class '<em>Include</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Include</em>'.
+   * @generated
+   */
+  Include createInclude();
+
+  /**
+   * Returns a new object of class '<em>Ingest Node</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Ingest Node</em>'.
+   * @generated
+   */
+  IngestNode createIngestNode();
+
+  /**
+   * Returns a new object of class '<em>Enum COD</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Enum COD</em>'.
+   * @generated
+   */
+  EnumCOD createEnumCOD();
+
+  /**
+   * Returns a new object of class '<em>Enum MR</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Enum MR</em>'.
+   * @generated
+   */
+  EnumMR createEnumMR();
+
+  /**
+   * Returns a new object of class '<em>Log Level</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Log Level</em>'.
+   * @generated
+   */
+  LogLevel createLogLevel();
 
   /**
    * Returns the package supported by this factory.

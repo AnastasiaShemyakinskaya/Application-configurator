@@ -14,11 +14,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link ru.spbstu.application.configurator.model.infoProject.Hold#getFeatures1 <em>Features1</em>}</li>
  *   <li>{@link ru.spbstu.application.configurator.model.infoProject.Hold#getFeatures <em>Features</em>}</li>
  * </ul>
- * </p>
  *
  * @see ru.spbstu.application.configurator.model.infoProject.InfoProjectPackage#getHold()
  * @model

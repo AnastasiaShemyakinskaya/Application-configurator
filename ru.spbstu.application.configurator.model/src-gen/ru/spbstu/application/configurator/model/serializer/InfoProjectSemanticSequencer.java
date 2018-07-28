@@ -14,19 +14,100 @@ import org.eclipse.xtext.serializer.ISerializationContext;
 import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
+import ru.spbstu.application.configurator.model.infoProject.AdminPassword;
+import ru.spbstu.application.configurator.model.infoProject.AgingPeriod;
+import ru.spbstu.application.configurator.model.infoProject.AgingStrategy;
+import ru.spbstu.application.configurator.model.infoProject.AipQuota;
+import ru.spbstu.application.configurator.model.infoProject.Aip_id;
+import ru.spbstu.application.configurator.model.infoProject.AiuQuota;
+import ru.spbstu.application.configurator.model.infoProject.AiuThreshold;
 import ru.spbstu.application.configurator.model.infoProject.Application;
+import ru.spbstu.application.configurator.model.infoProject.Application_attr;
 import ru.spbstu.application.configurator.model.infoProject.ArchiveType;
+import ru.spbstu.application.configurator.model.infoProject.AuditEvent;
+import ru.spbstu.application.configurator.model.infoProject.Bootstrap;
 import ru.spbstu.application.configurator.model.infoProject.Category;
+import ru.spbstu.application.configurator.model.infoProject.Ci;
+import ru.spbstu.application.configurator.model.infoProject.CiStore;
+import ru.spbstu.application.configurator.model.infoProject.CloseHintDateQuery;
+import ru.spbstu.application.configurator.model.infoProject.CloseMode;
+import ru.spbstu.application.configurator.model.infoProject.ClosePeriod;
+import ru.spbstu.application.configurator.model.infoProject.Configure;
+import ru.spbstu.application.configurator.model.infoProject.Confirmation;
+import ru.spbstu.application.configurator.model.infoProject.CryptoEnabled;
+import ru.spbstu.application.configurator.model.infoProject.CryptoEncoding;
+import ru.spbstu.application.configurator.model.infoProject.CryptoObject;
+import ru.spbstu.application.configurator.model.infoProject.CryptoObject_attr;
+import ru.spbstu.application.configurator.model.infoProject.Deadline;
+import ru.spbstu.application.configurator.model.infoProject.Default;
+import ru.spbstu.application.configurator.model.infoProject.DefaultRetentionClass;
+import ru.spbstu.application.configurator.model.infoProject.DeliveryChannel;
+import ru.spbstu.application.configurator.model.infoProject.DeliveryChannelParameters;
 import ru.spbstu.application.configurator.model.infoProject.Description;
+import ru.spbstu.application.configurator.model.infoProject.DispositionStrategy;
+import ru.spbstu.application.configurator.model.infoProject.EnumCOD;
+import ru.spbstu.application.configurator.model.infoProject.EnumMR;
 import ru.spbstu.application.configurator.model.infoProject.FeatureName;
+import ru.spbstu.application.configurator.model.infoProject.FileName;
 import ru.spbstu.application.configurator.model.infoProject.Hold;
 import ru.spbstu.application.configurator.model.infoProject.HoldType;
+import ru.spbstu.application.configurator.model.infoProject.Holding;
+import ru.spbstu.application.configurator.model.infoProject.HoldingCrypto;
+import ru.spbstu.application.configurator.model.infoProject.Holdings;
+import ru.spbstu.application.configurator.model.infoProject.Ia_conf_datetime;
+import ru.spbstu.application.configurator.model.infoProject.Ia_conf_type;
+import ru.spbstu.application.configurator.model.infoProject.Include;
 import ru.spbstu.application.configurator.model.infoProject.InfoProjectPackage;
+import ru.spbstu.application.configurator.model.infoProject.IngestNode;
+import ru.spbstu.application.configurator.model.infoProject.LogLevel;
+import ru.spbstu.application.configurator.model.infoProject.LogStore;
 import ru.spbstu.application.configurator.model.infoProject.MCS;
+import ru.spbstu.application.configurator.model.infoProject.ManagedItemStore;
 import ru.spbstu.application.configurator.model.infoProject.Model;
+import ru.spbstu.application.configurator.model.infoProject.Namespace;
+import ru.spbstu.application.configurator.model.infoProject.Overwrite;
+import ru.spbstu.application.configurator.model.infoProject.PKeyQuery;
+import ru.spbstu.application.configurator.model.infoProject.PaddingScheme;
+import ru.spbstu.application.configurator.model.infoProject.ParentSpaceRootXdbLibrary;
+import ru.spbstu.application.configurator.model.infoProject.Pdi;
+import ru.spbstu.application.configurator.model.infoProject.PdiConfigs;
+import ru.spbstu.application.configurator.model.infoProject.Pdis;
+import ru.spbstu.application.configurator.model.infoProject.Policies;
+import ru.spbstu.application.configurator.model.infoProject.Prefix;
+import ru.spbstu.application.configurator.model.infoProject.Priority;
+import ru.spbstu.application.configurator.model.infoProject.ReceiveNode;
+import ru.spbstu.application.configurator.model.infoProject.RenditionStore;
+import ru.spbstu.application.configurator.model.infoProject.RetentionClasses;
+import ru.spbstu.application.configurator.model.infoProject.RetentionPolicy;
+import ru.spbstu.application.configurator.model.infoProject.Schema;
+import ru.spbstu.application.configurator.model.infoProject.SecurityProvider;
+import ru.spbstu.application.configurator.model.infoProject.Sip;
+import ru.spbstu.application.configurator.model.infoProject.SipStore;
+import ru.spbstu.application.configurator.model.infoProject.SpaceRootXdbLibrary;
+import ru.spbstu.application.configurator.model.infoProject.Space_attr;
+import ru.spbstu.application.configurator.model.infoProject.StagingStore;
+import ru.spbstu.application.configurator.model.infoProject.Store;
+import ru.spbstu.application.configurator.model.infoProject.SubPath;
+import ru.spbstu.application.configurator.model.infoProject.SubPriorities;
+import ru.spbstu.application.configurator.model.infoProject.Suffix;
+import ru.spbstu.application.configurator.model.infoProject.SuperUserPassword;
 import ru.spbstu.application.configurator.model.infoProject.Tenant;
+import ru.spbstu.application.configurator.model.infoProject.Tenant_attr;
 import ru.spbstu.application.configurator.model.infoProject.Type;
+import ru.spbstu.application.configurator.model.infoProject.TypeAttribute;
+import ru.spbstu.application.configurator.model.infoProject.Types;
+import ru.spbstu.application.configurator.model.infoProject.Units;
+import ru.spbstu.application.configurator.model.infoProject.Uri;
+import ru.spbstu.application.configurator.model.infoProject.Value;
 import ru.spbstu.application.configurator.model.infoProject.Version;
+import ru.spbstu.application.configurator.model.infoProject.XdbDatabase;
+import ru.spbstu.application.configurator.model.infoProject.XdbFederation;
+import ru.spbstu.application.configurator.model.infoProject.XdbLibrary;
+import ru.spbstu.application.configurator.model.infoProject.XdbLibraryParent;
+import ru.spbstu.application.configurator.model.infoProject.XdbLibraryPolicy;
+import ru.spbstu.application.configurator.model.infoProject.XdbMode;
+import ru.spbstu.application.configurator.model.infoProject.XdbStore;
+import ru.spbstu.application.configurator.model.infoProject.XmlStore;
 import ru.spbstu.application.configurator.model.services.InfoProjectGrammarAccess;
 
 @SuppressWarnings("all")
@@ -43,20 +124,110 @@ public class InfoProjectSemanticSequencer extends AbstractDelegatingSemanticSequ
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == InfoProjectPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
+			case InfoProjectPackage.ADMIN_PASSWORD:
+				sequence_AdminPassword(context, (AdminPassword) semanticObject); 
+				return; 
+			case InfoProjectPackage.AGING_PERIOD:
+				sequence_AgingPeriod(context, (AgingPeriod) semanticObject); 
+				return; 
+			case InfoProjectPackage.AGING_STRATEGY:
+				sequence_AgingStrategy(context, (AgingStrategy) semanticObject); 
+				return; 
+			case InfoProjectPackage.AIP_QUOTA:
+				sequence_AipQuota(context, (AipQuota) semanticObject); 
+				return; 
+			case InfoProjectPackage.AIP_ID:
+				sequence_Aip_id(context, (Aip_id) semanticObject); 
+				return; 
+			case InfoProjectPackage.AIU_QUOTA:
+				sequence_AiuQuota(context, (AiuQuota) semanticObject); 
+				return; 
+			case InfoProjectPackage.AIU_THRESHOLD:
+				sequence_AiuThreshold(context, (AiuThreshold) semanticObject); 
+				return; 
 			case InfoProjectPackage.APPLICATION:
 				sequence_Application(context, (Application) semanticObject); 
+				return; 
+			case InfoProjectPackage.APPLICATION_ATTR:
+				sequence_Application_attr(context, (Application_attr) semanticObject); 
 				return; 
 			case InfoProjectPackage.ARCHIVE_TYPE:
 				sequence_ArchiveType(context, (ArchiveType) semanticObject); 
 				return; 
+			case InfoProjectPackage.AUDIT_EVENT:
+				sequence_AuditEvent(context, (AuditEvent) semanticObject); 
+				return; 
+			case InfoProjectPackage.BOOTSTRAP:
+				sequence_Bootstrap(context, (Bootstrap) semanticObject); 
+				return; 
 			case InfoProjectPackage.CATEGORY:
 				sequence_Category(context, (Category) semanticObject); 
+				return; 
+			case InfoProjectPackage.CI:
+				sequence_Ci(context, (Ci) semanticObject); 
+				return; 
+			case InfoProjectPackage.CI_STORE:
+				sequence_CiStore(context, (CiStore) semanticObject); 
+				return; 
+			case InfoProjectPackage.CLOSE_HINT_DATE_QUERY:
+				sequence_CloseHintDateQuery(context, (CloseHintDateQuery) semanticObject); 
+				return; 
+			case InfoProjectPackage.CLOSE_MODE:
+				sequence_CloseMode(context, (CloseMode) semanticObject); 
+				return; 
+			case InfoProjectPackage.CLOSE_PERIOD:
+				sequence_ClosePeriod(context, (ClosePeriod) semanticObject); 
+				return; 
+			case InfoProjectPackage.CONFIGURE:
+				sequence_Configure(context, (Configure) semanticObject); 
+				return; 
+			case InfoProjectPackage.CONFIRMATION:
+				sequence_Confirmation(context, (Confirmation) semanticObject); 
+				return; 
+			case InfoProjectPackage.CRYPTO_ENABLED:
+				sequence_CryptoEnabled(context, (CryptoEnabled) semanticObject); 
+				return; 
+			case InfoProjectPackage.CRYPTO_ENCODING:
+				sequence_CryptoEncoding(context, (CryptoEncoding) semanticObject); 
+				return; 
+			case InfoProjectPackage.CRYPTO_OBJECT:
+				sequence_CryptoObject(context, (CryptoObject) semanticObject); 
+				return; 
+			case InfoProjectPackage.CRYPTO_OBJECT_ATTR:
+				sequence_CryptoObject_attr(context, (CryptoObject_attr) semanticObject); 
+				return; 
+			case InfoProjectPackage.DEADLINE:
+				sequence_Deadline(context, (Deadline) semanticObject); 
+				return; 
+			case InfoProjectPackage.DEFAULT:
+				sequence_Default(context, (Default) semanticObject); 
+				return; 
+			case InfoProjectPackage.DEFAULT_RETENTION_CLASS:
+				sequence_DefaultRetentionClass(context, (DefaultRetentionClass) semanticObject); 
+				return; 
+			case InfoProjectPackage.DELIVERY_CHANNEL:
+				sequence_DeliveryChannel(context, (DeliveryChannel) semanticObject); 
+				return; 
+			case InfoProjectPackage.DELIVERY_CHANNEL_PARAMETERS:
+				sequence_DeliveryChannelParameters(context, (DeliveryChannelParameters) semanticObject); 
 				return; 
 			case InfoProjectPackage.DESCRIPTION:
 				sequence_Description(context, (Description) semanticObject); 
 				return; 
+			case InfoProjectPackage.DISPOSITION_STRATEGY:
+				sequence_DispositionStrategy(context, (DispositionStrategy) semanticObject); 
+				return; 
+			case InfoProjectPackage.ENUM_COD:
+				sequence_EnumCOD(context, (EnumCOD) semanticObject); 
+				return; 
+			case InfoProjectPackage.ENUM_MR:
+				sequence_EnumMR(context, (EnumMR) semanticObject); 
+				return; 
 			case InfoProjectPackage.FEATURE_NAME:
 				sequence_FeatureName(context, (FeatureName) semanticObject); 
+				return; 
+			case InfoProjectPackage.FILE_NAME:
+				sequence_FileName(context, (FileName) semanticObject); 
 				return; 
 			case InfoProjectPackage.HOLD:
 				sequence_Hold(context, (Hold) semanticObject); 
@@ -64,25 +235,315 @@ public class InfoProjectSemanticSequencer extends AbstractDelegatingSemanticSequ
 			case InfoProjectPackage.HOLD_TYPE:
 				sequence_HoldType(context, (HoldType) semanticObject); 
 				return; 
+			case InfoProjectPackage.HOLDING:
+				sequence_Holding(context, (Holding) semanticObject); 
+				return; 
+			case InfoProjectPackage.HOLDING_CRYPTO:
+				sequence_HoldingCrypto(context, (HoldingCrypto) semanticObject); 
+				return; 
+			case InfoProjectPackage.HOLDINGS:
+				sequence_Holdings(context, (Holdings) semanticObject); 
+				return; 
+			case InfoProjectPackage.IA_CONF_DATETIME:
+				sequence_Ia_conf_datetime(context, (Ia_conf_datetime) semanticObject); 
+				return; 
+			case InfoProjectPackage.IA_CONF_TYPE:
+				sequence_Ia_conf_type(context, (Ia_conf_type) semanticObject); 
+				return; 
+			case InfoProjectPackage.INCLUDE:
+				sequence_Include(context, (Include) semanticObject); 
+				return; 
+			case InfoProjectPackage.INGEST_NODE:
+				sequence_IngestNode(context, (IngestNode) semanticObject); 
+				return; 
+			case InfoProjectPackage.LOG_LEVEL:
+				sequence_LogLevel(context, (LogLevel) semanticObject); 
+				return; 
+			case InfoProjectPackage.LOG_STORE:
+				sequence_LogStore(context, (LogStore) semanticObject); 
+				return; 
 			case InfoProjectPackage.MCS:
 				sequence_MCS(context, (MCS) semanticObject); 
+				return; 
+			case InfoProjectPackage.MANAGED_ITEM_STORE:
+				sequence_ManagedItemStore(context, (ManagedItemStore) semanticObject); 
 				return; 
 			case InfoProjectPackage.MODEL:
 				sequence_Model(context, (Model) semanticObject); 
 				return; 
+			case InfoProjectPackage.NAMESPACE:
+				sequence_Namespace(context, (Namespace) semanticObject); 
+				return; 
+			case InfoProjectPackage.OVERWRITE:
+				sequence_Overwrite(context, (Overwrite) semanticObject); 
+				return; 
+			case InfoProjectPackage.PKEY_QUERY:
+				sequence_PKeyQuery(context, (PKeyQuery) semanticObject); 
+				return; 
+			case InfoProjectPackage.PADDING_SCHEME:
+				sequence_PaddingScheme(context, (PaddingScheme) semanticObject); 
+				return; 
+			case InfoProjectPackage.PARENT_SPACE_ROOT_XDB_LIBRARY:
+				sequence_ParentSpaceRootXdbLibrary(context, (ParentSpaceRootXdbLibrary) semanticObject); 
+				return; 
+			case InfoProjectPackage.PDI:
+				sequence_Pdi(context, (Pdi) semanticObject); 
+				return; 
+			case InfoProjectPackage.PDI_CONFIGS:
+				sequence_PdiConfigs(context, (PdiConfigs) semanticObject); 
+				return; 
+			case InfoProjectPackage.PDIS:
+				sequence_Pdis(context, (Pdis) semanticObject); 
+				return; 
+			case InfoProjectPackage.POLICIES:
+				sequence_Policies(context, (Policies) semanticObject); 
+				return; 
+			case InfoProjectPackage.PREFIX:
+				sequence_Prefix(context, (Prefix) semanticObject); 
+				return; 
+			case InfoProjectPackage.PRIORITY:
+				sequence_Priority(context, (Priority) semanticObject); 
+				return; 
+			case InfoProjectPackage.RECEIVE_NODE:
+				sequence_ReceiveNode(context, (ReceiveNode) semanticObject); 
+				return; 
+			case InfoProjectPackage.RENDITION_STORE:
+				sequence_RenditionStore(context, (RenditionStore) semanticObject); 
+				return; 
+			case InfoProjectPackage.RETENTION_CLASSES:
+				sequence_RetentionClasses(context, (RetentionClasses) semanticObject); 
+				return; 
+			case InfoProjectPackage.RETENTION_POLICY:
+				sequence_RetentionPolicy(context, (RetentionPolicy) semanticObject); 
+				return; 
+			case InfoProjectPackage.SCHEMA:
+				sequence_Schema(context, (Schema) semanticObject); 
+				return; 
+			case InfoProjectPackage.SECURITY_PROVIDER:
+				sequence_SecurityProvider(context, (SecurityProvider) semanticObject); 
+				return; 
+			case InfoProjectPackage.SIP:
+				sequence_Sip(context, (Sip) semanticObject); 
+				return; 
+			case InfoProjectPackage.SIP_STORE:
+				sequence_SipStore(context, (SipStore) semanticObject); 
+				return; 
+			case InfoProjectPackage.SPACE_ROOT_XDB_LIBRARY:
+				sequence_SpaceRootXdbLibrary(context, (SpaceRootXdbLibrary) semanticObject); 
+				return; 
+			case InfoProjectPackage.SPACE_ATTR:
+				sequence_Space_attr(context, (Space_attr) semanticObject); 
+				return; 
+			case InfoProjectPackage.STAGING_STORE:
+				sequence_StagingStore(context, (StagingStore) semanticObject); 
+				return; 
+			case InfoProjectPackage.STORE:
+				sequence_Store(context, (Store) semanticObject); 
+				return; 
+			case InfoProjectPackage.SUB_PATH:
+				sequence_SubPath(context, (SubPath) semanticObject); 
+				return; 
+			case InfoProjectPackage.SUB_PRIORITIES:
+				sequence_SubPriorities(context, (SubPriorities) semanticObject); 
+				return; 
+			case InfoProjectPackage.SUFFIX:
+				sequence_Suffix(context, (Suffix) semanticObject); 
+				return; 
+			case InfoProjectPackage.SUPER_USER_PASSWORD:
+				sequence_SuperUserPassword(context, (SuperUserPassword) semanticObject); 
+				return; 
 			case InfoProjectPackage.TENANT:
 				sequence_Tenant(context, (Tenant) semanticObject); 
+				return; 
+			case InfoProjectPackage.TENANT_ATTR:
+				sequence_Tenant_attr(context, (Tenant_attr) semanticObject); 
 				return; 
 			case InfoProjectPackage.TYPE:
 				sequence_Type(context, (Type) semanticObject); 
 				return; 
+			case InfoProjectPackage.TYPE_ATTRIBUTE:
+				sequence_TypeAttribute(context, (TypeAttribute) semanticObject); 
+				return; 
+			case InfoProjectPackage.TYPES:
+				sequence_Types(context, (Types) semanticObject); 
+				return; 
+			case InfoProjectPackage.UNITS:
+				sequence_Units(context, (Units) semanticObject); 
+				return; 
+			case InfoProjectPackage.URI:
+				sequence_Uri(context, (Uri) semanticObject); 
+				return; 
+			case InfoProjectPackage.VALUE:
+				sequence_Value(context, (Value) semanticObject); 
+				return; 
 			case InfoProjectPackage.VERSION:
 				sequence_Version(context, (Version) semanticObject); 
+				return; 
+			case InfoProjectPackage.XDB_DATABASE:
+				sequence_XdbDatabase(context, (XdbDatabase) semanticObject); 
+				return; 
+			case InfoProjectPackage.XDB_FEDERATION:
+				sequence_XdbFederation(context, (XdbFederation) semanticObject); 
+				return; 
+			case InfoProjectPackage.XDB_LIBRARY:
+				sequence_XdbLibrary(context, (XdbLibrary) semanticObject); 
+				return; 
+			case InfoProjectPackage.XDB_LIBRARY_PARENT:
+				sequence_XdbLibraryParent(context, (XdbLibraryParent) semanticObject); 
+				return; 
+			case InfoProjectPackage.XDB_LIBRARY_POLICY:
+				sequence_XdbLibraryPolicy(context, (XdbLibraryPolicy) semanticObject); 
+				return; 
+			case InfoProjectPackage.XDB_MODE:
+				sequence_XdbMode(context, (XdbMode) semanticObject); 
+				return; 
+			case InfoProjectPackage.XDB_STORE:
+				sequence_XdbStore(context, (XdbStore) semanticObject); 
+				return; 
+			case InfoProjectPackage.XML_STORE:
+				sequence_XmlStore(context, (XmlStore) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
 			errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
+	
+	/**
+	 * Contexts:
+	 *     AdminPassword returns AdminPassword
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name=EXCEPTION | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_AdminPassword(ISerializationContext context, AdminPassword semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     AgingPeriod returns AgingPeriod
+	 *
+	 * Constraint:
+	 *     (features+=Units features+=Value)
+	 */
+	protected void sequence_AgingPeriod(ISerializationContext context, AgingPeriod semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     AgingStrategy returns AgingStrategy
+	 *
+	 * Constraint:
+	 *     (features+=AgingPeriod features+=TypeAttribute)
+	 */
+	protected void sequence_AgingStrategy(ISerializationContext context, AgingStrategy semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     AipQuota returns AipQuota
+	 *
+	 * Constraint:
+	 *     name=VERSION_NUMBER
+	 */
+	protected void sequence_AipQuota(ISerializationContext context, AipQuota semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, InfoProjectPackage.Literals.AIP_QUOTA__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, InfoProjectPackage.Literals.AIP_QUOTA__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getAipQuotaAccess().getNameVERSION_NUMBERTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Aip_id returns Aip_id
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='%' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name='(' | 
+	 *         name=')' | 
+	 *         name='/' | 
+	 *         name='"' | 
+	 *         name=';' | 
+	 *         name=''' | 
+	 *         name=EXCEPTION | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_Aip_id(ISerializationContext context, Aip_id semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     AiuQuota returns AiuQuota
+	 *
+	 * Constraint:
+	 *     name=VERSION_NUMBER
+	 */
+	protected void sequence_AiuQuota(ISerializationContext context, AiuQuota semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, InfoProjectPackage.Literals.AIU_QUOTA__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, InfoProjectPackage.Literals.AIU_QUOTA__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getAiuQuotaAccess().getNameVERSION_NUMBERTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     AiuThreshold returns AiuThreshold
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name=';' | 
+	 *         name=EXCEPTION | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_AiuThreshold(ISerializationContext context, AiuThreshold semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
 	
 	/**
 	 * Contexts:
@@ -99,6 +560,34 @@ public class InfoProjectSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     )
 	 */
 	protected void sequence_Application(ISerializationContext context, Application semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Application_attr returns Application_attr
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name='(' | 
+	 *         name=')' | 
+	 *         name='/' | 
+	 *         name='"' | 
+	 *         name=';' | 
+	 *         name=EXCEPTION | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_Application_attr(ISerializationContext context, Application_attr semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -123,6 +612,46 @@ public class InfoProjectSemanticSequencer extends AbstractDelegatingSemanticSequ
 	
 	/**
 	 * Contexts:
+	 *     AuditEvent returns AuditEvent
+	 *
+	 * Constraint:
+	 *     (feature+=FeatureName feature+=Application_attr feature+=Tenant_attr feature+=TypeAttribute)
+	 */
+	protected void sequence_AuditEvent(ISerializationContext context, AuditEvent semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Bootstrap returns Bootstrap
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name='(' | 
+	 *         name=')' | 
+	 *         name='/' | 
+	 *         name='"' | 
+	 *         name=';' | 
+	 *         name=EXCEPTION | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_Bootstrap(ISerializationContext context, Bootstrap semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Category returns Category
 	 *
 	 * Constraint:
@@ -134,8 +663,314 @@ public class InfoProjectSemanticSequencer extends AbstractDelegatingSemanticSequ
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, InfoProjectPackage.Literals.CATEGORY__NAME));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getCategoryAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getCategoryAccess().getNameIDTerminalRuleCall_0_3_0(), semanticObject.getName());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     CiStore returns CiStore
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name='(' | 
+	 *         name=')' | 
+	 *         name='/' | 
+	 *         name='"' | 
+	 *         name=';' | 
+	 *         name=EXCEPTION | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_CiStore(ISerializationContext context, CiStore semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Ci returns Ci
+	 *
+	 * Constraint:
+	 *     (feature+=CryptoEnabled feature+=CryptoObject_attr)
+	 */
+	protected void sequence_Ci(ISerializationContext context, Ci semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     CloseHintDateQuery returns CloseHintDateQuery
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name='(' | 
+	 *         name=')' | 
+	 *         name=EXCEPTION | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_CloseHintDateQuery(ISerializationContext context, CloseHintDateQuery semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     CloseMode returns CloseMode
+	 *
+	 * Constraint:
+	 *     name=ID
+	 */
+	protected void sequence_CloseMode(ISerializationContext context, CloseMode semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, InfoProjectPackage.Literals.CLOSE_MODE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, InfoProjectPackage.Literals.CLOSE_MODE__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getCloseModeAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ClosePeriod returns ClosePeriod
+	 *
+	 * Constraint:
+	 *     name=VERSION_NUMBER
+	 */
+	protected void sequence_ClosePeriod(ISerializationContext context, ClosePeriod semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, InfoProjectPackage.Literals.CLOSE_PERIOD__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, InfoProjectPackage.Literals.CLOSE_PERIOD__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getClosePeriodAccess().getNameVERSION_NUMBERTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Configure returns Configure
+	 *
+	 * Constraint:
+	 *     name=ID
+	 */
+	protected void sequence_Configure(ISerializationContext context, Configure semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, InfoProjectPackage.Literals.CONFIGURE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, InfoProjectPackage.Literals.CONFIGURE__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getConfigureAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Confirmation returns Confirmation
+	 *
+	 * Constraint:
+	 *     (feature+=FeatureName feature+=DeliveryChannelParameters feature+=Holdings feature+=Types)
+	 */
+	protected void sequence_Confirmation(ISerializationContext context, Confirmation semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     CryptoEnabled returns CryptoEnabled
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name='(' | 
+	 *         name=')' | 
+	 *         name='/' | 
+	 *         name='"' | 
+	 *         name=';' | 
+	 *         name=EXCEPTION | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_CryptoEnabled(ISerializationContext context, CryptoEnabled semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     CryptoEncoding returns CryptoEncoding
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name='(' | 
+	 *         name=')' | 
+	 *         name='/' | 
+	 *         name='"' | 
+	 *         name=';' | 
+	 *         name=EXCEPTION | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_CryptoEncoding(ISerializationContext context, CryptoEncoding semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     CryptoObject returns CryptoObject
+	 *
+	 * Constraint:
+	 *     (features+=FeatureName features+=Configure features+=PaddingScheme features+=SecurityProvider)
+	 */
+	protected void sequence_CryptoObject(ISerializationContext context, CryptoObject semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     CryptoObject_attr returns CryptoObject_attr
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name='(' | 
+	 *         name=')' | 
+	 *         name='/' | 
+	 *         name='"' | 
+	 *         name=';' | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_CryptoObject_attr(ISerializationContext context, CryptoObject_attr semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Deadline returns Deadline
+	 *
+	 * Constraint:
+	 *     features+=Priority
+	 */
+	protected void sequence_Deadline(ISerializationContext context, Deadline semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     DefaultRetentionClass returns DefaultRetentionClass
+	 *
+	 * Constraint:
+	 *     name=ID
+	 */
+	protected void sequence_DefaultRetentionClass(ISerializationContext context, DefaultRetentionClass semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, InfoProjectPackage.Literals.DEFAULT_RETENTION_CLASS__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, InfoProjectPackage.Literals.DEFAULT_RETENTION_CLASS__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getDefaultRetentionClassAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Default returns Default
+	 *
+	 * Constraint:
+	 *     name=ID
+	 */
+	protected void sequence_Default(ISerializationContext context, Default semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, InfoProjectPackage.Literals.DEFAULT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, InfoProjectPackage.Literals.DEFAULT__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getDefaultAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     DeliveryChannelParameters returns DeliveryChannelParameters
+	 *
+	 * Constraint:
+	 *     (feature+=Aip_id feature+=Ia_conf_datetime feature+=Ia_conf_type)
+	 */
+	protected void sequence_DeliveryChannelParameters(ISerializationContext context, DeliveryChannelParameters semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     DeliveryChannel returns DeliveryChannel
+	 *
+	 * Constraint:
+	 *     (
+	 *         feature+=FeatureName 
+	 *         feature+=FileName 
+	 *         feature+=Overwrite 
+	 *         feature+=Prefix 
+	 *         feature+=Store 
+	 *         feature+=SubPath 
+	 *         feature+=Suffix
+	 *     )
+	 */
+	protected void sequence_DeliveryChannel(ISerializationContext context, DeliveryChannel semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -152,7 +987,55 @@ public class InfoProjectSemanticSequencer extends AbstractDelegatingSemanticSequ
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, InfoProjectPackage.Literals.DESCRIPTION__NAME));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getDescriptionAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getDescriptionAccess().getNameIDTerminalRuleCall_3_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     DispositionStrategy returns DispositionStrategy
+	 *
+	 * Constraint:
+	 *     features+=TypeAttribute
+	 */
+	protected void sequence_DispositionStrategy(ISerializationContext context, DispositionStrategy semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     EnumCOD returns EnumCOD
+	 *
+	 * Constraint:
+	 *     name=VERSION_NUMBER
+	 */
+	protected void sequence_EnumCOD(ISerializationContext context, EnumCOD semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, InfoProjectPackage.Literals.ENUM_COD__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, InfoProjectPackage.Literals.ENUM_COD__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getEnumCODAccess().getNameVERSION_NUMBERTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     EnumMR returns EnumMR
+	 *
+	 * Constraint:
+	 *     name=ID
+	 */
+	protected void sequence_EnumMR(ISerializationContext context, EnumMR semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, InfoProjectPackage.Literals.ENUM_MR__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, InfoProjectPackage.Literals.ENUM_MR__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getEnumMRAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	
@@ -162,16 +1045,49 @@ public class InfoProjectSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     FeatureName returns FeatureName
 	 *
 	 * Constraint:
-	 *     name=ID
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name=VERSION_NUMBER | 
+	 *         name=EXCEPTION
+	 *     )*
 	 */
 	protected void sequence_FeatureName(ISerializationContext context, FeatureName semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, InfoProjectPackage.Literals.FEATURE_NAME__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, InfoProjectPackage.Literals.FEATURE_NAME__NAME));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getFeatureNameAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     FileName returns FileName
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name='(' | 
+	 *         name=')' | 
+	 *         name='/' | 
+	 *         name='"' | 
+	 *         name=';' | 
+	 *         name=EXCEPTION | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_FileName(ISerializationContext context, FileName semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -180,7 +1096,7 @@ public class InfoProjectSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     HoldType returns HoldType
 	 *
 	 * Constraint:
-	 *     features+=Type
+	 *     (features+=FeatureName? features+=TypeAttribute)
 	 */
 	protected void sequence_HoldType(ISerializationContext context, HoldType semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -201,18 +1117,249 @@ public class InfoProjectSemanticSequencer extends AbstractDelegatingSemanticSequ
 	
 	/**
 	 * Contexts:
-	 *     MCS returns MCS
+	 *     HoldingCrypto returns HoldingCrypto
+	 *
+	 * Constraint:
+	 *     (
+	 *         feature+=FeatureName 
+	 *         feature+=CryptoEncoding 
+	 *         feature+=Ci 
+	 *         feature+=Pdi 
+	 *         feature+=Sip 
+	 *         feature+=Pdis
+	 *     )
+	 */
+	protected void sequence_HoldingCrypto(ISerializationContext context, HoldingCrypto semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Holding returns Holding
+	 *
+	 * Constraint:
+	 *     (
+	 *         features+=FeatureName 
+	 *         features+=CiStore 
+	 *         features+=DefaultRetentionClass 
+	 *         features+=Description 
+	 *         features+=IngestNode 
+	 *         features+=LogStore 
+	 *         features+=ManagedItemStore 
+	 *         features+=PdiConfigs 
+	 *         features+=Priority 
+	 *         features+=RenditionStore 
+	 *         features+=RetentionClasses 
+	 *         features+=SipStore 
+	 *         features+=StagingStore 
+	 *         features+=SubPriorities 
+	 *         features+=XdbLibraryParent 
+	 *         features+=XdbMode 
+	 *         features+=XdbStore 
+	 *         features+=XmlStore
+	 *     )
+	 */
+	protected void sequence_Holding(ISerializationContext context, Holding semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Holdings returns Holdings
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name='(' | 
+	 *         name=')' | 
+	 *         name='/' | 
+	 *         name='"' | 
+	 *         name=';' | 
+	 *         name=EXCEPTION | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_Holdings(ISerializationContext context, Holdings semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Ia_conf_datetime returns Ia_conf_datetime
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='%' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name='(' | 
+	 *         name=')' | 
+	 *         name='/' | 
+	 *         name='"' | 
+	 *         name=''' | 
+	 *         name=';' | 
+	 *         name=EXCEPTION | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_Ia_conf_datetime(ISerializationContext context, Ia_conf_datetime semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Ia_conf_type returns Ia_conf_type
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='%' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name='(' | 
+	 *         name=')' | 
+	 *         name='/' | 
+	 *         name='"' | 
+	 *         name=';' | 
+	 *         name=''' | 
+	 *         name=EXCEPTION | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_Ia_conf_type(ISerializationContext context, Ia_conf_type semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Include returns Include
+	 *
+	 * Constraint:
+	 *     files+=FileDeclaration*
+	 */
+	protected void sequence_Include(ISerializationContext context, Include semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     IngestNode returns IngestNode
+	 *
+	 * Constraint:
+	 *     (features+=FeatureName features+=EnumCOD features+=EnumMR features+=LogLevel)
+	 */
+	protected void sequence_IngestNode(ISerializationContext context, IngestNode semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     LogLevel returns LogLevel
 	 *
 	 * Constraint:
 	 *     name=ID
 	 */
-	protected void sequence_MCS(ISerializationContext context, MCS semanticObject) {
+	protected void sequence_LogLevel(ISerializationContext context, LogLevel semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, InfoProjectPackage.Literals.MCS__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, InfoProjectPackage.Literals.MCS__NAME));
+			if (transientValues.isValueTransient(semanticObject, InfoProjectPackage.Literals.LOG_LEVEL__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, InfoProjectPackage.Literals.LOG_LEVEL__NAME));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getMCSAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getLogLevelAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     LogStore returns LogStore
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name='(' | 
+	 *         name=')' | 
+	 *         name='/' | 
+	 *         name='"' | 
+	 *         name=';' | 
+	 *         name=EXCEPTION | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_LogStore(ISerializationContext context, LogStore semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     MCS returns MCS
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name=EXCEPTION | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_MCS(ISerializationContext context, MCS semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ManagedItemStore returns ManagedItemStore
+	 *
+	 * Constraint:
+	 *     name=ID
+	 */
+	protected void sequence_ManagedItemStore(ISerializationContext context, ManagedItemStore semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, InfoProjectPackage.Literals.MANAGED_ITEM_STORE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, InfoProjectPackage.Literals.MANAGED_ITEM_STORE__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getManagedItemStoreAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	
@@ -222,9 +1369,548 @@ public class InfoProjectSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     Model returns Model
 	 *
 	 * Constraint:
-	 *     (element+=Version element+=Application element+=Tenant element+=Hold)
+	 *     (
+	 *         element+=Version 
+	 *         element+=Namespace 
+	 *         element+=Tenant 
+	 *         element+=Application 
+	 *         element+=Hold 
+	 *         element+=IngestNode 
+	 *         element+=ReceiveNode 
+	 *         element+=RetentionPolicy 
+	 *         element+=DispositionStrategy 
+	 *         element+=Space_attr 
+	 *         element+=CryptoObject 
+	 *         element+=XdbFederation 
+	 *         element+=XdbDatabase 
+	 *         element+=SpaceRootXdbLibrary 
+	 *         element+=XdbLibrary 
+	 *         element+=XdbLibraryPolicy 
+	 *         element+=Holding 
+	 *         element+=AuditEvent 
+	 *         element+=DeliveryChannel 
+	 *         element+=Confirmation 
+	 *         element+=HoldingCrypto 
+	 *         element+=Include
+	 *     )
 	 */
 	protected void sequence_Model(ISerializationContext context, Model semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Namespace returns Namespace
+	 *
+	 * Constraint:
+	 *     (feature+=Prefix feature+=Uri)
+	 */
+	protected void sequence_Namespace(ISerializationContext context, Namespace semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Overwrite returns Overwrite
+	 *
+	 * Constraint:
+	 *     name=ID
+	 */
+	protected void sequence_Overwrite(ISerializationContext context, Overwrite semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, InfoProjectPackage.Literals.OVERWRITE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, InfoProjectPackage.Literals.OVERWRITE__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getOverwriteAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     PKeyQuery returns PKeyQuery
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='=' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name='(' | 
+	 *         name=')' | 
+	 *         name='/' | 
+	 *         name='"' | 
+	 *         name=';' | 
+	 *         name=EXCEPTION | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_PKeyQuery(ISerializationContext context, PKeyQuery semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     PaddingScheme returns PaddingScheme
+	 *
+	 * Constraint:
+	 *     name=ID*
+	 */
+	protected void sequence_PaddingScheme(ISerializationContext context, PaddingScheme semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ParentSpaceRootXdbLibrary returns ParentSpaceRootXdbLibrary
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name=EXCEPTION | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_ParentSpaceRootXdbLibrary(ISerializationContext context, ParentSpaceRootXdbLibrary semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     PdiConfigs returns PdiConfigs
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name='(' | 
+	 *         name=')' | 
+	 *         name='/' | 
+	 *         name='"' | 
+	 *         name=';' | 
+	 *         name=EXCEPTION | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_PdiConfigs(ISerializationContext context, PdiConfigs semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Pdi returns Pdi
+	 *
+	 * Constraint:
+	 *     (feature+=CryptoEnabled feature+=CryptoObject_attr)
+	 */
+	protected void sequence_Pdi(ISerializationContext context, Pdi semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Pdis returns Pdis
+	 *
+	 * Constraint:
+	 *     feature+=Schema
+	 */
+	protected void sequence_Pdis(ISerializationContext context, Pdis semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Policies returns Policies
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name='(' | 
+	 *         name=')' | 
+	 *         name='/' | 
+	 *         name='"' | 
+	 *         name=';' | 
+	 *         name=EXCEPTION | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_Policies(ISerializationContext context, Policies semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Prefix returns Prefix
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='%' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name=''' | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_Prefix(ISerializationContext context, Prefix semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Priority returns Priority
+	 *
+	 * Constraint:
+	 *     name=VERSION_NUMBER
+	 */
+	protected void sequence_Priority(ISerializationContext context, Priority semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, InfoProjectPackage.Literals.PRIORITY__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, InfoProjectPackage.Literals.PRIORITY__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getPriorityAccess().getNameVERSION_NUMBERTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ReceiveNode returns ReceiveNode
+	 *
+	 * Constraint:
+	 *     features+=FeatureName
+	 */
+	protected void sequence_ReceiveNode(ISerializationContext context, ReceiveNode semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     RenditionStore returns RenditionStore
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name='(' | 
+	 *         name=')' | 
+	 *         name='/' | 
+	 *         name='"' | 
+	 *         name=';' | 
+	 *         name=EXCEPTION | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_RenditionStore(ISerializationContext context, RenditionStore semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     RetentionClasses returns RetentionClasses
+	 *
+	 * Constraint:
+	 *     (features+=FeatureName feature+=Policies)
+	 */
+	protected void sequence_RetentionClasses(ISerializationContext context, RetentionClasses semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     RetentionPolicy returns RetentionPolicy
+	 *
+	 * Constraint:
+	 *     (features+=FeatureName features+=AgingStrategy features+=DispositionStrategy)
+	 */
+	protected void sequence_RetentionPolicy(ISerializationContext context, RetentionPolicy semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Schema returns Schema
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name='(' | 
+	 *         name=')' | 
+	 *         name='/' | 
+	 *         name='"' | 
+	 *         name=';' | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_Schema(ISerializationContext context, Schema semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     SecurityProvider returns SecurityProvider
+	 *
+	 * Constraint:
+	 *     name=ID
+	 */
+	protected void sequence_SecurityProvider(ISerializationContext context, SecurityProvider semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, InfoProjectPackage.Literals.SECURITY_PROVIDER__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, InfoProjectPackage.Literals.SECURITY_PROVIDER__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getSecurityProviderAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     SipStore returns SipStore
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name='(' | 
+	 *         name=')' | 
+	 *         name='/' | 
+	 *         name='"' | 
+	 *         name=';' | 
+	 *         name=EXCEPTION | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_SipStore(ISerializationContext context, SipStore semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Sip returns Sip
+	 *
+	 * Constraint:
+	 *     (feature+=CryptoEnabled feature+=CryptoObject_attr)
+	 */
+	protected void sequence_Sip(ISerializationContext context, Sip semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     SpaceRootXdbLibrary returns SpaceRootXdbLibrary
+	 *
+	 * Constraint:
+	 *     (features+=FeatureName features+=Default features+=SubPath)
+	 */
+	protected void sequence_SpaceRootXdbLibrary(ISerializationContext context, SpaceRootXdbLibrary semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Space_attr returns Space_attr
+	 *
+	 * Constraint:
+	 *     features+=FeatureName
+	 */
+	protected void sequence_Space_attr(ISerializationContext context, Space_attr semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     StagingStore returns StagingStore
+	 *
+	 * Constraint:
+	 *     name=ID
+	 */
+	protected void sequence_StagingStore(ISerializationContext context, StagingStore semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, InfoProjectPackage.Literals.STAGING_STORE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, InfoProjectPackage.Literals.STAGING_STORE__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getStagingStoreAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Store returns Store
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name='(' | 
+	 *         name=')' | 
+	 *         name='/' | 
+	 *         name='"' | 
+	 *         name=';' | 
+	 *         name=EXCEPTION | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_Store(ISerializationContext context, Store semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     SubPath returns SubPath
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='%' | 
+	 *         name='$' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name='(' | 
+	 *         name=')' | 
+	 *         name='/' | 
+	 *         name='"' | 
+	 *         name=';' | 
+	 *         name=EXCEPTION | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_SubPath(ISerializationContext context, SubPath semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     SubPriorities returns SubPriorities
+	 *
+	 * Constraint:
+	 *     features+=Deadline*
+	 */
+	protected void sequence_SubPriorities(ISerializationContext context, SubPriorities semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Suffix returns Suffix
+	 *
+	 * Constraint:
+	 *     (name='.' | name=ID)*
+	 */
+	protected void sequence_Suffix(ISerializationContext context, Suffix semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     SuperUserPassword returns SuperUserPassword
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name='(' | 
+	 *         name=')' | 
+	 *         name='/' | 
+	 *         name='"' | 
+	 *         name=';' | 
+	 *         name=EXCEPTION | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_SuperUserPassword(ISerializationContext context, SuperUserPassword semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -234,10 +1920,56 @@ public class InfoProjectSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     Tenant returns Tenant
 	 *
 	 * Constraint:
-	 *     features1+=FeatureName
+	 *     features+=FeatureName
 	 */
 	protected void sequence_Tenant(ISerializationContext context, Tenant semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Tenant_attr returns Tenant_attr
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name='(' | 
+	 *         name=')' | 
+	 *         name='/' | 
+	 *         name='"' | 
+	 *         name=';' | 
+	 *         name=EXCEPTION | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_Tenant_attr(ISerializationContext context, Tenant_attr semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     TypeAttribute returns TypeAttribute
+	 *
+	 * Constraint:
+	 *     name=ID
+	 */
+	protected void sequence_TypeAttribute(ISerializationContext context, TypeAttribute semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, InfoProjectPackage.Literals.TYPE_ATTRIBUTE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, InfoProjectPackage.Literals.TYPE_ATTRIBUTE__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTypeAttributeAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.finish();
 	}
 	
 	
@@ -254,8 +1986,99 @@ public class InfoProjectSemanticSequencer extends AbstractDelegatingSemanticSequ
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, InfoProjectPackage.Literals.TYPE__VALUE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getTypeAccess().getValueEnumOfTypesEnumRuleCall_1_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getTypeAccess().getValueEnumOfTypesEnumRuleCall_3_0(), semanticObject.getValue());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Types returns Types
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name='(' | 
+	 *         name=')' | 
+	 *         name='/' | 
+	 *         name='"' | 
+	 *         name=';' | 
+	 *         name=EXCEPTION | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_Types(ISerializationContext context, Types semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Units returns Units
+	 *
+	 * Constraint:
+	 *     name=ID
+	 */
+	protected void sequence_Units(ISerializationContext context, Units semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, InfoProjectPackage.Literals.UNITS__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, InfoProjectPackage.Literals.UNITS__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getUnitsAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Uri returns Uri
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_Uri(ISerializationContext context, Uri semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Value returns Value
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name=EXCEPTION | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_Value(ISerializationContext context, Value semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -272,8 +2095,177 @@ public class InfoProjectSemanticSequencer extends AbstractDelegatingSemanticSequ
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, InfoProjectPackage.Literals.VERSION__NAME));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getVersionAccess().getNameVERSION_NUMBERTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getVersionAccess().getNameVERSION_NUMBERTerminalRuleCall_2_0(), semanticObject.getName());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     XdbDatabase returns XdbDatabase
+	 *
+	 * Constraint:
+	 *     (features+=FeatureName features+=Configure features+=Default features+=AdminPassword)
+	 */
+	protected void sequence_XdbDatabase(ISerializationContext context, XdbDatabase semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     XdbFederation returns XdbFederation
+	 *
+	 * Constraint:
+	 *     (feature+=FeatureName feature+=Configure feature+=Default feature+=Bootstrap feature+=SuperUserPassword)
+	 */
+	protected void sequence_XdbFederation(ISerializationContext context, XdbFederation semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     XdbLibraryParent returns XdbLibraryParent
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name='(' | 
+	 *         name=')' | 
+	 *         name='/' | 
+	 *         name='"' | 
+	 *         name=';' | 
+	 *         name=EXCEPTION | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_XdbLibraryParent(ISerializationContext context, XdbLibraryParent semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     XdbLibraryPolicy returns XdbLibraryPolicy
+	 *
+	 * Constraint:
+	 *     (
+	 *         features+=FeatureName 
+	 *         features+=AipQuota 
+	 *         features+=AiuQuota 
+	 *         features+=CloseHintDateQuery 
+	 *         features+=CloseMode 
+	 *         features+=ClosePeriod 
+	 *         features+=AiuThreshold 
+	 *         features+=PKeyQuery
+	 *     )
+	 */
+	protected void sequence_XdbLibraryPolicy(ISerializationContext context, XdbLibraryPolicy semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     XdbLibrary returns XdbLibrary
+	 *
+	 * Constraint:
+	 *     (features+=FeatureName features+=ParentSpaceRootXdbLibrary features+=SubPath)
+	 */
+	protected void sequence_XdbLibrary(ISerializationContext context, XdbLibrary semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     XdbMode returns XdbMode
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name='(' | 
+	 *         name=')' | 
+	 *         name='/' | 
+	 *         name='"' | 
+	 *         name=';' | 
+	 *         name=EXCEPTION | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_XdbMode(ISerializationContext context, XdbMode semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     XdbStore returns XdbStore
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name='(' | 
+	 *         name=')' | 
+	 *         name='/' | 
+	 *         name='"' | 
+	 *         name=';' | 
+	 *         name=EXCEPTION | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_XdbStore(ISerializationContext context, XdbStore semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     XmlStore returns XmlStore
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID | 
+	 *         name='-' | 
+	 *         name='$' | 
+	 *         name='{' | 
+	 *         name='}' | 
+	 *         name='^' | 
+	 *         name=':' | 
+	 *         name='.' | 
+	 *         name='(' | 
+	 *         name=')' | 
+	 *         name='/' | 
+	 *         name='"' | 
+	 *         name=';' | 
+	 *         name=EXCEPTION | 
+	 *         name=VERSION_NUMBER
+	 *     )*
+	 */
+	protected void sequence_XmlStore(ISerializationContext context, XmlStore semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

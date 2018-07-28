@@ -86,6 +86,21 @@ public class InfoProjectAdapterFactory extends AdapterFactoryImpl
         return createVersionAdapter();
       }
       @Override
+      public Adapter caseNamespace(Namespace object)
+      {
+        return createNamespaceAdapter();
+      }
+      @Override
+      public Adapter casePrefix(Prefix object)
+      {
+        return createPrefixAdapter();
+      }
+      @Override
+      public Adapter caseUri(Uri object)
+      {
+        return createUriAdapter();
+      }
+      @Override
       public Adapter caseFeatureName(FeatureName object)
       {
         return createFeatureNameAdapter();
@@ -136,6 +151,396 @@ public class InfoProjectAdapterFactory extends AdapterFactoryImpl
         return createHoldTypeAdapter();
       }
       @Override
+      public Adapter caseTypeAttribute(TypeAttribute object)
+      {
+        return createTypeAttributeAdapter();
+      }
+      @Override
+      public Adapter caseReceiveNode(ReceiveNode object)
+      {
+        return createReceiveNodeAdapter();
+      }
+      @Override
+      public Adapter caseRetentionPolicy(RetentionPolicy object)
+      {
+        return createRetentionPolicyAdapter();
+      }
+      @Override
+      public Adapter caseAgingPeriod(AgingPeriod object)
+      {
+        return createAgingPeriodAdapter();
+      }
+      @Override
+      public Adapter caseUnits(Units object)
+      {
+        return createUnitsAdapter();
+      }
+      @Override
+      public Adapter caseValue(Value object)
+      {
+        return createValueAdapter();
+      }
+      @Override
+      public Adapter caseAgingStrategy(AgingStrategy object)
+      {
+        return createAgingStrategyAdapter();
+      }
+      @Override
+      public Adapter caseDispositionStrategy(DispositionStrategy object)
+      {
+        return createDispositionStrategyAdapter();
+      }
+      @Override
+      public Adapter caseSpace_attr(Space_attr object)
+      {
+        return createSpace_attrAdapter();
+      }
+      @Override
+      public Adapter caseCryptoObject(CryptoObject object)
+      {
+        return createCryptoObjectAdapter();
+      }
+      @Override
+      public Adapter caseConfigure(Configure object)
+      {
+        return createConfigureAdapter();
+      }
+      @Override
+      public Adapter casePaddingScheme(PaddingScheme object)
+      {
+        return createPaddingSchemeAdapter();
+      }
+      @Override
+      public Adapter caseSecurityProvider(SecurityProvider object)
+      {
+        return createSecurityProviderAdapter();
+      }
+      @Override
+      public Adapter caseXdbFederation(XdbFederation object)
+      {
+        return createXdbFederationAdapter();
+      }
+      @Override
+      public Adapter caseBootstrap(Bootstrap object)
+      {
+        return createBootstrapAdapter();
+      }
+      @Override
+      public Adapter caseSuperUserPassword(SuperUserPassword object)
+      {
+        return createSuperUserPasswordAdapter();
+      }
+      @Override
+      public Adapter caseXdbDatabase(XdbDatabase object)
+      {
+        return createXdbDatabaseAdapter();
+      }
+      @Override
+      public Adapter caseDefault(Default object)
+      {
+        return createDefaultAdapter();
+      }
+      @Override
+      public Adapter caseAdminPassword(AdminPassword object)
+      {
+        return createAdminPasswordAdapter();
+      }
+      @Override
+      public Adapter caseSpaceRootXdbLibrary(SpaceRootXdbLibrary object)
+      {
+        return createSpaceRootXdbLibraryAdapter();
+      }
+      @Override
+      public Adapter caseXdbLibrary(XdbLibrary object)
+      {
+        return createXdbLibraryAdapter();
+      }
+      @Override
+      public Adapter caseParentSpaceRootXdbLibrary(ParentSpaceRootXdbLibrary object)
+      {
+        return createParentSpaceRootXdbLibraryAdapter();
+      }
+      @Override
+      public Adapter caseSubPath(SubPath object)
+      {
+        return createSubPathAdapter();
+      }
+      @Override
+      public Adapter caseXdbLibraryPolicy(XdbLibraryPolicy object)
+      {
+        return createXdbLibraryPolicyAdapter();
+      }
+      @Override
+      public Adapter caseAipQuota(AipQuota object)
+      {
+        return createAipQuotaAdapter();
+      }
+      @Override
+      public Adapter caseAiuQuota(AiuQuota object)
+      {
+        return createAiuQuotaAdapter();
+      }
+      @Override
+      public Adapter caseCloseHintDateQuery(CloseHintDateQuery object)
+      {
+        return createCloseHintDateQueryAdapter();
+      }
+      @Override
+      public Adapter caseCloseMode(CloseMode object)
+      {
+        return createCloseModeAdapter();
+      }
+      @Override
+      public Adapter caseClosePeriod(ClosePeriod object)
+      {
+        return createClosePeriodAdapter();
+      }
+      @Override
+      public Adapter caseAiuThreshold(AiuThreshold object)
+      {
+        return createAiuThresholdAdapter();
+      }
+      @Override
+      public Adapter casePKeyQuery(PKeyQuery object)
+      {
+        return createPKeyQueryAdapter();
+      }
+      @Override
+      public Adapter caseHolding(Holding object)
+      {
+        return createHoldingAdapter();
+      }
+      @Override
+      public Adapter caseCiStore(CiStore object)
+      {
+        return createCiStoreAdapter();
+      }
+      @Override
+      public Adapter caseDefaultRetentionClass(DefaultRetentionClass object)
+      {
+        return createDefaultRetentionClassAdapter();
+      }
+      @Override
+      public Adapter caseLogStore(LogStore object)
+      {
+        return createLogStoreAdapter();
+      }
+      @Override
+      public Adapter caseManagedItemStore(ManagedItemStore object)
+      {
+        return createManagedItemStoreAdapter();
+      }
+      @Override
+      public Adapter casePdiConfigs(PdiConfigs object)
+      {
+        return createPdiConfigsAdapter();
+      }
+      @Override
+      public Adapter casePriority(Priority object)
+      {
+        return createPriorityAdapter();
+      }
+      @Override
+      public Adapter caseRenditionStore(RenditionStore object)
+      {
+        return createRenditionStoreAdapter();
+      }
+      @Override
+      public Adapter caseRetentionClasses(RetentionClasses object)
+      {
+        return createRetentionClassesAdapter();
+      }
+      @Override
+      public Adapter casePolicies(Policies object)
+      {
+        return createPoliciesAdapter();
+      }
+      @Override
+      public Adapter caseSipStore(SipStore object)
+      {
+        return createSipStoreAdapter();
+      }
+      @Override
+      public Adapter caseStagingStore(StagingStore object)
+      {
+        return createStagingStoreAdapter();
+      }
+      @Override
+      public Adapter caseSubPriorities(SubPriorities object)
+      {
+        return createSubPrioritiesAdapter();
+      }
+      @Override
+      public Adapter caseDeadline(Deadline object)
+      {
+        return createDeadlineAdapter();
+      }
+      @Override
+      public Adapter caseXdbLibraryParent(XdbLibraryParent object)
+      {
+        return createXdbLibraryParentAdapter();
+      }
+      @Override
+      public Adapter caseXdbMode(XdbMode object)
+      {
+        return createXdbModeAdapter();
+      }
+      @Override
+      public Adapter caseXdbStore(XdbStore object)
+      {
+        return createXdbStoreAdapter();
+      }
+      @Override
+      public Adapter caseXmlStore(XmlStore object)
+      {
+        return createXmlStoreAdapter();
+      }
+      @Override
+      public Adapter caseAuditEvent(AuditEvent object)
+      {
+        return createAuditEventAdapter();
+      }
+      @Override
+      public Adapter caseApplication_attr(Application_attr object)
+      {
+        return createApplication_attrAdapter();
+      }
+      @Override
+      public Adapter caseTenant_attr(Tenant_attr object)
+      {
+        return createTenant_attrAdapter();
+      }
+      @Override
+      public Adapter caseDeliveryChannel(DeliveryChannel object)
+      {
+        return createDeliveryChannelAdapter();
+      }
+      @Override
+      public Adapter caseFileName(FileName object)
+      {
+        return createFileNameAdapter();
+      }
+      @Override
+      public Adapter caseOverwrite(Overwrite object)
+      {
+        return createOverwriteAdapter();
+      }
+      @Override
+      public Adapter caseStore(Store object)
+      {
+        return createStoreAdapter();
+      }
+      @Override
+      public Adapter caseSuffix(Suffix object)
+      {
+        return createSuffixAdapter();
+      }
+      @Override
+      public Adapter caseConfirmation(Confirmation object)
+      {
+        return createConfirmationAdapter();
+      }
+      @Override
+      public Adapter caseDeliveryChannelParameters(DeliveryChannelParameters object)
+      {
+        return createDeliveryChannelParametersAdapter();
+      }
+      @Override
+      public Adapter caseAip_id(Aip_id object)
+      {
+        return createAip_idAdapter();
+      }
+      @Override
+      public Adapter caseIa_conf_datetime(Ia_conf_datetime object)
+      {
+        return createIa_conf_datetimeAdapter();
+      }
+      @Override
+      public Adapter caseIa_conf_type(Ia_conf_type object)
+      {
+        return createIa_conf_typeAdapter();
+      }
+      @Override
+      public Adapter caseHoldings(Holdings object)
+      {
+        return createHoldingsAdapter();
+      }
+      @Override
+      public Adapter caseTypes(Types object)
+      {
+        return createTypesAdapter();
+      }
+      @Override
+      public Adapter caseHoldingCrypto(HoldingCrypto object)
+      {
+        return createHoldingCryptoAdapter();
+      }
+      @Override
+      public Adapter caseCryptoEncoding(CryptoEncoding object)
+      {
+        return createCryptoEncodingAdapter();
+      }
+      @Override
+      public Adapter caseCi(Ci object)
+      {
+        return createCiAdapter();
+      }
+      @Override
+      public Adapter caseCryptoEnabled(CryptoEnabled object)
+      {
+        return createCryptoEnabledAdapter();
+      }
+      @Override
+      public Adapter caseCryptoObject_attr(CryptoObject_attr object)
+      {
+        return createCryptoObject_attrAdapter();
+      }
+      @Override
+      public Adapter casePdi(Pdi object)
+      {
+        return createPdiAdapter();
+      }
+      @Override
+      public Adapter caseSip(Sip object)
+      {
+        return createSipAdapter();
+      }
+      @Override
+      public Adapter casePdis(Pdis object)
+      {
+        return createPdisAdapter();
+      }
+      @Override
+      public Adapter caseSchema(Schema object)
+      {
+        return createSchemaAdapter();
+      }
+      @Override
+      public Adapter caseInclude(Include object)
+      {
+        return createIncludeAdapter();
+      }
+      @Override
+      public Adapter caseIngestNode(IngestNode object)
+      {
+        return createIngestNodeAdapter();
+      }
+      @Override
+      public Adapter caseEnumCOD(EnumCOD object)
+      {
+        return createEnumCODAdapter();
+      }
+      @Override
+      public Adapter caseEnumMR(EnumMR object)
+      {
+        return createEnumMRAdapter();
+      }
+      @Override
+      public Adapter caseLogLevel(LogLevel object)
+      {
+        return createLogLevelAdapter();
+      }
+      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -183,6 +588,51 @@ public class InfoProjectAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createVersionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Namespace <em>Namespace</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.Namespace
+   * @generated
+   */
+  public Adapter createNamespaceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Prefix <em>Prefix</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.Prefix
+   * @generated
+   */
+  public Adapter createPrefixAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Uri <em>Uri</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.Uri
+   * @generated
+   */
+  public Adapter createUriAdapter()
   {
     return null;
   }
@@ -333,6 +783,1176 @@ public class InfoProjectAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createHoldTypeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.TypeAttribute <em>Type Attribute</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.TypeAttribute
+   * @generated
+   */
+  public Adapter createTypeAttributeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.ReceiveNode <em>Receive Node</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.ReceiveNode
+   * @generated
+   */
+  public Adapter createReceiveNodeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.RetentionPolicy <em>Retention Policy</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.RetentionPolicy
+   * @generated
+   */
+  public Adapter createRetentionPolicyAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.AgingPeriod <em>Aging Period</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.AgingPeriod
+   * @generated
+   */
+  public Adapter createAgingPeriodAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Units <em>Units</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.Units
+   * @generated
+   */
+  public Adapter createUnitsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Value <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.Value
+   * @generated
+   */
+  public Adapter createValueAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.AgingStrategy <em>Aging Strategy</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.AgingStrategy
+   * @generated
+   */
+  public Adapter createAgingStrategyAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.DispositionStrategy <em>Disposition Strategy</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.DispositionStrategy
+   * @generated
+   */
+  public Adapter createDispositionStrategyAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Space_attr <em>Space attr</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.Space_attr
+   * @generated
+   */
+  public Adapter createSpace_attrAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.CryptoObject <em>Crypto Object</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.CryptoObject
+   * @generated
+   */
+  public Adapter createCryptoObjectAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Configure <em>Configure</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.Configure
+   * @generated
+   */
+  public Adapter createConfigureAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.PaddingScheme <em>Padding Scheme</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.PaddingScheme
+   * @generated
+   */
+  public Adapter createPaddingSchemeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.SecurityProvider <em>Security Provider</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.SecurityProvider
+   * @generated
+   */
+  public Adapter createSecurityProviderAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.XdbFederation <em>Xdb Federation</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.XdbFederation
+   * @generated
+   */
+  public Adapter createXdbFederationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Bootstrap <em>Bootstrap</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.Bootstrap
+   * @generated
+   */
+  public Adapter createBootstrapAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.SuperUserPassword <em>Super User Password</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.SuperUserPassword
+   * @generated
+   */
+  public Adapter createSuperUserPasswordAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.XdbDatabase <em>Xdb Database</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.XdbDatabase
+   * @generated
+   */
+  public Adapter createXdbDatabaseAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Default <em>Default</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.Default
+   * @generated
+   */
+  public Adapter createDefaultAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.AdminPassword <em>Admin Password</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.AdminPassword
+   * @generated
+   */
+  public Adapter createAdminPasswordAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.SpaceRootXdbLibrary <em>Space Root Xdb Library</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.SpaceRootXdbLibrary
+   * @generated
+   */
+  public Adapter createSpaceRootXdbLibraryAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.XdbLibrary <em>Xdb Library</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.XdbLibrary
+   * @generated
+   */
+  public Adapter createXdbLibraryAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.ParentSpaceRootXdbLibrary <em>Parent Space Root Xdb Library</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.ParentSpaceRootXdbLibrary
+   * @generated
+   */
+  public Adapter createParentSpaceRootXdbLibraryAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.SubPath <em>Sub Path</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.SubPath
+   * @generated
+   */
+  public Adapter createSubPathAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.XdbLibraryPolicy <em>Xdb Library Policy</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.XdbLibraryPolicy
+   * @generated
+   */
+  public Adapter createXdbLibraryPolicyAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.AipQuota <em>Aip Quota</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.AipQuota
+   * @generated
+   */
+  public Adapter createAipQuotaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.AiuQuota <em>Aiu Quota</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.AiuQuota
+   * @generated
+   */
+  public Adapter createAiuQuotaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.CloseHintDateQuery <em>Close Hint Date Query</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.CloseHintDateQuery
+   * @generated
+   */
+  public Adapter createCloseHintDateQueryAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.CloseMode <em>Close Mode</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.CloseMode
+   * @generated
+   */
+  public Adapter createCloseModeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.ClosePeriod <em>Close Period</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.ClosePeriod
+   * @generated
+   */
+  public Adapter createClosePeriodAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.AiuThreshold <em>Aiu Threshold</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.AiuThreshold
+   * @generated
+   */
+  public Adapter createAiuThresholdAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.PKeyQuery <em>PKey Query</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.PKeyQuery
+   * @generated
+   */
+  public Adapter createPKeyQueryAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Holding <em>Holding</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.Holding
+   * @generated
+   */
+  public Adapter createHoldingAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.CiStore <em>Ci Store</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.CiStore
+   * @generated
+   */
+  public Adapter createCiStoreAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.DefaultRetentionClass <em>Default Retention Class</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.DefaultRetentionClass
+   * @generated
+   */
+  public Adapter createDefaultRetentionClassAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.LogStore <em>Log Store</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.LogStore
+   * @generated
+   */
+  public Adapter createLogStoreAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.ManagedItemStore <em>Managed Item Store</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.ManagedItemStore
+   * @generated
+   */
+  public Adapter createManagedItemStoreAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.PdiConfigs <em>Pdi Configs</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.PdiConfigs
+   * @generated
+   */
+  public Adapter createPdiConfigsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Priority <em>Priority</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.Priority
+   * @generated
+   */
+  public Adapter createPriorityAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.RenditionStore <em>Rendition Store</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.RenditionStore
+   * @generated
+   */
+  public Adapter createRenditionStoreAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.RetentionClasses <em>Retention Classes</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.RetentionClasses
+   * @generated
+   */
+  public Adapter createRetentionClassesAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Policies <em>Policies</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.Policies
+   * @generated
+   */
+  public Adapter createPoliciesAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.SipStore <em>Sip Store</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.SipStore
+   * @generated
+   */
+  public Adapter createSipStoreAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.StagingStore <em>Staging Store</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.StagingStore
+   * @generated
+   */
+  public Adapter createStagingStoreAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.SubPriorities <em>Sub Priorities</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.SubPriorities
+   * @generated
+   */
+  public Adapter createSubPrioritiesAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Deadline <em>Deadline</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.Deadline
+   * @generated
+   */
+  public Adapter createDeadlineAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.XdbLibraryParent <em>Xdb Library Parent</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.XdbLibraryParent
+   * @generated
+   */
+  public Adapter createXdbLibraryParentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.XdbMode <em>Xdb Mode</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.XdbMode
+   * @generated
+   */
+  public Adapter createXdbModeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.XdbStore <em>Xdb Store</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.XdbStore
+   * @generated
+   */
+  public Adapter createXdbStoreAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.XmlStore <em>Xml Store</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.XmlStore
+   * @generated
+   */
+  public Adapter createXmlStoreAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.AuditEvent <em>Audit Event</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.AuditEvent
+   * @generated
+   */
+  public Adapter createAuditEventAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Application_attr <em>Application attr</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.Application_attr
+   * @generated
+   */
+  public Adapter createApplication_attrAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Tenant_attr <em>Tenant attr</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.Tenant_attr
+   * @generated
+   */
+  public Adapter createTenant_attrAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.DeliveryChannel <em>Delivery Channel</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.DeliveryChannel
+   * @generated
+   */
+  public Adapter createDeliveryChannelAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.FileName <em>File Name</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.FileName
+   * @generated
+   */
+  public Adapter createFileNameAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Overwrite <em>Overwrite</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.Overwrite
+   * @generated
+   */
+  public Adapter createOverwriteAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Store <em>Store</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.Store
+   * @generated
+   */
+  public Adapter createStoreAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Suffix <em>Suffix</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.Suffix
+   * @generated
+   */
+  public Adapter createSuffixAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Confirmation <em>Confirmation</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.Confirmation
+   * @generated
+   */
+  public Adapter createConfirmationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.DeliveryChannelParameters <em>Delivery Channel Parameters</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.DeliveryChannelParameters
+   * @generated
+   */
+  public Adapter createDeliveryChannelParametersAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Aip_id <em>Aip id</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.Aip_id
+   * @generated
+   */
+  public Adapter createAip_idAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Ia_conf_datetime <em>Ia conf datetime</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.Ia_conf_datetime
+   * @generated
+   */
+  public Adapter createIa_conf_datetimeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Ia_conf_type <em>Ia conf type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.Ia_conf_type
+   * @generated
+   */
+  public Adapter createIa_conf_typeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Holdings <em>Holdings</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.Holdings
+   * @generated
+   */
+  public Adapter createHoldingsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Types <em>Types</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.Types
+   * @generated
+   */
+  public Adapter createTypesAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.HoldingCrypto <em>Holding Crypto</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.HoldingCrypto
+   * @generated
+   */
+  public Adapter createHoldingCryptoAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.CryptoEncoding <em>Crypto Encoding</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.CryptoEncoding
+   * @generated
+   */
+  public Adapter createCryptoEncodingAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Ci <em>Ci</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.Ci
+   * @generated
+   */
+  public Adapter createCiAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.CryptoEnabled <em>Crypto Enabled</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.CryptoEnabled
+   * @generated
+   */
+  public Adapter createCryptoEnabledAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.CryptoObject_attr <em>Crypto Object attr</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.CryptoObject_attr
+   * @generated
+   */
+  public Adapter createCryptoObject_attrAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Pdi <em>Pdi</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.Pdi
+   * @generated
+   */
+  public Adapter createPdiAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Sip <em>Sip</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.Sip
+   * @generated
+   */
+  public Adapter createSipAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Pdis <em>Pdis</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.Pdis
+   * @generated
+   */
+  public Adapter createPdisAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Schema <em>Schema</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.Schema
+   * @generated
+   */
+  public Adapter createSchemaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.Include <em>Include</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.Include
+   * @generated
+   */
+  public Adapter createIncludeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.IngestNode <em>Ingest Node</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.IngestNode
+   * @generated
+   */
+  public Adapter createIngestNodeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.EnumCOD <em>Enum COD</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.EnumCOD
+   * @generated
+   */
+  public Adapter createEnumCODAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.EnumMR <em>Enum MR</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.EnumMR
+   * @generated
+   */
+  public Adapter createEnumMRAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link ru.spbstu.application.configurator.model.infoProject.LogLevel <em>Log Level</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see ru.spbstu.application.configurator.model.infoProject.LogLevel
+   * @generated
+   */
+  public Adapter createLogLevelAdapter()
   {
     return null;
   }

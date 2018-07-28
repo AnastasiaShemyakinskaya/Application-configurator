@@ -51,7 +51,7 @@ public class InfoProjectSwitch<T> extends Switch<T>
    * Checks whether this is a switch for the given package.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @parameter ePackage the package in question.
+   * @param ePackage the package in question.
    * @return whether this is a switch for the given package.
    * @generated
    */
@@ -84,6 +84,27 @@ public class InfoProjectSwitch<T> extends Switch<T>
       {
         Version version = (Version)theEObject;
         T result = caseVersion(version);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.NAMESPACE:
+      {
+        Namespace namespace = (Namespace)theEObject;
+        T result = caseNamespace(namespace);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.PREFIX:
+      {
+        Prefix prefix = (Prefix)theEObject;
+        T result = casePrefix(prefix);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.URI:
+      {
+        Uri uri = (Uri)theEObject;
+        T result = caseUri(uri);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -157,6 +178,552 @@ public class InfoProjectSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case InfoProjectPackage.TYPE_ATTRIBUTE:
+      {
+        TypeAttribute typeAttribute = (TypeAttribute)theEObject;
+        T result = caseTypeAttribute(typeAttribute);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.RECEIVE_NODE:
+      {
+        ReceiveNode receiveNode = (ReceiveNode)theEObject;
+        T result = caseReceiveNode(receiveNode);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.RETENTION_POLICY:
+      {
+        RetentionPolicy retentionPolicy = (RetentionPolicy)theEObject;
+        T result = caseRetentionPolicy(retentionPolicy);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.AGING_PERIOD:
+      {
+        AgingPeriod agingPeriod = (AgingPeriod)theEObject;
+        T result = caseAgingPeriod(agingPeriod);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.UNITS:
+      {
+        Units units = (Units)theEObject;
+        T result = caseUnits(units);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.VALUE:
+      {
+        Value value = (Value)theEObject;
+        T result = caseValue(value);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.AGING_STRATEGY:
+      {
+        AgingStrategy agingStrategy = (AgingStrategy)theEObject;
+        T result = caseAgingStrategy(agingStrategy);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.DISPOSITION_STRATEGY:
+      {
+        DispositionStrategy dispositionStrategy = (DispositionStrategy)theEObject;
+        T result = caseDispositionStrategy(dispositionStrategy);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.SPACE_ATTR:
+      {
+        Space_attr space_attr = (Space_attr)theEObject;
+        T result = caseSpace_attr(space_attr);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.CRYPTO_OBJECT:
+      {
+        CryptoObject cryptoObject = (CryptoObject)theEObject;
+        T result = caseCryptoObject(cryptoObject);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.CONFIGURE:
+      {
+        Configure configure = (Configure)theEObject;
+        T result = caseConfigure(configure);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.PADDING_SCHEME:
+      {
+        PaddingScheme paddingScheme = (PaddingScheme)theEObject;
+        T result = casePaddingScheme(paddingScheme);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.SECURITY_PROVIDER:
+      {
+        SecurityProvider securityProvider = (SecurityProvider)theEObject;
+        T result = caseSecurityProvider(securityProvider);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.XDB_FEDERATION:
+      {
+        XdbFederation xdbFederation = (XdbFederation)theEObject;
+        T result = caseXdbFederation(xdbFederation);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.BOOTSTRAP:
+      {
+        Bootstrap bootstrap = (Bootstrap)theEObject;
+        T result = caseBootstrap(bootstrap);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.SUPER_USER_PASSWORD:
+      {
+        SuperUserPassword superUserPassword = (SuperUserPassword)theEObject;
+        T result = caseSuperUserPassword(superUserPassword);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.XDB_DATABASE:
+      {
+        XdbDatabase xdbDatabase = (XdbDatabase)theEObject;
+        T result = caseXdbDatabase(xdbDatabase);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.DEFAULT:
+      {
+        Default default_ = (Default)theEObject;
+        T result = caseDefault(default_);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.ADMIN_PASSWORD:
+      {
+        AdminPassword adminPassword = (AdminPassword)theEObject;
+        T result = caseAdminPassword(adminPassword);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.SPACE_ROOT_XDB_LIBRARY:
+      {
+        SpaceRootXdbLibrary spaceRootXdbLibrary = (SpaceRootXdbLibrary)theEObject;
+        T result = caseSpaceRootXdbLibrary(spaceRootXdbLibrary);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.XDB_LIBRARY:
+      {
+        XdbLibrary xdbLibrary = (XdbLibrary)theEObject;
+        T result = caseXdbLibrary(xdbLibrary);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.PARENT_SPACE_ROOT_XDB_LIBRARY:
+      {
+        ParentSpaceRootXdbLibrary parentSpaceRootXdbLibrary = (ParentSpaceRootXdbLibrary)theEObject;
+        T result = caseParentSpaceRootXdbLibrary(parentSpaceRootXdbLibrary);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.SUB_PATH:
+      {
+        SubPath subPath = (SubPath)theEObject;
+        T result = caseSubPath(subPath);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.XDB_LIBRARY_POLICY:
+      {
+        XdbLibraryPolicy xdbLibraryPolicy = (XdbLibraryPolicy)theEObject;
+        T result = caseXdbLibraryPolicy(xdbLibraryPolicy);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.AIP_QUOTA:
+      {
+        AipQuota aipQuota = (AipQuota)theEObject;
+        T result = caseAipQuota(aipQuota);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.AIU_QUOTA:
+      {
+        AiuQuota aiuQuota = (AiuQuota)theEObject;
+        T result = caseAiuQuota(aiuQuota);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.CLOSE_HINT_DATE_QUERY:
+      {
+        CloseHintDateQuery closeHintDateQuery = (CloseHintDateQuery)theEObject;
+        T result = caseCloseHintDateQuery(closeHintDateQuery);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.CLOSE_MODE:
+      {
+        CloseMode closeMode = (CloseMode)theEObject;
+        T result = caseCloseMode(closeMode);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.CLOSE_PERIOD:
+      {
+        ClosePeriod closePeriod = (ClosePeriod)theEObject;
+        T result = caseClosePeriod(closePeriod);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.AIU_THRESHOLD:
+      {
+        AiuThreshold aiuThreshold = (AiuThreshold)theEObject;
+        T result = caseAiuThreshold(aiuThreshold);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.PKEY_QUERY:
+      {
+        PKeyQuery pKeyQuery = (PKeyQuery)theEObject;
+        T result = casePKeyQuery(pKeyQuery);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.HOLDING:
+      {
+        Holding holding = (Holding)theEObject;
+        T result = caseHolding(holding);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.CI_STORE:
+      {
+        CiStore ciStore = (CiStore)theEObject;
+        T result = caseCiStore(ciStore);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.DEFAULT_RETENTION_CLASS:
+      {
+        DefaultRetentionClass defaultRetentionClass = (DefaultRetentionClass)theEObject;
+        T result = caseDefaultRetentionClass(defaultRetentionClass);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.LOG_STORE:
+      {
+        LogStore logStore = (LogStore)theEObject;
+        T result = caseLogStore(logStore);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.MANAGED_ITEM_STORE:
+      {
+        ManagedItemStore managedItemStore = (ManagedItemStore)theEObject;
+        T result = caseManagedItemStore(managedItemStore);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.PDI_CONFIGS:
+      {
+        PdiConfigs pdiConfigs = (PdiConfigs)theEObject;
+        T result = casePdiConfigs(pdiConfigs);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.PRIORITY:
+      {
+        Priority priority = (Priority)theEObject;
+        T result = casePriority(priority);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.RENDITION_STORE:
+      {
+        RenditionStore renditionStore = (RenditionStore)theEObject;
+        T result = caseRenditionStore(renditionStore);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.RETENTION_CLASSES:
+      {
+        RetentionClasses retentionClasses = (RetentionClasses)theEObject;
+        T result = caseRetentionClasses(retentionClasses);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.POLICIES:
+      {
+        Policies policies = (Policies)theEObject;
+        T result = casePolicies(policies);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.SIP_STORE:
+      {
+        SipStore sipStore = (SipStore)theEObject;
+        T result = caseSipStore(sipStore);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.STAGING_STORE:
+      {
+        StagingStore stagingStore = (StagingStore)theEObject;
+        T result = caseStagingStore(stagingStore);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.SUB_PRIORITIES:
+      {
+        SubPriorities subPriorities = (SubPriorities)theEObject;
+        T result = caseSubPriorities(subPriorities);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.DEADLINE:
+      {
+        Deadline deadline = (Deadline)theEObject;
+        T result = caseDeadline(deadline);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.XDB_LIBRARY_PARENT:
+      {
+        XdbLibraryParent xdbLibraryParent = (XdbLibraryParent)theEObject;
+        T result = caseXdbLibraryParent(xdbLibraryParent);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.XDB_MODE:
+      {
+        XdbMode xdbMode = (XdbMode)theEObject;
+        T result = caseXdbMode(xdbMode);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.XDB_STORE:
+      {
+        XdbStore xdbStore = (XdbStore)theEObject;
+        T result = caseXdbStore(xdbStore);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.XML_STORE:
+      {
+        XmlStore xmlStore = (XmlStore)theEObject;
+        T result = caseXmlStore(xmlStore);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.AUDIT_EVENT:
+      {
+        AuditEvent auditEvent = (AuditEvent)theEObject;
+        T result = caseAuditEvent(auditEvent);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.APPLICATION_ATTR:
+      {
+        Application_attr application_attr = (Application_attr)theEObject;
+        T result = caseApplication_attr(application_attr);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.TENANT_ATTR:
+      {
+        Tenant_attr tenant_attr = (Tenant_attr)theEObject;
+        T result = caseTenant_attr(tenant_attr);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.DELIVERY_CHANNEL:
+      {
+        DeliveryChannel deliveryChannel = (DeliveryChannel)theEObject;
+        T result = caseDeliveryChannel(deliveryChannel);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.FILE_NAME:
+      {
+        FileName fileName = (FileName)theEObject;
+        T result = caseFileName(fileName);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.OVERWRITE:
+      {
+        Overwrite overwrite = (Overwrite)theEObject;
+        T result = caseOverwrite(overwrite);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.STORE:
+      {
+        Store store = (Store)theEObject;
+        T result = caseStore(store);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.SUFFIX:
+      {
+        Suffix suffix = (Suffix)theEObject;
+        T result = caseSuffix(suffix);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.CONFIRMATION:
+      {
+        Confirmation confirmation = (Confirmation)theEObject;
+        T result = caseConfirmation(confirmation);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.DELIVERY_CHANNEL_PARAMETERS:
+      {
+        DeliveryChannelParameters deliveryChannelParameters = (DeliveryChannelParameters)theEObject;
+        T result = caseDeliveryChannelParameters(deliveryChannelParameters);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.AIP_ID:
+      {
+        Aip_id aip_id = (Aip_id)theEObject;
+        T result = caseAip_id(aip_id);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.IA_CONF_DATETIME:
+      {
+        Ia_conf_datetime ia_conf_datetime = (Ia_conf_datetime)theEObject;
+        T result = caseIa_conf_datetime(ia_conf_datetime);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.IA_CONF_TYPE:
+      {
+        Ia_conf_type ia_conf_type = (Ia_conf_type)theEObject;
+        T result = caseIa_conf_type(ia_conf_type);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.HOLDINGS:
+      {
+        Holdings holdings = (Holdings)theEObject;
+        T result = caseHoldings(holdings);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.TYPES:
+      {
+        Types types = (Types)theEObject;
+        T result = caseTypes(types);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.HOLDING_CRYPTO:
+      {
+        HoldingCrypto holdingCrypto = (HoldingCrypto)theEObject;
+        T result = caseHoldingCrypto(holdingCrypto);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.CRYPTO_ENCODING:
+      {
+        CryptoEncoding cryptoEncoding = (CryptoEncoding)theEObject;
+        T result = caseCryptoEncoding(cryptoEncoding);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.CI:
+      {
+        Ci ci = (Ci)theEObject;
+        T result = caseCi(ci);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.CRYPTO_ENABLED:
+      {
+        CryptoEnabled cryptoEnabled = (CryptoEnabled)theEObject;
+        T result = caseCryptoEnabled(cryptoEnabled);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.CRYPTO_OBJECT_ATTR:
+      {
+        CryptoObject_attr cryptoObject_attr = (CryptoObject_attr)theEObject;
+        T result = caseCryptoObject_attr(cryptoObject_attr);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.PDI:
+      {
+        Pdi pdi = (Pdi)theEObject;
+        T result = casePdi(pdi);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.SIP:
+      {
+        Sip sip = (Sip)theEObject;
+        T result = caseSip(sip);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.PDIS:
+      {
+        Pdis pdis = (Pdis)theEObject;
+        T result = casePdis(pdis);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.SCHEMA:
+      {
+        Schema schema = (Schema)theEObject;
+        T result = caseSchema(schema);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.INCLUDE:
+      {
+        Include include = (Include)theEObject;
+        T result = caseInclude(include);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.INGEST_NODE:
+      {
+        IngestNode ingestNode = (IngestNode)theEObject;
+        T result = caseIngestNode(ingestNode);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.ENUM_COD:
+      {
+        EnumCOD enumCOD = (EnumCOD)theEObject;
+        T result = caseEnumCOD(enumCOD);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.ENUM_MR:
+      {
+        EnumMR enumMR = (EnumMR)theEObject;
+        T result = caseEnumMR(enumMR);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case InfoProjectPackage.LOG_LEVEL:
+      {
+        LogLevel logLevel = (LogLevel)theEObject;
+        T result = caseLogLevel(logLevel);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       default: return defaultCase(theEObject);
     }
   }
@@ -189,6 +756,54 @@ public class InfoProjectSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseVersion(Version object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Namespace</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Namespace</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseNamespace(Namespace object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Prefix</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Prefix</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePrefix(Prefix object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Uri</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Uri</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseUri(Uri object)
   {
     return null;
   }
@@ -349,6 +964,1254 @@ public class InfoProjectSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseHoldType(HoldType object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Type Attribute</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Type Attribute</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTypeAttribute(TypeAttribute object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Receive Node</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Receive Node</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseReceiveNode(ReceiveNode object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Retention Policy</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Retention Policy</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRetentionPolicy(RetentionPolicy object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Aging Period</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Aging Period</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAgingPeriod(AgingPeriod object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Units</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Units</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseUnits(Units object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Value</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Value</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseValue(Value object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Aging Strategy</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Aging Strategy</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAgingStrategy(AgingStrategy object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Disposition Strategy</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Disposition Strategy</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDispositionStrategy(DispositionStrategy object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Space attr</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Space attr</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSpace_attr(Space_attr object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Crypto Object</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Crypto Object</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCryptoObject(CryptoObject object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Configure</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Configure</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseConfigure(Configure object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Padding Scheme</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Padding Scheme</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePaddingScheme(PaddingScheme object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Security Provider</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Security Provider</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSecurityProvider(SecurityProvider object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Xdb Federation</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Xdb Federation</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseXdbFederation(XdbFederation object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Bootstrap</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Bootstrap</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBootstrap(Bootstrap object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Super User Password</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Super User Password</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSuperUserPassword(SuperUserPassword object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Xdb Database</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Xdb Database</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseXdbDatabase(XdbDatabase object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Default</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Default</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDefault(Default object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Admin Password</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Admin Password</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAdminPassword(AdminPassword object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Space Root Xdb Library</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Space Root Xdb Library</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSpaceRootXdbLibrary(SpaceRootXdbLibrary object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Xdb Library</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Xdb Library</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseXdbLibrary(XdbLibrary object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Parent Space Root Xdb Library</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Parent Space Root Xdb Library</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseParentSpaceRootXdbLibrary(ParentSpaceRootXdbLibrary object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Sub Path</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Sub Path</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSubPath(SubPath object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Xdb Library Policy</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Xdb Library Policy</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseXdbLibraryPolicy(XdbLibraryPolicy object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Aip Quota</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Aip Quota</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAipQuota(AipQuota object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Aiu Quota</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Aiu Quota</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAiuQuota(AiuQuota object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Close Hint Date Query</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Close Hint Date Query</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCloseHintDateQuery(CloseHintDateQuery object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Close Mode</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Close Mode</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCloseMode(CloseMode object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Close Period</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Close Period</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseClosePeriod(ClosePeriod object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Aiu Threshold</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Aiu Threshold</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAiuThreshold(AiuThreshold object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>PKey Query</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>PKey Query</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePKeyQuery(PKeyQuery object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Holding</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Holding</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseHolding(Holding object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Ci Store</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Ci Store</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCiStore(CiStore object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Default Retention Class</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Default Retention Class</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDefaultRetentionClass(DefaultRetentionClass object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Log Store</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Log Store</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLogStore(LogStore object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Managed Item Store</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Managed Item Store</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseManagedItemStore(ManagedItemStore object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Pdi Configs</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Pdi Configs</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePdiConfigs(PdiConfigs object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Priority</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Priority</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePriority(Priority object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Rendition Store</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Rendition Store</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRenditionStore(RenditionStore object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Retention Classes</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Retention Classes</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRetentionClasses(RetentionClasses object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Policies</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Policies</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePolicies(Policies object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Sip Store</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Sip Store</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSipStore(SipStore object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Staging Store</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Staging Store</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStagingStore(StagingStore object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Sub Priorities</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Sub Priorities</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSubPriorities(SubPriorities object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Deadline</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Deadline</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDeadline(Deadline object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Xdb Library Parent</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Xdb Library Parent</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseXdbLibraryParent(XdbLibraryParent object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Xdb Mode</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Xdb Mode</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseXdbMode(XdbMode object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Xdb Store</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Xdb Store</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseXdbStore(XdbStore object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Xml Store</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Xml Store</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseXmlStore(XmlStore object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Audit Event</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Audit Event</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAuditEvent(AuditEvent object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Application attr</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Application attr</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseApplication_attr(Application_attr object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Tenant attr</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Tenant attr</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTenant_attr(Tenant_attr object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Delivery Channel</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Delivery Channel</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDeliveryChannel(DeliveryChannel object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>File Name</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>File Name</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFileName(FileName object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Overwrite</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Overwrite</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseOverwrite(Overwrite object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Store</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Store</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStore(Store object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Suffix</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Suffix</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSuffix(Suffix object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Confirmation</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Confirmation</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseConfirmation(Confirmation object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Delivery Channel Parameters</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Delivery Channel Parameters</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDeliveryChannelParameters(DeliveryChannelParameters object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Aip id</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Aip id</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAip_id(Aip_id object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Ia conf datetime</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Ia conf datetime</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIa_conf_datetime(Ia_conf_datetime object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Ia conf type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Ia conf type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIa_conf_type(Ia_conf_type object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Holdings</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Holdings</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseHoldings(Holdings object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Types</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Types</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTypes(Types object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Holding Crypto</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Holding Crypto</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseHoldingCrypto(HoldingCrypto object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Crypto Encoding</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Crypto Encoding</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCryptoEncoding(CryptoEncoding object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Ci</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Ci</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCi(Ci object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Crypto Enabled</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Crypto Enabled</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCryptoEnabled(CryptoEnabled object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Crypto Object attr</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Crypto Object attr</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCryptoObject_attr(CryptoObject_attr object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Pdi</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Pdi</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePdi(Pdi object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Sip</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Sip</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSip(Sip object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Pdis</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Pdis</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePdis(Pdis object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Schema</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Schema</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSchema(Schema object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Include</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Include</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInclude(Include object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Ingest Node</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Ingest Node</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIngestNode(IngestNode object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Enum COD</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Enum COD</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEnumCOD(EnumCOD object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Enum MR</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Enum MR</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEnumMR(EnumMR object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Log Level</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Log Level</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLogLevel(LogLevel object)
   {
     return null;
   }

@@ -27,24 +27,24 @@ import ru.spbstu.application.configurator.model.infoProject.Tenant;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * <ul>
- *   <li>{@link ru.spbstu.application.configurator.model.infoProject.impl.TenantImpl#getFeatures1 <em>Features1</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link ru.spbstu.application.configurator.model.infoProject.impl.TenantImpl#getFeatures <em>Features</em>}</li>
+ * </ul>
  *
  * @generated
  */
 public class TenantImpl extends MinimalEObjectImpl.Container implements Tenant
 {
   /**
-   * The cached value of the '{@link #getFeatures1() <em>Features1</em>}' containment reference list.
+   * The cached value of the '{@link #getFeatures() <em>Features</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getFeatures1()
+   * @see #getFeatures()
    * @generated
    * @ordered
    */
-  protected EList<FeatureName> features1;
+  protected EList<FeatureName> features;
 
   /**
    * <!-- begin-user-doc -->
@@ -72,13 +72,13 @@ public class TenantImpl extends MinimalEObjectImpl.Container implements Tenant
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<FeatureName> getFeatures1()
+  public EList<FeatureName> getFeatures()
   {
-    if (features1 == null)
+    if (features == null)
     {
-      features1 = new EObjectContainmentEList<FeatureName>(FeatureName.class, this, InfoProjectPackage.TENANT__FEATURES1);
+      features = new EObjectContainmentEList<FeatureName>(FeatureName.class, this, InfoProjectPackage.TENANT__FEATURES);
     }
-    return features1;
+    return features;
   }
 
   /**
@@ -91,8 +91,8 @@ public class TenantImpl extends MinimalEObjectImpl.Container implements Tenant
   {
     switch (featureID)
     {
-      case InfoProjectPackage.TENANT__FEATURES1:
-        return ((InternalEList<?>)getFeatures1()).basicRemove(otherEnd, msgs);
+      case InfoProjectPackage.TENANT__FEATURES:
+        return ((InternalEList<?>)getFeatures()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -107,8 +107,8 @@ public class TenantImpl extends MinimalEObjectImpl.Container implements Tenant
   {
     switch (featureID)
     {
-      case InfoProjectPackage.TENANT__FEATURES1:
-        return getFeatures1();
+      case InfoProjectPackage.TENANT__FEATURES:
+        return getFeatures();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -124,9 +124,9 @@ public class TenantImpl extends MinimalEObjectImpl.Container implements Tenant
   {
     switch (featureID)
     {
-      case InfoProjectPackage.TENANT__FEATURES1:
-        getFeatures1().clear();
-        getFeatures1().addAll((Collection<? extends FeatureName>)newValue);
+      case InfoProjectPackage.TENANT__FEATURES:
+        getFeatures().clear();
+        getFeatures().addAll((Collection<? extends FeatureName>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -142,8 +142,8 @@ public class TenantImpl extends MinimalEObjectImpl.Container implements Tenant
   {
     switch (featureID)
     {
-      case InfoProjectPackage.TENANT__FEATURES1:
-        getFeatures1().clear();
+      case InfoProjectPackage.TENANT__FEATURES:
+        getFeatures().clear();
         return;
     }
     super.eUnset(featureID);
@@ -159,8 +159,8 @@ public class TenantImpl extends MinimalEObjectImpl.Container implements Tenant
   {
     switch (featureID)
     {
-      case InfoProjectPackage.TENANT__FEATURES1:
-        return features1 != null && !features1.isEmpty();
+      case InfoProjectPackage.TENANT__FEATURES:
+        return features != null && !features.isEmpty();
     }
     return super.eIsSet(featureID);
   }

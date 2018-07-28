@@ -68,6 +68,9 @@ public class InfoProjectFactoryImpl extends EFactoryImpl implements InfoProjectF
     {
       case InfoProjectPackage.MODEL: return createModel();
       case InfoProjectPackage.VERSION: return createVersion();
+      case InfoProjectPackage.NAMESPACE: return createNamespace();
+      case InfoProjectPackage.PREFIX: return createPrefix();
+      case InfoProjectPackage.URI: return createUri();
       case InfoProjectPackage.FEATURE_NAME: return createFeatureName();
       case InfoProjectPackage.APPLICATION: return createApplication();
       case InfoProjectPackage.TENANT: return createTenant();
@@ -78,6 +81,84 @@ public class InfoProjectFactoryImpl extends EFactoryImpl implements InfoProjectF
       case InfoProjectPackage.MCS: return createMCS();
       case InfoProjectPackage.TYPE: return createType();
       case InfoProjectPackage.HOLD_TYPE: return createHoldType();
+      case InfoProjectPackage.TYPE_ATTRIBUTE: return createTypeAttribute();
+      case InfoProjectPackage.RECEIVE_NODE: return createReceiveNode();
+      case InfoProjectPackage.RETENTION_POLICY: return createRetentionPolicy();
+      case InfoProjectPackage.AGING_PERIOD: return createAgingPeriod();
+      case InfoProjectPackage.UNITS: return createUnits();
+      case InfoProjectPackage.VALUE: return createValue();
+      case InfoProjectPackage.AGING_STRATEGY: return createAgingStrategy();
+      case InfoProjectPackage.DISPOSITION_STRATEGY: return createDispositionStrategy();
+      case InfoProjectPackage.SPACE_ATTR: return createSpace_attr();
+      case InfoProjectPackage.CRYPTO_OBJECT: return createCryptoObject();
+      case InfoProjectPackage.CONFIGURE: return createConfigure();
+      case InfoProjectPackage.PADDING_SCHEME: return createPaddingScheme();
+      case InfoProjectPackage.SECURITY_PROVIDER: return createSecurityProvider();
+      case InfoProjectPackage.XDB_FEDERATION: return createXdbFederation();
+      case InfoProjectPackage.BOOTSTRAP: return createBootstrap();
+      case InfoProjectPackage.SUPER_USER_PASSWORD: return createSuperUserPassword();
+      case InfoProjectPackage.XDB_DATABASE: return createXdbDatabase();
+      case InfoProjectPackage.DEFAULT: return createDefault();
+      case InfoProjectPackage.ADMIN_PASSWORD: return createAdminPassword();
+      case InfoProjectPackage.SPACE_ROOT_XDB_LIBRARY: return createSpaceRootXdbLibrary();
+      case InfoProjectPackage.XDB_LIBRARY: return createXdbLibrary();
+      case InfoProjectPackage.PARENT_SPACE_ROOT_XDB_LIBRARY: return createParentSpaceRootXdbLibrary();
+      case InfoProjectPackage.SUB_PATH: return createSubPath();
+      case InfoProjectPackage.XDB_LIBRARY_POLICY: return createXdbLibraryPolicy();
+      case InfoProjectPackage.AIP_QUOTA: return createAipQuota();
+      case InfoProjectPackage.AIU_QUOTA: return createAiuQuota();
+      case InfoProjectPackage.CLOSE_HINT_DATE_QUERY: return createCloseHintDateQuery();
+      case InfoProjectPackage.CLOSE_MODE: return createCloseMode();
+      case InfoProjectPackage.CLOSE_PERIOD: return createClosePeriod();
+      case InfoProjectPackage.AIU_THRESHOLD: return createAiuThreshold();
+      case InfoProjectPackage.PKEY_QUERY: return createPKeyQuery();
+      case InfoProjectPackage.HOLDING: return createHolding();
+      case InfoProjectPackage.CI_STORE: return createCiStore();
+      case InfoProjectPackage.DEFAULT_RETENTION_CLASS: return createDefaultRetentionClass();
+      case InfoProjectPackage.LOG_STORE: return createLogStore();
+      case InfoProjectPackage.MANAGED_ITEM_STORE: return createManagedItemStore();
+      case InfoProjectPackage.PDI_CONFIGS: return createPdiConfigs();
+      case InfoProjectPackage.PRIORITY: return createPriority();
+      case InfoProjectPackage.RENDITION_STORE: return createRenditionStore();
+      case InfoProjectPackage.RETENTION_CLASSES: return createRetentionClasses();
+      case InfoProjectPackage.POLICIES: return createPolicies();
+      case InfoProjectPackage.SIP_STORE: return createSipStore();
+      case InfoProjectPackage.STAGING_STORE: return createStagingStore();
+      case InfoProjectPackage.SUB_PRIORITIES: return createSubPriorities();
+      case InfoProjectPackage.DEADLINE: return createDeadline();
+      case InfoProjectPackage.XDB_LIBRARY_PARENT: return createXdbLibraryParent();
+      case InfoProjectPackage.XDB_MODE: return createXdbMode();
+      case InfoProjectPackage.XDB_STORE: return createXdbStore();
+      case InfoProjectPackage.XML_STORE: return createXmlStore();
+      case InfoProjectPackage.AUDIT_EVENT: return createAuditEvent();
+      case InfoProjectPackage.APPLICATION_ATTR: return createApplication_attr();
+      case InfoProjectPackage.TENANT_ATTR: return createTenant_attr();
+      case InfoProjectPackage.DELIVERY_CHANNEL: return createDeliveryChannel();
+      case InfoProjectPackage.FILE_NAME: return createFileName();
+      case InfoProjectPackage.OVERWRITE: return createOverwrite();
+      case InfoProjectPackage.STORE: return createStore();
+      case InfoProjectPackage.SUFFIX: return createSuffix();
+      case InfoProjectPackage.CONFIRMATION: return createConfirmation();
+      case InfoProjectPackage.DELIVERY_CHANNEL_PARAMETERS: return createDeliveryChannelParameters();
+      case InfoProjectPackage.AIP_ID: return createAip_id();
+      case InfoProjectPackage.IA_CONF_DATETIME: return createIa_conf_datetime();
+      case InfoProjectPackage.IA_CONF_TYPE: return createIa_conf_type();
+      case InfoProjectPackage.HOLDINGS: return createHoldings();
+      case InfoProjectPackage.TYPES: return createTypes();
+      case InfoProjectPackage.HOLDING_CRYPTO: return createHoldingCrypto();
+      case InfoProjectPackage.CRYPTO_ENCODING: return createCryptoEncoding();
+      case InfoProjectPackage.CI: return createCi();
+      case InfoProjectPackage.CRYPTO_ENABLED: return createCryptoEnabled();
+      case InfoProjectPackage.CRYPTO_OBJECT_ATTR: return createCryptoObject_attr();
+      case InfoProjectPackage.PDI: return createPdi();
+      case InfoProjectPackage.SIP: return createSip();
+      case InfoProjectPackage.PDIS: return createPdis();
+      case InfoProjectPackage.SCHEMA: return createSchema();
+      case InfoProjectPackage.INCLUDE: return createInclude();
+      case InfoProjectPackage.INGEST_NODE: return createIngestNode();
+      case InfoProjectPackage.ENUM_COD: return createEnumCOD();
+      case InfoProjectPackage.ENUM_MR: return createEnumMR();
+      case InfoProjectPackage.LOG_LEVEL: return createLogLevel();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -141,6 +222,39 @@ public class InfoProjectFactoryImpl extends EFactoryImpl implements InfoProjectF
   {
     VersionImpl version = new VersionImpl();
     return version;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Namespace createNamespace()
+  {
+    NamespaceImpl namespace = new NamespaceImpl();
+    return namespace;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Prefix createPrefix()
+  {
+    PrefixImpl prefix = new PrefixImpl();
+    return prefix;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Uri createUri()
+  {
+    UriImpl uri = new UriImpl();
+    return uri;
   }
 
   /**
@@ -251,6 +365,864 @@ public class InfoProjectFactoryImpl extends EFactoryImpl implements InfoProjectF
   {
     HoldTypeImpl holdType = new HoldTypeImpl();
     return holdType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TypeAttribute createTypeAttribute()
+  {
+    TypeAttributeImpl typeAttribute = new TypeAttributeImpl();
+    return typeAttribute;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ReceiveNode createReceiveNode()
+  {
+    ReceiveNodeImpl receiveNode = new ReceiveNodeImpl();
+    return receiveNode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public RetentionPolicy createRetentionPolicy()
+  {
+    RetentionPolicyImpl retentionPolicy = new RetentionPolicyImpl();
+    return retentionPolicy;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AgingPeriod createAgingPeriod()
+  {
+    AgingPeriodImpl agingPeriod = new AgingPeriodImpl();
+    return agingPeriod;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Units createUnits()
+  {
+    UnitsImpl units = new UnitsImpl();
+    return units;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Value createValue()
+  {
+    ValueImpl value = new ValueImpl();
+    return value;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AgingStrategy createAgingStrategy()
+  {
+    AgingStrategyImpl agingStrategy = new AgingStrategyImpl();
+    return agingStrategy;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DispositionStrategy createDispositionStrategy()
+  {
+    DispositionStrategyImpl dispositionStrategy = new DispositionStrategyImpl();
+    return dispositionStrategy;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Space_attr createSpace_attr()
+  {
+    Space_attrImpl space_attr = new Space_attrImpl();
+    return space_attr;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public CryptoObject createCryptoObject()
+  {
+    CryptoObjectImpl cryptoObject = new CryptoObjectImpl();
+    return cryptoObject;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Configure createConfigure()
+  {
+    ConfigureImpl configure = new ConfigureImpl();
+    return configure;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PaddingScheme createPaddingScheme()
+  {
+    PaddingSchemeImpl paddingScheme = new PaddingSchemeImpl();
+    return paddingScheme;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SecurityProvider createSecurityProvider()
+  {
+    SecurityProviderImpl securityProvider = new SecurityProviderImpl();
+    return securityProvider;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public XdbFederation createXdbFederation()
+  {
+    XdbFederationImpl xdbFederation = new XdbFederationImpl();
+    return xdbFederation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Bootstrap createBootstrap()
+  {
+    BootstrapImpl bootstrap = new BootstrapImpl();
+    return bootstrap;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SuperUserPassword createSuperUserPassword()
+  {
+    SuperUserPasswordImpl superUserPassword = new SuperUserPasswordImpl();
+    return superUserPassword;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public XdbDatabase createXdbDatabase()
+  {
+    XdbDatabaseImpl xdbDatabase = new XdbDatabaseImpl();
+    return xdbDatabase;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Default createDefault()
+  {
+    DefaultImpl default_ = new DefaultImpl();
+    return default_;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AdminPassword createAdminPassword()
+  {
+    AdminPasswordImpl adminPassword = new AdminPasswordImpl();
+    return adminPassword;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SpaceRootXdbLibrary createSpaceRootXdbLibrary()
+  {
+    SpaceRootXdbLibraryImpl spaceRootXdbLibrary = new SpaceRootXdbLibraryImpl();
+    return spaceRootXdbLibrary;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public XdbLibrary createXdbLibrary()
+  {
+    XdbLibraryImpl xdbLibrary = new XdbLibraryImpl();
+    return xdbLibrary;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ParentSpaceRootXdbLibrary createParentSpaceRootXdbLibrary()
+  {
+    ParentSpaceRootXdbLibraryImpl parentSpaceRootXdbLibrary = new ParentSpaceRootXdbLibraryImpl();
+    return parentSpaceRootXdbLibrary;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SubPath createSubPath()
+  {
+    SubPathImpl subPath = new SubPathImpl();
+    return subPath;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public XdbLibraryPolicy createXdbLibraryPolicy()
+  {
+    XdbLibraryPolicyImpl xdbLibraryPolicy = new XdbLibraryPolicyImpl();
+    return xdbLibraryPolicy;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AipQuota createAipQuota()
+  {
+    AipQuotaImpl aipQuota = new AipQuotaImpl();
+    return aipQuota;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AiuQuota createAiuQuota()
+  {
+    AiuQuotaImpl aiuQuota = new AiuQuotaImpl();
+    return aiuQuota;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public CloseHintDateQuery createCloseHintDateQuery()
+  {
+    CloseHintDateQueryImpl closeHintDateQuery = new CloseHintDateQueryImpl();
+    return closeHintDateQuery;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public CloseMode createCloseMode()
+  {
+    CloseModeImpl closeMode = new CloseModeImpl();
+    return closeMode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ClosePeriod createClosePeriod()
+  {
+    ClosePeriodImpl closePeriod = new ClosePeriodImpl();
+    return closePeriod;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AiuThreshold createAiuThreshold()
+  {
+    AiuThresholdImpl aiuThreshold = new AiuThresholdImpl();
+    return aiuThreshold;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PKeyQuery createPKeyQuery()
+  {
+    PKeyQueryImpl pKeyQuery = new PKeyQueryImpl();
+    return pKeyQuery;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Holding createHolding()
+  {
+    HoldingImpl holding = new HoldingImpl();
+    return holding;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public CiStore createCiStore()
+  {
+    CiStoreImpl ciStore = new CiStoreImpl();
+    return ciStore;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DefaultRetentionClass createDefaultRetentionClass()
+  {
+    DefaultRetentionClassImpl defaultRetentionClass = new DefaultRetentionClassImpl();
+    return defaultRetentionClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LogStore createLogStore()
+  {
+    LogStoreImpl logStore = new LogStoreImpl();
+    return logStore;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ManagedItemStore createManagedItemStore()
+  {
+    ManagedItemStoreImpl managedItemStore = new ManagedItemStoreImpl();
+    return managedItemStore;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PdiConfigs createPdiConfigs()
+  {
+    PdiConfigsImpl pdiConfigs = new PdiConfigsImpl();
+    return pdiConfigs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Priority createPriority()
+  {
+    PriorityImpl priority = new PriorityImpl();
+    return priority;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public RenditionStore createRenditionStore()
+  {
+    RenditionStoreImpl renditionStore = new RenditionStoreImpl();
+    return renditionStore;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public RetentionClasses createRetentionClasses()
+  {
+    RetentionClassesImpl retentionClasses = new RetentionClassesImpl();
+    return retentionClasses;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Policies createPolicies()
+  {
+    PoliciesImpl policies = new PoliciesImpl();
+    return policies;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SipStore createSipStore()
+  {
+    SipStoreImpl sipStore = new SipStoreImpl();
+    return sipStore;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public StagingStore createStagingStore()
+  {
+    StagingStoreImpl stagingStore = new StagingStoreImpl();
+    return stagingStore;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SubPriorities createSubPriorities()
+  {
+    SubPrioritiesImpl subPriorities = new SubPrioritiesImpl();
+    return subPriorities;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Deadline createDeadline()
+  {
+    DeadlineImpl deadline = new DeadlineImpl();
+    return deadline;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public XdbLibraryParent createXdbLibraryParent()
+  {
+    XdbLibraryParentImpl xdbLibraryParent = new XdbLibraryParentImpl();
+    return xdbLibraryParent;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public XdbMode createXdbMode()
+  {
+    XdbModeImpl xdbMode = new XdbModeImpl();
+    return xdbMode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public XdbStore createXdbStore()
+  {
+    XdbStoreImpl xdbStore = new XdbStoreImpl();
+    return xdbStore;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public XmlStore createXmlStore()
+  {
+    XmlStoreImpl xmlStore = new XmlStoreImpl();
+    return xmlStore;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AuditEvent createAuditEvent()
+  {
+    AuditEventImpl auditEvent = new AuditEventImpl();
+    return auditEvent;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Application_attr createApplication_attr()
+  {
+    Application_attrImpl application_attr = new Application_attrImpl();
+    return application_attr;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Tenant_attr createTenant_attr()
+  {
+    Tenant_attrImpl tenant_attr = new Tenant_attrImpl();
+    return tenant_attr;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DeliveryChannel createDeliveryChannel()
+  {
+    DeliveryChannelImpl deliveryChannel = new DeliveryChannelImpl();
+    return deliveryChannel;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FileName createFileName()
+  {
+    FileNameImpl fileName = new FileNameImpl();
+    return fileName;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Overwrite createOverwrite()
+  {
+    OverwriteImpl overwrite = new OverwriteImpl();
+    return overwrite;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Store createStore()
+  {
+    StoreImpl store = new StoreImpl();
+    return store;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Suffix createSuffix()
+  {
+    SuffixImpl suffix = new SuffixImpl();
+    return suffix;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Confirmation createConfirmation()
+  {
+    ConfirmationImpl confirmation = new ConfirmationImpl();
+    return confirmation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DeliveryChannelParameters createDeliveryChannelParameters()
+  {
+    DeliveryChannelParametersImpl deliveryChannelParameters = new DeliveryChannelParametersImpl();
+    return deliveryChannelParameters;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Aip_id createAip_id()
+  {
+    Aip_idImpl aip_id = new Aip_idImpl();
+    return aip_id;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Ia_conf_datetime createIa_conf_datetime()
+  {
+    Ia_conf_datetimeImpl ia_conf_datetime = new Ia_conf_datetimeImpl();
+    return ia_conf_datetime;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Ia_conf_type createIa_conf_type()
+  {
+    Ia_conf_typeImpl ia_conf_type = new Ia_conf_typeImpl();
+    return ia_conf_type;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Holdings createHoldings()
+  {
+    HoldingsImpl holdings = new HoldingsImpl();
+    return holdings;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Types createTypes()
+  {
+    TypesImpl types = new TypesImpl();
+    return types;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public HoldingCrypto createHoldingCrypto()
+  {
+    HoldingCryptoImpl holdingCrypto = new HoldingCryptoImpl();
+    return holdingCrypto;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public CryptoEncoding createCryptoEncoding()
+  {
+    CryptoEncodingImpl cryptoEncoding = new CryptoEncodingImpl();
+    return cryptoEncoding;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Ci createCi()
+  {
+    CiImpl ci = new CiImpl();
+    return ci;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public CryptoEnabled createCryptoEnabled()
+  {
+    CryptoEnabledImpl cryptoEnabled = new CryptoEnabledImpl();
+    return cryptoEnabled;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public CryptoObject_attr createCryptoObject_attr()
+  {
+    CryptoObject_attrImpl cryptoObject_attr = new CryptoObject_attrImpl();
+    return cryptoObject_attr;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Pdi createPdi()
+  {
+    PdiImpl pdi = new PdiImpl();
+    return pdi;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Sip createSip()
+  {
+    SipImpl sip = new SipImpl();
+    return sip;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Pdis createPdis()
+  {
+    PdisImpl pdis = new PdisImpl();
+    return pdis;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Schema createSchema()
+  {
+    SchemaImpl schema = new SchemaImpl();
+    return schema;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Include createInclude()
+  {
+    IncludeImpl include = new IncludeImpl();
+    return include;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IngestNode createIngestNode()
+  {
+    IngestNodeImpl ingestNode = new IngestNodeImpl();
+    return ingestNode;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EnumCOD createEnumCOD()
+  {
+    EnumCODImpl enumCOD = new EnumCODImpl();
+    return enumCOD;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EnumMR createEnumMR()
+  {
+    EnumMRImpl enumMR = new EnumMRImpl();
+    return enumMR;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LogLevel createLogLevel()
+  {
+    LogLevelImpl logLevel = new LogLevelImpl();
+    return logLevel;
   }
 
   /**

@@ -11,19 +11,100 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import ru.spbstu.application.configurator.model.infoProject.AdminPassword;
+import ru.spbstu.application.configurator.model.infoProject.AgingPeriod;
+import ru.spbstu.application.configurator.model.infoProject.AgingStrategy;
+import ru.spbstu.application.configurator.model.infoProject.AipQuota;
+import ru.spbstu.application.configurator.model.infoProject.Aip_id;
+import ru.spbstu.application.configurator.model.infoProject.AiuQuota;
+import ru.spbstu.application.configurator.model.infoProject.AiuThreshold;
 import ru.spbstu.application.configurator.model.infoProject.Application;
+import ru.spbstu.application.configurator.model.infoProject.Application_attr;
 import ru.spbstu.application.configurator.model.infoProject.ArchiveType;
+import ru.spbstu.application.configurator.model.infoProject.AuditEvent;
+import ru.spbstu.application.configurator.model.infoProject.Bootstrap;
 import ru.spbstu.application.configurator.model.infoProject.Category;
+import ru.spbstu.application.configurator.model.infoProject.Ci;
+import ru.spbstu.application.configurator.model.infoProject.CiStore;
+import ru.spbstu.application.configurator.model.infoProject.CloseHintDateQuery;
+import ru.spbstu.application.configurator.model.infoProject.CloseMode;
+import ru.spbstu.application.configurator.model.infoProject.ClosePeriod;
+import ru.spbstu.application.configurator.model.infoProject.Configure;
+import ru.spbstu.application.configurator.model.infoProject.Confirmation;
+import ru.spbstu.application.configurator.model.infoProject.CryptoEnabled;
+import ru.spbstu.application.configurator.model.infoProject.CryptoEncoding;
+import ru.spbstu.application.configurator.model.infoProject.CryptoObject;
+import ru.spbstu.application.configurator.model.infoProject.CryptoObject_attr;
+import ru.spbstu.application.configurator.model.infoProject.Deadline;
+import ru.spbstu.application.configurator.model.infoProject.Default;
+import ru.spbstu.application.configurator.model.infoProject.DefaultRetentionClass;
+import ru.spbstu.application.configurator.model.infoProject.DeliveryChannel;
+import ru.spbstu.application.configurator.model.infoProject.DeliveryChannelParameters;
 import ru.spbstu.application.configurator.model.infoProject.Description;
+import ru.spbstu.application.configurator.model.infoProject.DispositionStrategy;
+import ru.spbstu.application.configurator.model.infoProject.EnumCOD;
+import ru.spbstu.application.configurator.model.infoProject.EnumMR;
 import ru.spbstu.application.configurator.model.infoProject.FeatureName;
+import ru.spbstu.application.configurator.model.infoProject.FileName;
 import ru.spbstu.application.configurator.model.infoProject.Hold;
 import ru.spbstu.application.configurator.model.infoProject.HoldType;
+import ru.spbstu.application.configurator.model.infoProject.Holding;
+import ru.spbstu.application.configurator.model.infoProject.HoldingCrypto;
+import ru.spbstu.application.configurator.model.infoProject.Holdings;
+import ru.spbstu.application.configurator.model.infoProject.Ia_conf_datetime;
+import ru.spbstu.application.configurator.model.infoProject.Ia_conf_type;
+import ru.spbstu.application.configurator.model.infoProject.Include;
 import ru.spbstu.application.configurator.model.infoProject.InfoProjectFactory;
 import ru.spbstu.application.configurator.model.infoProject.InfoProjectPackage;
+import ru.spbstu.application.configurator.model.infoProject.IngestNode;
+import ru.spbstu.application.configurator.model.infoProject.LogLevel;
+import ru.spbstu.application.configurator.model.infoProject.LogStore;
+import ru.spbstu.application.configurator.model.infoProject.ManagedItemStore;
 import ru.spbstu.application.configurator.model.infoProject.Model;
+import ru.spbstu.application.configurator.model.infoProject.Namespace;
+import ru.spbstu.application.configurator.model.infoProject.Overwrite;
+import ru.spbstu.application.configurator.model.infoProject.PKeyQuery;
+import ru.spbstu.application.configurator.model.infoProject.PaddingScheme;
+import ru.spbstu.application.configurator.model.infoProject.ParentSpaceRootXdbLibrary;
+import ru.spbstu.application.configurator.model.infoProject.Pdi;
+import ru.spbstu.application.configurator.model.infoProject.PdiConfigs;
+import ru.spbstu.application.configurator.model.infoProject.Pdis;
+import ru.spbstu.application.configurator.model.infoProject.Policies;
+import ru.spbstu.application.configurator.model.infoProject.Prefix;
+import ru.spbstu.application.configurator.model.infoProject.Priority;
+import ru.spbstu.application.configurator.model.infoProject.ReceiveNode;
+import ru.spbstu.application.configurator.model.infoProject.RenditionStore;
+import ru.spbstu.application.configurator.model.infoProject.RetentionClasses;
+import ru.spbstu.application.configurator.model.infoProject.RetentionPolicy;
+import ru.spbstu.application.configurator.model.infoProject.Schema;
+import ru.spbstu.application.configurator.model.infoProject.SecurityProvider;
+import ru.spbstu.application.configurator.model.infoProject.Sip;
+import ru.spbstu.application.configurator.model.infoProject.SipStore;
+import ru.spbstu.application.configurator.model.infoProject.SpaceRootXdbLibrary;
+import ru.spbstu.application.configurator.model.infoProject.Space_attr;
+import ru.spbstu.application.configurator.model.infoProject.StagingStore;
+import ru.spbstu.application.configurator.model.infoProject.Store;
+import ru.spbstu.application.configurator.model.infoProject.SubPath;
+import ru.spbstu.application.configurator.model.infoProject.SubPriorities;
+import ru.spbstu.application.configurator.model.infoProject.Suffix;
+import ru.spbstu.application.configurator.model.infoProject.SuperUserPassword;
 import ru.spbstu.application.configurator.model.infoProject.Tenant;
+import ru.spbstu.application.configurator.model.infoProject.Tenant_attr;
 import ru.spbstu.application.configurator.model.infoProject.Type;
+import ru.spbstu.application.configurator.model.infoProject.TypeAttribute;
+import ru.spbstu.application.configurator.model.infoProject.Types;
+import ru.spbstu.application.configurator.model.infoProject.Units;
+import ru.spbstu.application.configurator.model.infoProject.Uri;
+import ru.spbstu.application.configurator.model.infoProject.Value;
 import ru.spbstu.application.configurator.model.infoProject.Version;
+import ru.spbstu.application.configurator.model.infoProject.XdbDatabase;
+import ru.spbstu.application.configurator.model.infoProject.XdbFederation;
+import ru.spbstu.application.configurator.model.infoProject.XdbLibrary;
+import ru.spbstu.application.configurator.model.infoProject.XdbLibraryParent;
+import ru.spbstu.application.configurator.model.infoProject.XdbLibraryPolicy;
+import ru.spbstu.application.configurator.model.infoProject.XdbMode;
+import ru.spbstu.application.configurator.model.infoProject.XdbStore;
+import ru.spbstu.application.configurator.model.infoProject.XmlStore;
 import ru.spbstu.application.configurator.model.infoProject.enumOfArchiveType;
 import ru.spbstu.application.configurator.model.infoProject.enumOfTypes;
 
@@ -48,6 +129,27 @@ public class InfoProjectPackageImpl extends EPackageImpl implements InfoProjectP
    * @generated
    */
   private EClass versionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass namespaceEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass prefixEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass uriEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -124,6 +226,552 @@ public class InfoProjectPackageImpl extends EPackageImpl implements InfoProjectP
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass typeAttributeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass receiveNodeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass retentionPolicyEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass agingPeriodEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass unitsEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass valueEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass agingStrategyEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass dispositionStrategyEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass space_attrEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass cryptoObjectEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass configureEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass paddingSchemeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass securityProviderEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass xdbFederationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass bootstrapEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass superUserPasswordEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass xdbDatabaseEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass defaultEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass adminPasswordEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass spaceRootXdbLibraryEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass xdbLibraryEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass parentSpaceRootXdbLibraryEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass subPathEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass xdbLibraryPolicyEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass aipQuotaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass aiuQuotaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass closeHintDateQueryEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass closeModeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass closePeriodEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass aiuThresholdEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass pKeyQueryEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass holdingEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass ciStoreEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass defaultRetentionClassEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass logStoreEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass managedItemStoreEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass pdiConfigsEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass priorityEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass renditionStoreEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass retentionClassesEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass policiesEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass sipStoreEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass stagingStoreEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass subPrioritiesEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass deadlineEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass xdbLibraryParentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass xdbModeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass xdbStoreEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass xmlStoreEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass auditEventEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass application_attrEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass tenant_attrEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass deliveryChannelEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass fileNameEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass overwriteEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass storeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass suffixEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass confirmationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass deliveryChannelParametersEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass aip_idEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass ia_conf_datetimeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass ia_conf_typeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass holdingsEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass typesEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass holdingCryptoEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass cryptoEncodingEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass ciEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass cryptoEnabledEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass cryptoObject_attrEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass pdiEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass sipEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass pdisEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass schemaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass includeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass ingestNodeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass enumCODEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass enumMREClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass logLevelEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EEnum enumOfArchiveTypeEEnum = null;
 
   /**
@@ -162,7 +810,7 @@ public class InfoProjectPackageImpl extends EPackageImpl implements InfoProjectP
 
   /**
    * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-   * 
+   *
    * <p>This method is used to initialize {@link InfoProjectPackage#eINSTANCE} when that field is accessed.
    * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
    * <!-- begin-user-doc -->
@@ -177,7 +825,8 @@ public class InfoProjectPackageImpl extends EPackageImpl implements InfoProjectP
     if (isInited) return (InfoProjectPackage)EPackage.Registry.INSTANCE.getEPackage(InfoProjectPackage.eNS_URI);
 
     // Obtain or create and register package
-    InfoProjectPackageImpl theInfoProjectPackage = (InfoProjectPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof InfoProjectPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new InfoProjectPackageImpl());
+    Object registeredInfoProjectPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+    InfoProjectPackageImpl theInfoProjectPackage = registeredInfoProjectPackage instanceof InfoProjectPackageImpl ? (InfoProjectPackageImpl)registeredInfoProjectPackage : new InfoProjectPackageImpl();
 
     isInited = true;
 
@@ -190,7 +839,6 @@ public class InfoProjectPackageImpl extends EPackageImpl implements InfoProjectP
     // Mark meta-data to indicate it can't be changed
     theInfoProjectPackage.freeze();
 
-  
     // Update the registry and return the package
     EPackage.Registry.INSTANCE.put(InfoProjectPackage.eNS_URI, theInfoProjectPackage);
     return theInfoProjectPackage;
@@ -234,6 +882,66 @@ public class InfoProjectPackageImpl extends EPackageImpl implements InfoProjectP
   public EAttribute getVersion_Name()
   {
     return (EAttribute)versionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getNamespace()
+  {
+    return namespaceEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getNamespace_Feature()
+  {
+    return (EReference)namespaceEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPrefix()
+  {
+    return prefixEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPrefix_Name()
+  {
+    return (EAttribute)prefixEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getUri()
+  {
+    return uriEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getUri_Name()
+  {
+    return (EAttribute)uriEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -311,7 +1019,7 @@ public class InfoProjectPackageImpl extends EPackageImpl implements InfoProjectP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getTenant_Features1()
+  public EReference getTenant_Features()
   {
     return (EReference)tenantEClass.getEStructuralFeatures().get(0);
   }
@@ -471,6 +1179,1576 @@ public class InfoProjectPackageImpl extends EPackageImpl implements InfoProjectP
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getTypeAttribute()
+  {
+    return typeAttributeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTypeAttribute_Name()
+  {
+    return (EAttribute)typeAttributeEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getReceiveNode()
+  {
+    return receiveNodeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getReceiveNode_Features()
+  {
+    return (EReference)receiveNodeEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getRetentionPolicy()
+  {
+    return retentionPolicyEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getRetentionPolicy_Features()
+  {
+    return (EReference)retentionPolicyEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAgingPeriod()
+  {
+    return agingPeriodEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getAgingPeriod_Features()
+  {
+    return (EReference)agingPeriodEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getUnits()
+  {
+    return unitsEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getUnits_Name()
+  {
+    return (EAttribute)unitsEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getValue()
+  {
+    return valueEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getValue_Name()
+  {
+    return (EAttribute)valueEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAgingStrategy()
+  {
+    return agingStrategyEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getAgingStrategy_Features()
+  {
+    return (EReference)agingStrategyEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDispositionStrategy()
+  {
+    return dispositionStrategyEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDispositionStrategy_Features()
+  {
+    return (EReference)dispositionStrategyEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSpace_attr()
+  {
+    return space_attrEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getSpace_attr_Features()
+  {
+    return (EReference)space_attrEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getCryptoObject()
+  {
+    return cryptoObjectEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getCryptoObject_Features()
+  {
+    return (EReference)cryptoObjectEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getConfigure()
+  {
+    return configureEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getConfigure_Name()
+  {
+    return (EAttribute)configureEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPaddingScheme()
+  {
+    return paddingSchemeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPaddingScheme_Name()
+  {
+    return (EAttribute)paddingSchemeEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSecurityProvider()
+  {
+    return securityProviderEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSecurityProvider_Name()
+  {
+    return (EAttribute)securityProviderEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getXdbFederation()
+  {
+    return xdbFederationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getXdbFederation_Feature()
+  {
+    return (EReference)xdbFederationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getBootstrap()
+  {
+    return bootstrapEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getBootstrap_Name()
+  {
+    return (EAttribute)bootstrapEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSuperUserPassword()
+  {
+    return superUserPasswordEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSuperUserPassword_Name()
+  {
+    return (EAttribute)superUserPasswordEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getXdbDatabase()
+  {
+    return xdbDatabaseEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getXdbDatabase_Features()
+  {
+    return (EReference)xdbDatabaseEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDefault()
+  {
+    return defaultEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getDefault_Name()
+  {
+    return (EAttribute)defaultEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAdminPassword()
+  {
+    return adminPasswordEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAdminPassword_Name()
+  {
+    return (EAttribute)adminPasswordEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSpaceRootXdbLibrary()
+  {
+    return spaceRootXdbLibraryEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getSpaceRootXdbLibrary_Features()
+  {
+    return (EReference)spaceRootXdbLibraryEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getXdbLibrary()
+  {
+    return xdbLibraryEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getXdbLibrary_Features()
+  {
+    return (EReference)xdbLibraryEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getParentSpaceRootXdbLibrary()
+  {
+    return parentSpaceRootXdbLibraryEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getParentSpaceRootXdbLibrary_Name()
+  {
+    return (EAttribute)parentSpaceRootXdbLibraryEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSubPath()
+  {
+    return subPathEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSubPath_Name()
+  {
+    return (EAttribute)subPathEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getXdbLibraryPolicy()
+  {
+    return xdbLibraryPolicyEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getXdbLibraryPolicy_Features()
+  {
+    return (EReference)xdbLibraryPolicyEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAipQuota()
+  {
+    return aipQuotaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAipQuota_Name()
+  {
+    return (EAttribute)aipQuotaEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAiuQuota()
+  {
+    return aiuQuotaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAiuQuota_Name()
+  {
+    return (EAttribute)aiuQuotaEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getCloseHintDateQuery()
+  {
+    return closeHintDateQueryEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getCloseHintDateQuery_Name()
+  {
+    return (EAttribute)closeHintDateQueryEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getCloseMode()
+  {
+    return closeModeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getCloseMode_Name()
+  {
+    return (EAttribute)closeModeEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getClosePeriod()
+  {
+    return closePeriodEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getClosePeriod_Name()
+  {
+    return (EAttribute)closePeriodEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAiuThreshold()
+  {
+    return aiuThresholdEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAiuThreshold_Name()
+  {
+    return (EAttribute)aiuThresholdEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPKeyQuery()
+  {
+    return pKeyQueryEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPKeyQuery_Name()
+  {
+    return (EAttribute)pKeyQueryEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getHolding()
+  {
+    return holdingEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getHolding_Features()
+  {
+    return (EReference)holdingEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getCiStore()
+  {
+    return ciStoreEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getCiStore_Name()
+  {
+    return (EAttribute)ciStoreEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDefaultRetentionClass()
+  {
+    return defaultRetentionClassEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getDefaultRetentionClass_Name()
+  {
+    return (EAttribute)defaultRetentionClassEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLogStore()
+  {
+    return logStoreEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLogStore_Name()
+  {
+    return (EAttribute)logStoreEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getManagedItemStore()
+  {
+    return managedItemStoreEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getManagedItemStore_Name()
+  {
+    return (EAttribute)managedItemStoreEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPdiConfigs()
+  {
+    return pdiConfigsEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPdiConfigs_Name()
+  {
+    return (EAttribute)pdiConfigsEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPriority()
+  {
+    return priorityEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPriority_Name()
+  {
+    return (EAttribute)priorityEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getRenditionStore()
+  {
+    return renditionStoreEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getRenditionStore_Name()
+  {
+    return (EAttribute)renditionStoreEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getRetentionClasses()
+  {
+    return retentionClassesEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getRetentionClasses_Features()
+  {
+    return (EReference)retentionClassesEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getRetentionClasses_Feature()
+  {
+    return (EReference)retentionClassesEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPolicies()
+  {
+    return policiesEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPolicies_Name()
+  {
+    return (EAttribute)policiesEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSipStore()
+  {
+    return sipStoreEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSipStore_Name()
+  {
+    return (EAttribute)sipStoreEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getStagingStore()
+  {
+    return stagingStoreEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getStagingStore_Name()
+  {
+    return (EAttribute)stagingStoreEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSubPriorities()
+  {
+    return subPrioritiesEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getSubPriorities_Features()
+  {
+    return (EReference)subPrioritiesEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDeadline()
+  {
+    return deadlineEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDeadline_Features()
+  {
+    return (EReference)deadlineEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getXdbLibraryParent()
+  {
+    return xdbLibraryParentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getXdbLibraryParent_Name()
+  {
+    return (EAttribute)xdbLibraryParentEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getXdbMode()
+  {
+    return xdbModeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getXdbMode_Name()
+  {
+    return (EAttribute)xdbModeEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getXdbStore()
+  {
+    return xdbStoreEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getXdbStore_Name()
+  {
+    return (EAttribute)xdbStoreEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getXmlStore()
+  {
+    return xmlStoreEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getXmlStore_Name()
+  {
+    return (EAttribute)xmlStoreEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAuditEvent()
+  {
+    return auditEventEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getAuditEvent_Feature()
+  {
+    return (EReference)auditEventEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getApplication_attr()
+  {
+    return application_attrEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getApplication_attr_Name()
+  {
+    return (EAttribute)application_attrEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTenant_attr()
+  {
+    return tenant_attrEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTenant_attr_Name()
+  {
+    return (EAttribute)tenant_attrEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDeliveryChannel()
+  {
+    return deliveryChannelEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDeliveryChannel_Feature()
+  {
+    return (EReference)deliveryChannelEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFileName()
+  {
+    return fileNameEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getFileName_Name()
+  {
+    return (EAttribute)fileNameEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getOverwrite()
+  {
+    return overwriteEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getOverwrite_Name()
+  {
+    return (EAttribute)overwriteEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getStore()
+  {
+    return storeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getStore_Name()
+  {
+    return (EAttribute)storeEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSuffix()
+  {
+    return suffixEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSuffix_Name()
+  {
+    return (EAttribute)suffixEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getConfirmation()
+  {
+    return confirmationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getConfirmation_Feature()
+  {
+    return (EReference)confirmationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDeliveryChannelParameters()
+  {
+    return deliveryChannelParametersEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDeliveryChannelParameters_Feature()
+  {
+    return (EReference)deliveryChannelParametersEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAip_id()
+  {
+    return aip_idEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAip_id_Name()
+  {
+    return (EAttribute)aip_idEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getIa_conf_datetime()
+  {
+    return ia_conf_datetimeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getIa_conf_datetime_Name()
+  {
+    return (EAttribute)ia_conf_datetimeEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getIa_conf_type()
+  {
+    return ia_conf_typeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getIa_conf_type_Name()
+  {
+    return (EAttribute)ia_conf_typeEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getHoldings()
+  {
+    return holdingsEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getHoldings_Name()
+  {
+    return (EAttribute)holdingsEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTypes()
+  {
+    return typesEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTypes_Name()
+  {
+    return (EAttribute)typesEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getHoldingCrypto()
+  {
+    return holdingCryptoEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getHoldingCrypto_Feature()
+  {
+    return (EReference)holdingCryptoEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getCryptoEncoding()
+  {
+    return cryptoEncodingEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getCryptoEncoding_Name()
+  {
+    return (EAttribute)cryptoEncodingEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getCi()
+  {
+    return ciEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getCi_Feature()
+  {
+    return (EReference)ciEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getCryptoEnabled()
+  {
+    return cryptoEnabledEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getCryptoEnabled_Name()
+  {
+    return (EAttribute)cryptoEnabledEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getCryptoObject_attr()
+  {
+    return cryptoObject_attrEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getCryptoObject_attr_Name()
+  {
+    return (EAttribute)cryptoObject_attrEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPdi()
+  {
+    return pdiEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPdi_Feature()
+  {
+    return (EReference)pdiEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSip()
+  {
+    return sipEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getSip_Feature()
+  {
+    return (EReference)sipEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPdis()
+  {
+    return pdisEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPdis_Feature()
+  {
+    return (EReference)pdisEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSchema()
+  {
+    return schemaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSchema_Name()
+  {
+    return (EAttribute)schemaEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getInclude()
+  {
+    return includeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getInclude_Files()
+  {
+    return (EAttribute)includeEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getIngestNode()
+  {
+    return ingestNodeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getIngestNode_Features()
+  {
+    return (EReference)ingestNodeEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getEnumCOD()
+  {
+    return enumCODEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getEnumCOD_Name()
+  {
+    return (EAttribute)enumCODEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getEnumMR()
+  {
+    return enumMREClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getEnumMR_Name()
+  {
+    return (EAttribute)enumMREClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLogLevel()
+  {
+    return logLevelEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLogLevel_Name()
+  {
+    return (EAttribute)logLevelEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EEnum getenumOfArchiveType()
   {
     return enumOfArchiveTypeEEnum;
@@ -522,6 +2800,15 @@ public class InfoProjectPackageImpl extends EPackageImpl implements InfoProjectP
     versionEClass = createEClass(VERSION);
     createEAttribute(versionEClass, VERSION__NAME);
 
+    namespaceEClass = createEClass(NAMESPACE);
+    createEReference(namespaceEClass, NAMESPACE__FEATURE);
+
+    prefixEClass = createEClass(PREFIX);
+    createEAttribute(prefixEClass, PREFIX__NAME);
+
+    uriEClass = createEClass(URI);
+    createEAttribute(uriEClass, URI__NAME);
+
     featureNameEClass = createEClass(FEATURE_NAME);
     createEAttribute(featureNameEClass, FEATURE_NAME__NAME);
 
@@ -531,7 +2818,7 @@ public class InfoProjectPackageImpl extends EPackageImpl implements InfoProjectP
     createEReference(applicationEClass, APPLICATION__FEATURE);
 
     tenantEClass = createEClass(TENANT);
-    createEReference(tenantEClass, TENANT__FEATURES1);
+    createEReference(tenantEClass, TENANT__FEATURES);
 
     holdEClass = createEClass(HOLD);
     createEReference(holdEClass, HOLD__FEATURES1);
@@ -554,6 +2841,241 @@ public class InfoProjectPackageImpl extends EPackageImpl implements InfoProjectP
 
     holdTypeEClass = createEClass(HOLD_TYPE);
     createEReference(holdTypeEClass, HOLD_TYPE__FEATURES);
+
+    typeAttributeEClass = createEClass(TYPE_ATTRIBUTE);
+    createEAttribute(typeAttributeEClass, TYPE_ATTRIBUTE__NAME);
+
+    receiveNodeEClass = createEClass(RECEIVE_NODE);
+    createEReference(receiveNodeEClass, RECEIVE_NODE__FEATURES);
+
+    retentionPolicyEClass = createEClass(RETENTION_POLICY);
+    createEReference(retentionPolicyEClass, RETENTION_POLICY__FEATURES);
+
+    agingPeriodEClass = createEClass(AGING_PERIOD);
+    createEReference(agingPeriodEClass, AGING_PERIOD__FEATURES);
+
+    unitsEClass = createEClass(UNITS);
+    createEAttribute(unitsEClass, UNITS__NAME);
+
+    valueEClass = createEClass(VALUE);
+    createEAttribute(valueEClass, VALUE__NAME);
+
+    agingStrategyEClass = createEClass(AGING_STRATEGY);
+    createEReference(agingStrategyEClass, AGING_STRATEGY__FEATURES);
+
+    dispositionStrategyEClass = createEClass(DISPOSITION_STRATEGY);
+    createEReference(dispositionStrategyEClass, DISPOSITION_STRATEGY__FEATURES);
+
+    space_attrEClass = createEClass(SPACE_ATTR);
+    createEReference(space_attrEClass, SPACE_ATTR__FEATURES);
+
+    cryptoObjectEClass = createEClass(CRYPTO_OBJECT);
+    createEReference(cryptoObjectEClass, CRYPTO_OBJECT__FEATURES);
+
+    configureEClass = createEClass(CONFIGURE);
+    createEAttribute(configureEClass, CONFIGURE__NAME);
+
+    paddingSchemeEClass = createEClass(PADDING_SCHEME);
+    createEAttribute(paddingSchemeEClass, PADDING_SCHEME__NAME);
+
+    securityProviderEClass = createEClass(SECURITY_PROVIDER);
+    createEAttribute(securityProviderEClass, SECURITY_PROVIDER__NAME);
+
+    xdbFederationEClass = createEClass(XDB_FEDERATION);
+    createEReference(xdbFederationEClass, XDB_FEDERATION__FEATURE);
+
+    bootstrapEClass = createEClass(BOOTSTRAP);
+    createEAttribute(bootstrapEClass, BOOTSTRAP__NAME);
+
+    superUserPasswordEClass = createEClass(SUPER_USER_PASSWORD);
+    createEAttribute(superUserPasswordEClass, SUPER_USER_PASSWORD__NAME);
+
+    xdbDatabaseEClass = createEClass(XDB_DATABASE);
+    createEReference(xdbDatabaseEClass, XDB_DATABASE__FEATURES);
+
+    defaultEClass = createEClass(DEFAULT);
+    createEAttribute(defaultEClass, DEFAULT__NAME);
+
+    adminPasswordEClass = createEClass(ADMIN_PASSWORD);
+    createEAttribute(adminPasswordEClass, ADMIN_PASSWORD__NAME);
+
+    spaceRootXdbLibraryEClass = createEClass(SPACE_ROOT_XDB_LIBRARY);
+    createEReference(spaceRootXdbLibraryEClass, SPACE_ROOT_XDB_LIBRARY__FEATURES);
+
+    xdbLibraryEClass = createEClass(XDB_LIBRARY);
+    createEReference(xdbLibraryEClass, XDB_LIBRARY__FEATURES);
+
+    parentSpaceRootXdbLibraryEClass = createEClass(PARENT_SPACE_ROOT_XDB_LIBRARY);
+    createEAttribute(parentSpaceRootXdbLibraryEClass, PARENT_SPACE_ROOT_XDB_LIBRARY__NAME);
+
+    subPathEClass = createEClass(SUB_PATH);
+    createEAttribute(subPathEClass, SUB_PATH__NAME);
+
+    xdbLibraryPolicyEClass = createEClass(XDB_LIBRARY_POLICY);
+    createEReference(xdbLibraryPolicyEClass, XDB_LIBRARY_POLICY__FEATURES);
+
+    aipQuotaEClass = createEClass(AIP_QUOTA);
+    createEAttribute(aipQuotaEClass, AIP_QUOTA__NAME);
+
+    aiuQuotaEClass = createEClass(AIU_QUOTA);
+    createEAttribute(aiuQuotaEClass, AIU_QUOTA__NAME);
+
+    closeHintDateQueryEClass = createEClass(CLOSE_HINT_DATE_QUERY);
+    createEAttribute(closeHintDateQueryEClass, CLOSE_HINT_DATE_QUERY__NAME);
+
+    closeModeEClass = createEClass(CLOSE_MODE);
+    createEAttribute(closeModeEClass, CLOSE_MODE__NAME);
+
+    closePeriodEClass = createEClass(CLOSE_PERIOD);
+    createEAttribute(closePeriodEClass, CLOSE_PERIOD__NAME);
+
+    aiuThresholdEClass = createEClass(AIU_THRESHOLD);
+    createEAttribute(aiuThresholdEClass, AIU_THRESHOLD__NAME);
+
+    pKeyQueryEClass = createEClass(PKEY_QUERY);
+    createEAttribute(pKeyQueryEClass, PKEY_QUERY__NAME);
+
+    holdingEClass = createEClass(HOLDING);
+    createEReference(holdingEClass, HOLDING__FEATURES);
+
+    ciStoreEClass = createEClass(CI_STORE);
+    createEAttribute(ciStoreEClass, CI_STORE__NAME);
+
+    defaultRetentionClassEClass = createEClass(DEFAULT_RETENTION_CLASS);
+    createEAttribute(defaultRetentionClassEClass, DEFAULT_RETENTION_CLASS__NAME);
+
+    logStoreEClass = createEClass(LOG_STORE);
+    createEAttribute(logStoreEClass, LOG_STORE__NAME);
+
+    managedItemStoreEClass = createEClass(MANAGED_ITEM_STORE);
+    createEAttribute(managedItemStoreEClass, MANAGED_ITEM_STORE__NAME);
+
+    pdiConfigsEClass = createEClass(PDI_CONFIGS);
+    createEAttribute(pdiConfigsEClass, PDI_CONFIGS__NAME);
+
+    priorityEClass = createEClass(PRIORITY);
+    createEAttribute(priorityEClass, PRIORITY__NAME);
+
+    renditionStoreEClass = createEClass(RENDITION_STORE);
+    createEAttribute(renditionStoreEClass, RENDITION_STORE__NAME);
+
+    retentionClassesEClass = createEClass(RETENTION_CLASSES);
+    createEReference(retentionClassesEClass, RETENTION_CLASSES__FEATURES);
+    createEReference(retentionClassesEClass, RETENTION_CLASSES__FEATURE);
+
+    policiesEClass = createEClass(POLICIES);
+    createEAttribute(policiesEClass, POLICIES__NAME);
+
+    sipStoreEClass = createEClass(SIP_STORE);
+    createEAttribute(sipStoreEClass, SIP_STORE__NAME);
+
+    stagingStoreEClass = createEClass(STAGING_STORE);
+    createEAttribute(stagingStoreEClass, STAGING_STORE__NAME);
+
+    subPrioritiesEClass = createEClass(SUB_PRIORITIES);
+    createEReference(subPrioritiesEClass, SUB_PRIORITIES__FEATURES);
+
+    deadlineEClass = createEClass(DEADLINE);
+    createEReference(deadlineEClass, DEADLINE__FEATURES);
+
+    xdbLibraryParentEClass = createEClass(XDB_LIBRARY_PARENT);
+    createEAttribute(xdbLibraryParentEClass, XDB_LIBRARY_PARENT__NAME);
+
+    xdbModeEClass = createEClass(XDB_MODE);
+    createEAttribute(xdbModeEClass, XDB_MODE__NAME);
+
+    xdbStoreEClass = createEClass(XDB_STORE);
+    createEAttribute(xdbStoreEClass, XDB_STORE__NAME);
+
+    xmlStoreEClass = createEClass(XML_STORE);
+    createEAttribute(xmlStoreEClass, XML_STORE__NAME);
+
+    auditEventEClass = createEClass(AUDIT_EVENT);
+    createEReference(auditEventEClass, AUDIT_EVENT__FEATURE);
+
+    application_attrEClass = createEClass(APPLICATION_ATTR);
+    createEAttribute(application_attrEClass, APPLICATION_ATTR__NAME);
+
+    tenant_attrEClass = createEClass(TENANT_ATTR);
+    createEAttribute(tenant_attrEClass, TENANT_ATTR__NAME);
+
+    deliveryChannelEClass = createEClass(DELIVERY_CHANNEL);
+    createEReference(deliveryChannelEClass, DELIVERY_CHANNEL__FEATURE);
+
+    fileNameEClass = createEClass(FILE_NAME);
+    createEAttribute(fileNameEClass, FILE_NAME__NAME);
+
+    overwriteEClass = createEClass(OVERWRITE);
+    createEAttribute(overwriteEClass, OVERWRITE__NAME);
+
+    storeEClass = createEClass(STORE);
+    createEAttribute(storeEClass, STORE__NAME);
+
+    suffixEClass = createEClass(SUFFIX);
+    createEAttribute(suffixEClass, SUFFIX__NAME);
+
+    confirmationEClass = createEClass(CONFIRMATION);
+    createEReference(confirmationEClass, CONFIRMATION__FEATURE);
+
+    deliveryChannelParametersEClass = createEClass(DELIVERY_CHANNEL_PARAMETERS);
+    createEReference(deliveryChannelParametersEClass, DELIVERY_CHANNEL_PARAMETERS__FEATURE);
+
+    aip_idEClass = createEClass(AIP_ID);
+    createEAttribute(aip_idEClass, AIP_ID__NAME);
+
+    ia_conf_datetimeEClass = createEClass(IA_CONF_DATETIME);
+    createEAttribute(ia_conf_datetimeEClass, IA_CONF_DATETIME__NAME);
+
+    ia_conf_typeEClass = createEClass(IA_CONF_TYPE);
+    createEAttribute(ia_conf_typeEClass, IA_CONF_TYPE__NAME);
+
+    holdingsEClass = createEClass(HOLDINGS);
+    createEAttribute(holdingsEClass, HOLDINGS__NAME);
+
+    typesEClass = createEClass(TYPES);
+    createEAttribute(typesEClass, TYPES__NAME);
+
+    holdingCryptoEClass = createEClass(HOLDING_CRYPTO);
+    createEReference(holdingCryptoEClass, HOLDING_CRYPTO__FEATURE);
+
+    cryptoEncodingEClass = createEClass(CRYPTO_ENCODING);
+    createEAttribute(cryptoEncodingEClass, CRYPTO_ENCODING__NAME);
+
+    ciEClass = createEClass(CI);
+    createEReference(ciEClass, CI__FEATURE);
+
+    cryptoEnabledEClass = createEClass(CRYPTO_ENABLED);
+    createEAttribute(cryptoEnabledEClass, CRYPTO_ENABLED__NAME);
+
+    cryptoObject_attrEClass = createEClass(CRYPTO_OBJECT_ATTR);
+    createEAttribute(cryptoObject_attrEClass, CRYPTO_OBJECT_ATTR__NAME);
+
+    pdiEClass = createEClass(PDI);
+    createEReference(pdiEClass, PDI__FEATURE);
+
+    sipEClass = createEClass(SIP);
+    createEReference(sipEClass, SIP__FEATURE);
+
+    pdisEClass = createEClass(PDIS);
+    createEReference(pdisEClass, PDIS__FEATURE);
+
+    schemaEClass = createEClass(SCHEMA);
+    createEAttribute(schemaEClass, SCHEMA__NAME);
+
+    includeEClass = createEClass(INCLUDE);
+    createEAttribute(includeEClass, INCLUDE__FILES);
+
+    ingestNodeEClass = createEClass(INGEST_NODE);
+    createEReference(ingestNodeEClass, INGEST_NODE__FEATURES);
+
+    enumCODEClass = createEClass(ENUM_COD);
+    createEAttribute(enumCODEClass, ENUM_COD__NAME);
+
+    enumMREClass = createEClass(ENUM_MR);
+    createEAttribute(enumMREClass, ENUM_MR__NAME);
+
+    logLevelEClass = createEClass(LOG_LEVEL);
+    createEAttribute(logLevelEClass, LOG_LEVEL__NAME);
 
     // Create enums
     enumOfArchiveTypeEEnum = createEEnum(ENUM_OF_ARCHIVE_TYPE);
@@ -597,6 +3119,15 @@ public class InfoProjectPackageImpl extends EPackageImpl implements InfoProjectP
     initEClass(versionEClass, Version.class, "Version", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getVersion_Name(), ecorePackage.getEString(), "name", null, 0, 1, Version.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(namespaceEClass, Namespace.class, "Namespace", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getNamespace_Feature(), ecorePackage.getEObject(), null, "feature", null, 0, -1, Namespace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(prefixEClass, Prefix.class, "Prefix", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getPrefix_Name(), ecorePackage.getEString(), "name", null, 0, 1, Prefix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(uriEClass, Uri.class, "Uri", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getUri_Name(), ecorePackage.getEString(), "name", null, 0, 1, Uri.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(featureNameEClass, FeatureName.class, "FeatureName", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getFeatureName_Name(), ecorePackage.getEString(), "name", null, 0, 1, FeatureName.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -606,7 +3137,7 @@ public class InfoProjectPackageImpl extends EPackageImpl implements InfoProjectP
     initEReference(getApplication_Feature(), ecorePackage.getEObject(), null, "feature", null, 0, -1, Application.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(tenantEClass, Tenant.class, "Tenant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getTenant_Features1(), this.getFeatureName(), null, "features1", null, 0, -1, Tenant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTenant_Features(), this.getFeatureName(), null, "features", null, 0, -1, Tenant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(holdEClass, Hold.class, "Hold", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getHold_Features1(), this.getFeatureName(), null, "features1", null, 0, -1, Hold.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -628,7 +3159,242 @@ public class InfoProjectPackageImpl extends EPackageImpl implements InfoProjectP
     initEAttribute(getType_Value(), this.getenumOfTypes(), "value", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(holdTypeEClass, HoldType.class, "HoldType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getHoldType_Features(), this.getType(), null, "features", null, 0, -1, HoldType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getHoldType_Features(), ecorePackage.getEObject(), null, "features", null, 0, -1, HoldType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(typeAttributeEClass, TypeAttribute.class, "TypeAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTypeAttribute_Name(), ecorePackage.getEString(), "name", null, 0, 1, TypeAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(receiveNodeEClass, ReceiveNode.class, "ReceiveNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getReceiveNode_Features(), this.getFeatureName(), null, "features", null, 0, -1, ReceiveNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(retentionPolicyEClass, RetentionPolicy.class, "RetentionPolicy", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getRetentionPolicy_Features(), ecorePackage.getEObject(), null, "features", null, 0, -1, RetentionPolicy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(agingPeriodEClass, AgingPeriod.class, "AgingPeriod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getAgingPeriod_Features(), ecorePackage.getEObject(), null, "features", null, 0, -1, AgingPeriod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(unitsEClass, Units.class, "Units", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getUnits_Name(), ecorePackage.getEString(), "name", null, 0, 1, Units.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(valueEClass, Value.class, "Value", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getValue_Name(), ecorePackage.getEString(), "name", null, 0, 1, Value.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(agingStrategyEClass, AgingStrategy.class, "AgingStrategy", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getAgingStrategy_Features(), ecorePackage.getEObject(), null, "features", null, 0, -1, AgingStrategy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(dispositionStrategyEClass, DispositionStrategy.class, "DispositionStrategy", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDispositionStrategy_Features(), this.getTypeAttribute(), null, "features", null, 0, -1, DispositionStrategy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(space_attrEClass, Space_attr.class, "Space_attr", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getSpace_attr_Features(), this.getFeatureName(), null, "features", null, 0, -1, Space_attr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(cryptoObjectEClass, CryptoObject.class, "CryptoObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getCryptoObject_Features(), ecorePackage.getEObject(), null, "features", null, 0, -1, CryptoObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(configureEClass, Configure.class, "Configure", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getConfigure_Name(), ecorePackage.getEString(), "name", null, 0, 1, Configure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(paddingSchemeEClass, PaddingScheme.class, "PaddingScheme", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getPaddingScheme_Name(), ecorePackage.getEString(), "name", null, 0, 1, PaddingScheme.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(securityProviderEClass, SecurityProvider.class, "SecurityProvider", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSecurityProvider_Name(), ecorePackage.getEString(), "name", null, 0, 1, SecurityProvider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(xdbFederationEClass, XdbFederation.class, "XdbFederation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getXdbFederation_Feature(), ecorePackage.getEObject(), null, "feature", null, 0, -1, XdbFederation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(bootstrapEClass, Bootstrap.class, "Bootstrap", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getBootstrap_Name(), ecorePackage.getEString(), "name", null, 0, 1, Bootstrap.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(superUserPasswordEClass, SuperUserPassword.class, "SuperUserPassword", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSuperUserPassword_Name(), ecorePackage.getEString(), "name", null, 0, 1, SuperUserPassword.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(xdbDatabaseEClass, XdbDatabase.class, "XdbDatabase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getXdbDatabase_Features(), ecorePackage.getEObject(), null, "features", null, 0, -1, XdbDatabase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(defaultEClass, Default.class, "Default", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getDefault_Name(), ecorePackage.getEString(), "name", null, 0, 1, Default.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(adminPasswordEClass, AdminPassword.class, "AdminPassword", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAdminPassword_Name(), ecorePackage.getEString(), "name", null, 0, 1, AdminPassword.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(spaceRootXdbLibraryEClass, SpaceRootXdbLibrary.class, "SpaceRootXdbLibrary", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getSpaceRootXdbLibrary_Features(), ecorePackage.getEObject(), null, "features", null, 0, -1, SpaceRootXdbLibrary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(xdbLibraryEClass, XdbLibrary.class, "XdbLibrary", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getXdbLibrary_Features(), ecorePackage.getEObject(), null, "features", null, 0, -1, XdbLibrary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(parentSpaceRootXdbLibraryEClass, ParentSpaceRootXdbLibrary.class, "ParentSpaceRootXdbLibrary", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getParentSpaceRootXdbLibrary_Name(), ecorePackage.getEString(), "name", null, 0, 1, ParentSpaceRootXdbLibrary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(subPathEClass, SubPath.class, "SubPath", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSubPath_Name(), ecorePackage.getEString(), "name", null, 0, 1, SubPath.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(xdbLibraryPolicyEClass, XdbLibraryPolicy.class, "XdbLibraryPolicy", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getXdbLibraryPolicy_Features(), ecorePackage.getEObject(), null, "features", null, 0, -1, XdbLibraryPolicy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(aipQuotaEClass, AipQuota.class, "AipQuota", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAipQuota_Name(), ecorePackage.getEString(), "name", null, 0, 1, AipQuota.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(aiuQuotaEClass, AiuQuota.class, "AiuQuota", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAiuQuota_Name(), ecorePackage.getEString(), "name", null, 0, 1, AiuQuota.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(closeHintDateQueryEClass, CloseHintDateQuery.class, "CloseHintDateQuery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getCloseHintDateQuery_Name(), ecorePackage.getEString(), "name", null, 0, 1, CloseHintDateQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(closeModeEClass, CloseMode.class, "CloseMode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getCloseMode_Name(), ecorePackage.getEString(), "name", null, 0, 1, CloseMode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(closePeriodEClass, ClosePeriod.class, "ClosePeriod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getClosePeriod_Name(), ecorePackage.getEString(), "name", null, 0, 1, ClosePeriod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(aiuThresholdEClass, AiuThreshold.class, "AiuThreshold", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAiuThreshold_Name(), ecorePackage.getEString(), "name", null, 0, 1, AiuThreshold.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(pKeyQueryEClass, PKeyQuery.class, "PKeyQuery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getPKeyQuery_Name(), ecorePackage.getEString(), "name", null, 0, 1, PKeyQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(holdingEClass, Holding.class, "Holding", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getHolding_Features(), ecorePackage.getEObject(), null, "features", null, 0, -1, Holding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(ciStoreEClass, CiStore.class, "CiStore", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getCiStore_Name(), ecorePackage.getEString(), "name", null, 0, 1, CiStore.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(defaultRetentionClassEClass, DefaultRetentionClass.class, "DefaultRetentionClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getDefaultRetentionClass_Name(), ecorePackage.getEString(), "name", null, 0, 1, DefaultRetentionClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(logStoreEClass, LogStore.class, "LogStore", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getLogStore_Name(), ecorePackage.getEString(), "name", null, 0, 1, LogStore.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(managedItemStoreEClass, ManagedItemStore.class, "ManagedItemStore", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getManagedItemStore_Name(), ecorePackage.getEString(), "name", null, 0, 1, ManagedItemStore.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(pdiConfigsEClass, PdiConfigs.class, "PdiConfigs", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getPdiConfigs_Name(), ecorePackage.getEString(), "name", null, 0, 1, PdiConfigs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(priorityEClass, Priority.class, "Priority", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getPriority_Name(), ecorePackage.getEString(), "name", null, 0, 1, Priority.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(renditionStoreEClass, RenditionStore.class, "RenditionStore", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getRenditionStore_Name(), ecorePackage.getEString(), "name", null, 0, 1, RenditionStore.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(retentionClassesEClass, RetentionClasses.class, "RetentionClasses", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getRetentionClasses_Features(), this.getFeatureName(), null, "features", null, 0, -1, RetentionClasses.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRetentionClasses_Feature(), this.getPolicies(), null, "feature", null, 0, -1, RetentionClasses.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(policiesEClass, Policies.class, "Policies", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getPolicies_Name(), ecorePackage.getEString(), "name", null, 0, 1, Policies.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(sipStoreEClass, SipStore.class, "SipStore", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSipStore_Name(), ecorePackage.getEString(), "name", null, 0, 1, SipStore.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(stagingStoreEClass, StagingStore.class, "StagingStore", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getStagingStore_Name(), ecorePackage.getEString(), "name", null, 0, 1, StagingStore.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(subPrioritiesEClass, SubPriorities.class, "SubPriorities", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getSubPriorities_Features(), this.getDeadline(), null, "features", null, 0, -1, SubPriorities.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(deadlineEClass, Deadline.class, "Deadline", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDeadline_Features(), this.getPriority(), null, "features", null, 0, -1, Deadline.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(xdbLibraryParentEClass, XdbLibraryParent.class, "XdbLibraryParent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getXdbLibraryParent_Name(), ecorePackage.getEString(), "name", null, 0, 1, XdbLibraryParent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(xdbModeEClass, XdbMode.class, "XdbMode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getXdbMode_Name(), ecorePackage.getEString(), "name", null, 0, 1, XdbMode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(xdbStoreEClass, XdbStore.class, "XdbStore", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getXdbStore_Name(), ecorePackage.getEString(), "name", null, 0, 1, XdbStore.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(xmlStoreEClass, XmlStore.class, "XmlStore", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getXmlStore_Name(), ecorePackage.getEString(), "name", null, 0, 1, XmlStore.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(auditEventEClass, AuditEvent.class, "AuditEvent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getAuditEvent_Feature(), ecorePackage.getEObject(), null, "feature", null, 0, -1, AuditEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(application_attrEClass, Application_attr.class, "Application_attr", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getApplication_attr_Name(), ecorePackage.getEString(), "name", null, 0, 1, Application_attr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(tenant_attrEClass, Tenant_attr.class, "Tenant_attr", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTenant_attr_Name(), ecorePackage.getEString(), "name", null, 0, 1, Tenant_attr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(deliveryChannelEClass, DeliveryChannel.class, "DeliveryChannel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDeliveryChannel_Feature(), ecorePackage.getEObject(), null, "feature", null, 0, -1, DeliveryChannel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(fileNameEClass, FileName.class, "FileName", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getFileName_Name(), ecorePackage.getEString(), "name", null, 0, 1, FileName.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(overwriteEClass, Overwrite.class, "Overwrite", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getOverwrite_Name(), ecorePackage.getEString(), "name", null, 0, 1, Overwrite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(storeEClass, Store.class, "Store", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getStore_Name(), ecorePackage.getEString(), "name", null, 0, 1, Store.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(suffixEClass, Suffix.class, "Suffix", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSuffix_Name(), ecorePackage.getEString(), "name", null, 0, 1, Suffix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(confirmationEClass, Confirmation.class, "Confirmation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getConfirmation_Feature(), ecorePackage.getEObject(), null, "feature", null, 0, -1, Confirmation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(deliveryChannelParametersEClass, DeliveryChannelParameters.class, "DeliveryChannelParameters", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDeliveryChannelParameters_Feature(), ecorePackage.getEObject(), null, "feature", null, 0, -1, DeliveryChannelParameters.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(aip_idEClass, Aip_id.class, "Aip_id", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAip_id_Name(), ecorePackage.getEString(), "name", null, 0, 1, Aip_id.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(ia_conf_datetimeEClass, Ia_conf_datetime.class, "Ia_conf_datetime", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getIa_conf_datetime_Name(), ecorePackage.getEString(), "name", null, 0, 1, Ia_conf_datetime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(ia_conf_typeEClass, Ia_conf_type.class, "Ia_conf_type", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getIa_conf_type_Name(), ecorePackage.getEString(), "name", null, 0, 1, Ia_conf_type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(holdingsEClass, Holdings.class, "Holdings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getHoldings_Name(), ecorePackage.getEString(), "name", null, 0, 1, Holdings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(typesEClass, Types.class, "Types", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTypes_Name(), ecorePackage.getEString(), "name", null, 0, 1, Types.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(holdingCryptoEClass, HoldingCrypto.class, "HoldingCrypto", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getHoldingCrypto_Feature(), ecorePackage.getEObject(), null, "feature", null, 0, -1, HoldingCrypto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(cryptoEncodingEClass, CryptoEncoding.class, "CryptoEncoding", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getCryptoEncoding_Name(), ecorePackage.getEString(), "name", null, 0, 1, CryptoEncoding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(ciEClass, Ci.class, "Ci", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getCi_Feature(), ecorePackage.getEObject(), null, "feature", null, 0, -1, Ci.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(cryptoEnabledEClass, CryptoEnabled.class, "CryptoEnabled", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getCryptoEnabled_Name(), ecorePackage.getEString(), "name", null, 0, 1, CryptoEnabled.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(cryptoObject_attrEClass, CryptoObject_attr.class, "CryptoObject_attr", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getCryptoObject_attr_Name(), ecorePackage.getEString(), "name", null, 0, 1, CryptoObject_attr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(pdiEClass, Pdi.class, "Pdi", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getPdi_Feature(), ecorePackage.getEObject(), null, "feature", null, 0, -1, Pdi.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(sipEClass, Sip.class, "Sip", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getSip_Feature(), ecorePackage.getEObject(), null, "feature", null, 0, -1, Sip.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(pdisEClass, Pdis.class, "Pdis", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getPdis_Feature(), this.getSchema(), null, "feature", null, 0, -1, Pdis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(schemaEClass, Schema.class, "Schema", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSchema_Name(), ecorePackage.getEString(), "name", null, 0, 1, Schema.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(includeEClass, Include.class, "Include", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getInclude_Files(), ecorePackage.getEString(), "files", null, 0, -1, Include.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(ingestNodeEClass, IngestNode.class, "IngestNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getIngestNode_Features(), ecorePackage.getEObject(), null, "features", null, 0, -1, IngestNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(enumCODEClass, EnumCOD.class, "EnumCOD", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getEnumCOD_Name(), ecorePackage.getEString(), "name", null, 0, 1, EnumCOD.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(enumMREClass, EnumMR.class, "EnumMR", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getEnumMR_Name(), ecorePackage.getEString(), "name", null, 0, 1, EnumMR.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(logLevelEClass, LogLevel.class, "LogLevel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getLogLevel_Name(), ecorePackage.getEString(), "name", null, 0, 1, LogLevel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
     initEEnum(enumOfArchiveTypeEEnum, enumOfArchiveType.class, "enumOfArchiveType");
